@@ -21,7 +21,7 @@ After some internet sleuthing and poring over many forum threads, the answer fin
 2. An Android phone or tablet to download the APK to. There's probably a way to transfer the file from iPhone too, but I don't use those, so it's beyond the scope here. Either way this method won't require a PC at all.
 3. You'll need a few extra apps for both the TV and phone/tablet -- we'll take care of those first
 
-### Install prerequisite apps
+### Install pre-requisite apps
 
 First, you'll need file manager app on your Sony Bravia TV to browse files. I suggest **File Commander**, but feel free to use any app you want, there's plenty to choose from. For some reason Google's own Files app isn't available on the Play Store via Sony Bravia TV (and I'm not about to figure out how to sideload that app too), so go to the Play Store from your TV and install the file manager app of your choice.
 
