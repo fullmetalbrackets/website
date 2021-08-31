@@ -40,8 +40,8 @@ li {
     list-style-type: none;
     padding: 0 auto;
     margin: 0 auto;
-    margin-top: -1em;
-    margin-left: -2em;
+    margin-top: -2.75em;
+    margin-left: -1.75em;
 }
 
 h2 {
