@@ -4,9 +4,10 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/fullmetalbrackets/website) ![Lines of code](https://img.shields.io/tokei/lines/github/fullmetalbrackets/website)
 
-----------------------
+---
 
 Install locally and run in development:
+
 ```bash
 $ git clone https://github.com/fullmetalbrackets/website.git
 $ cd website
@@ -15,7 +16,10 @@ $ yarn dev
 ```
 
 Build for production and launch server:
+
 ```bash
 $ yarn build
 $ yarn generate
 ```
+
+The source code is also available to download as a tarball or zip file from the Releases.
