@@ -65,9 +65,7 @@ img {
 code {
     background: hsl(210, 30%, 30%);
     margin: auto;
-    padding: auto;
-    padding-right: 1em;
-    padding-left: 1em;
+    padding: auto 1em auto 1em;
     border-radius: 0.25em;
     color: hsl(50, 100%, 80%);
     font-size: 0.875em;
@@ -80,6 +78,8 @@ code {
 pre {
     border-radius: 0.5em;
     color: hsl(50, 100%, 80%);
+    margin: auto;
+    padding: auto 1em auto 1em;
 }
 
 .bottom {
