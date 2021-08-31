@@ -1,5 +1,7 @@
 <template>
     <body>
+    <Header />
+    <Navbar />
         <div class="main">
             <h2>Who Dis?</h2>
             <p>
@@ -34,7 +36,7 @@ img {
 
 @media screen and (max-width: 600px) {
     img {
-        width: 55px;
+        width: 50px;
         height: auto;
     }
 }
