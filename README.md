@@ -18,4 +18,5 @@ Build for production and launch server:
 ```bash
 $ yarn build
 $ yarn generate
+$ yarn start
 ```
