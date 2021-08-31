@@ -55,4 +55,13 @@ h2 {
     margin-left: 0.75em;
     color: var(--skyblue);
 }
+
+@media screen and (max-width: 600px) {
+    li {
+        list-style-type: none;
+        padding: 0 auto;
+        margin: 0 auto;
+        margin-left: -1.75em;
+    }
+}
 </style>
