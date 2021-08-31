@@ -94,27 +94,35 @@ h3 {
       transparent 100%
     );
   }
+}
 
-  @media screen and (max-width: 1200px) {
-    .main {
-      margin: 0.5em 2em;
-    }
+@media screen and (max-width: 1200px) {
+  .main {
+    margin: 0.5em 2em;
   }
+}
 
-  @media screen and (max-width: 1080px) {
-    .main {
-      margin: 0.5em 1em;
-    }
+@media screen and (max-width: 1080px) {
+  .main {
+    margin: 0.5em 1em;
   }
+}
 
-  @media screen and (max-width: 768px) {
-    h2 {
-      font-size: 1.1em;
-    }
-    .main {
-      margin: 0.5em auto;
-      padding: 1em;
-      font-size: 1.35em;
-    }
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.1em;
+  }
+  .main {
+    margin: 0.5em auto;
+    padding: 1em;
+    font-size: 1.35em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    margin: 0.5em auto;
+    padding: 1em;
+    font-size: 1.35em;
   }
 }
