@@ -6,11 +6,14 @@
             <article>
                 <h2>{{ article.title }}</h2>
                 <hr>
+                <p class="art-date">
+                    Posted on: {{ formatDate(article.createdAt) }}
+                </p>
                 <nuxt-content :document="article" />
                 <hr class="bottom">
                 <p class="foot">
-                <a href="/blog"><i class="return"></i> Return to Blog</a>
-                <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
+                    <a href="/blog"><i class="return"></i> Return to Blog</a>
+                    <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
                 </p>
             </article>
         </div>
@@ -46,9 +49,9 @@ li {
 }
 
 .art-date {
-    margin: 0 auto;
+    margin: 0 auto 3em auto;
     padding: 0 auto;
-    font-size: 0.6em;
+    font-size: 0.75em;
 }
 
 img {
@@ -60,8 +63,9 @@ img {
 }
 
 code {
-    background: hsl(210, 6%, 12%);
+    background: hsl(210, 30%, 30%);
     margin: auto;
+    margin-left: 2em;
     padding: auto;
     border-radius: 0.5em;
     color: hsl(50, 90%, 70%);
