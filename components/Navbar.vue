@@ -16,8 +16,6 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
-
 .nav {
     display: flex;
     flex-direction: row;
