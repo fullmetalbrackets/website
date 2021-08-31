@@ -3,9 +3,9 @@
         <div class="main">
                 <h2>{{ article.title }}</h2>
                 <hr>
-                <p>
+                <p class="art-info">
                     <span>Posted on:</span>
-                    <span class="art-date">{{ formatDate(article.createdAt) }}</span>
+                    <span class="art-date">{{ formatDate(article.date) }}</span>
                 </p>
                 <nuxt-content :document="article" />
                 <hr class="bottom">
@@ -43,6 +43,10 @@ li {
     margin: 0 auto;
     padding: 0 auto;
     line-height: 1;
+}
+
+.art-info {
+    margin-bottom: 3em;
 }
 
 .art-date {
