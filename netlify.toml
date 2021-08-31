@@ -15,6 +15,7 @@ Access-Control-Allow-Origin = "*"
   
   [headers.values]
     Access-Control-Allow-Origin = "*"
+    Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/png"
 
@@ -23,6 +24,7 @@ Access-Control-Allow-Origin = "*"
   
   [headers.values]
     Access-Control-Allow-Origin = "*"
+    Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/jpeg"
 
@@ -31,6 +33,7 @@ Access-Control-Allow-Origin = "*"
   
   [headers.values]
     Access-Control-Allow-Origin = "*"
+    Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=604800"
     Content-Type = "application/font-ttf"
 
