@@ -61,6 +61,7 @@ h2 {
         list-style-type: none;
         padding: 0 auto;
         margin: 0 auto;
+        margin-top: -2em;
         margin-left: -1.75em;
     }
 }
