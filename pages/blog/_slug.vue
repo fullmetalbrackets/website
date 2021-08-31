@@ -66,15 +66,20 @@ code {
     background: hsl(210, 30%, 30%);
     margin: auto;
     padding: auto;
-    border-radius: 0.5em;
-    color: hsl(50, 90%, 70%);
-    font-size: 0.925em;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-radius: 0.25em;
+    color: hsl(50, 100%, 80%);
+    font-size: 0.875em;
+    line-height: 1;
+    max-width: 80vw;
+    height: auto;
     overflow-x: scroll;
 }
 
 pre {
     border-radius: 0.5em;
-    color: hsl(50, 90%, 70%);
+    color: hsl(50, 100%, 80%);
 }
 
 .bottom {

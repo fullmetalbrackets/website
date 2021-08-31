@@ -14,7 +14,6 @@
                 <a href="https://sass-lang.com/documentation" target="_blank" rel="noopener"><img src="/img/sass.png"></a>
                 <a href="https://v3.vuejs.org/guide/introduction.html" target="_blank" rel="noopener"><img src="/img/vuejs.png"></a>
                 <a href="https://nuxtjs.org/docs/2.x/get-started/installation" target="_blank" rel="noopener"><img src="/img/nuxtjs.png"></a>
-                <br>
                 <a href="https://nodejs.org/en/docs/" target="_blank" rel="noopener"><img src="/img/nodejs.png"></a>
                 <a href="https://docs.netlify.com/" target="_blank" rel="noopener"><img src="/img/netlify.png"></a>
                 <a href="https://docs.docker.com/" target="_blank" rel="noopener"><img src="/img/docker.png"></a>
@@ -37,7 +36,7 @@ img {
 
 @media screen and (max-width: 600px) {
     img {
-        width: 5y5px;
+        width: 55px;
         height: auto;
     }
 }
