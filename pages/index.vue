@@ -1,7 +1,5 @@
 <template>
   <body>
-    <Header />
-    <Navbar />
     <div class="main">
       <h2>Hello World</h2>
       <p>

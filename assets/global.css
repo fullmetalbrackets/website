@@ -17,6 +17,12 @@
   margin: 0 auto;
   width: 100vw;
   height: auto;
+  --hotpink: hsl(316, 99%, 53%);
+  --lightpink: hsl(321, 100%, 67%);
+  --skyblue: hsl(201, 100%, 85%);
+  --orange: hsl(30, 100%, 56%);
+  --yellow: hsl(58, 97%, 63%);
+  --shadow: hsl(237, 44%, 10%);
 }
 
 ::-webkit-scrollbar {
@@ -42,17 +48,17 @@
 a,
 a:active,
 a:visited {
-  color: hsl(30, 100%, 56%);
+  color: var(--orange);
   text-decoration: none;
 }
 
 a:hover {
-  color: hsl(58, 97%, 63%);
+  color: var(--yellow);
   text-decoration: none;
 }
 
 h2 {
-  color: hsl(321, 100%, 67%);
+  color: var(--hotpink);
   font-weight: 600;
   line-height: 1;
   font-size: 1.35em;
@@ -67,7 +73,7 @@ h3 {
   padding: 0 auto;
   line-height: 1;
   font-size: 1.15em;
-  color: hsl(321, 100%, 67%);
+  color: var(--hotpink);
 }
 
 @media screen and (max-width: 1200px) {

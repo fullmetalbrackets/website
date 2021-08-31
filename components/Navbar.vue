@@ -33,7 +33,7 @@
     font-family: 'Baloo 2', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
     font-display: swap;
     font-size: 2.5rem;
-    text-shadow: 0.15rem 0.15rem 0 rgb(14, 15, 36);
+    text-shadow: 0.15rem 0.15rem 0 var(--shadow);
     text-decoration: none;
     padding: 0 1em;
     margin: 0;

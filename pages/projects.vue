@@ -1,7 +1,5 @@
 <template>
     <body>
-    <Header />
-    <Navbar />
         <div class="main">
             <h2>Stuff I've Made</h2>
             <p>

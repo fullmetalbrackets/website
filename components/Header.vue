@@ -24,7 +24,7 @@ h1 {
     font-family: 'streamster', 'Segoe Script Bold', 'Segoe Script';
     font-weight: 700;
     font-display: swap;
-    text-shadow: 0.5rem 0.5rem 0.15rem hsl(237, 44%, 10%);
+    text-shadow: 0.5rem 0.5rem 0.15rem var(--shadow);
     text-transform: none;
     text-align: center;
     width: auto;
@@ -36,12 +36,12 @@ h1 {
 a,
 a:active,
 a:visited {
-    color: hsl(316, 99%, 53%);
+    color: var(--hotpink);
     text-decoration: none;
 }
 
 a:hover {
-    color: hsl(321, 100%, 67%);
+    color: var(--lightpink);
     text-decoration: none;
 }
 

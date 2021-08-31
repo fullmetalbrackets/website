@@ -1,13 +1,11 @@
 <template>
     <body>
-        <Header />
-        <Navbar />
         <div class="main">
-            <article>
                 <h2>{{ article.title }}</h2>
                 <hr>
-                <p class="art-date">
-                    Posted on: {{ formatDate(article.createdAt) }}
+                <p>
+                    <span>Posted on:</span>
+                    <span class="art-date">{{ formatDate(article.createdAt) }}</span>
                 </p>
                 <nuxt-content :document="article" />
                 <hr class="bottom">
@@ -15,7 +13,6 @@
                     <a href="/blog"><i class="return"></i> Return to Blog</a>
                     <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
                 </p>
-            </article>
         </div>
     </body>
 </template>
@@ -49,9 +46,7 @@ li {
 }
 
 .art-date {
-    margin: 0 auto;
-    padding: 0 auto;
-    font-size: 0.75em;
+    color: var(--hotpink);
 }
 
 img {
@@ -63,11 +58,9 @@ img {
 }
 
 code {
-    background: hsl(210, 30%, 30%);
     margin: auto;
     padding: auto 1em auto 1em;
     border-radius: 0.25em;
-    color: hsl(50, 100%, 80%);
     font-size: 0.875em;
     line-height: 1;
     max-width: 80vw;
@@ -77,7 +70,6 @@ code {
 
 pre {
     border-radius: 0.5em;
-    color: hsl(50, 100%, 80%);
     margin: auto;
     padding: auto 1em auto 1em;
 }

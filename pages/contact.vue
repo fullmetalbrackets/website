@@ -1,7 +1,5 @@
 <template>
     <body>
-    <Header />
-    <Navbar />
         <div class="main">
             <h2>Contact Me, Maybe?</h2>
             <p>
