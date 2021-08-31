@@ -49,7 +49,7 @@ li {
 }
 
 .art-date {
-    margin: 0 auto 3em auto;
+    margin: 0 auto;
     padding: 0 auto;
     font-size: 0.75em;
 }
