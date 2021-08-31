@@ -70,5 +70,5 @@ package = "@netlify/plugin-sitemap"
   [plugins.inputs]
   buildDir = "dist"
   exclude = [
-    './404', './dist/thanks', './dist/admin'
+    './dist/404', './dist/thanks', './dist/admin'
   ]
