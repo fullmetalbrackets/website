@@ -25,8 +25,7 @@ Now click the green **New SSH key** button near the top-right side of the scre
 
 Now use your favorite text editor to open your computer's SSH public key, located in your `~/.ssh` directory ([read this](ssh.html) if you have no idea what I'm talking about) and most likely named `id_rsa.pub`, if you used the default options when you generated the key. In the key file you'll see a jumble of text that looks something like this:
 
-`ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9Tjom/BWDSU GPl+nafzlHDTYW7hdI4yZ5ew18JH4JW9jbhUFrviQzM7xlELEVf4h9lFX5QVkbPppSwg0cda3 Pbv7kOdJ/MTyBlWXFCR+HAo3FXRitBqxiX1nKhXpHAZsMciLq8V6RjsNAQwdsdMFvSlVK/7XA t3FaoJoAsncM1Q9x5+3V0Ww68/eIFmb1zuUFljQJKprrX88XypNDvjYNby6vw/Pb0rwert/En mZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbx`\
-`NrRFi9wrf+M7Q== bob@hostname`
+<a href="https://arieldiaz.codes/img/ssh-rsa.png" target="_blank"><img src="/img/ssh-rsa.png" alt="Screenshot of an SSH key"></a>
 
 Copy all this text to clipboard. Now go back to GitHub, paste the SSH key text in, add a title (I usually put the hostname of the computer this key belongs to) and finally click **Add SSH key**.
 
@@ -42,8 +41,8 @@ Next we have to "commit" the staged files, including a short message describing 
 
 If you get an error and Git asks who you are, then it's probably your first time doing a commit on the computer you're using. Use the following commands to register your username and email address on this computer with Git:
 
-`git config --global user.name "username"`\
-`git config --global user.email "email@example.com"`
+`git config --global user.name "username"`<br>
+`git config --global user.email "email@example.com`
 
 Now we can re-try the commit and it should work. The next and final step is to push to GitHub. First, you will need to have created a new repository on GitHub and copied the URL for it. I will assume you know how to do that and skip it. If the new repo has a README.MD and/or .gitignore, your first command will need to be `git pull` followed by the URL to get those files on your computer. Otherwise, if the new repo is empty, we can go straight to `git push`. However, for the first push to a new remote repo, we'll want to set the remote repo we are pushing to as the upstream master branch. Do so with this command:
 
@@ -51,7 +50,7 @@ Now we can re-try the commit and it should work. The next and final step is to p
 
 Note that if you'd rather use **main** as the primary branch instead of **master**, use the following commands instead of the above, to set both the local branch and the remote one to **main**:
 
-`git push --set-upstream git@github.com:username/repo.git main`\
+`git push --set-upstream git@github.com:username/repo.git main`<br>
 `git branch -M main`
 
 And we're done! Git will automatically keep track of any modified files in the project directory, as well as changes in the remote repository, and you can easily push changes to GitHub or pull from it if you (or a friend?) make changes there. You can use Git and GitHub for all sorts of stuff, not just your coding project. I use it for this website to quickly deploy to Netlify, and also to backup certain configuration files from Windows and Linux. (In private repos, of course.) The best way to learn anything is by using it, so feel free to use Git for as many things as possible, GitHub barely has limits for free users and you can always delete any trash repos you no longer care about.
