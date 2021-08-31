@@ -11,10 +11,28 @@ Access-Control-Allow-Origin = "*"
          Permissions-Policy = "autoplay=(), camera=(), geolocation=(), microphone=()"
 
 [[headers]]
-  for = "*.png"
+  for = "/img/*.png"
   
   [headers.values]
+    Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=604800"
+    Content-Type = "image/png"
+
+[[headers]]
+  for = "/img/*.jpg"
+  
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=604800"
+    Content-Type = "image/jpeg"
+
+[[headers]]
+  for = "/assets/*.ttf"
+  
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=604800"
+    Content-Type = "application/font-ttf"
 
 [[plugins]]
 package = "netlify-plugin-csp-generator"
