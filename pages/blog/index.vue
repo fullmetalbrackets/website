@@ -8,7 +8,7 @@
                 <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
                 <div class="post">
                     <h2>{{ article.title }}</h2>
-                    <p class="art-desc">{{ article.description }}</p>
+                    <p class="art-desc">{{ article.summary }}</p>
                 </div>
                 </NuxtLink>
             </li>
@@ -22,7 +22,7 @@
 export default {
     async asyncData({ $content, params }) {
     const articles = await $content('articles')
-        .only(['title', 'description', 'slug'])
+        .only(['title', 'summary', 'slug'])
         .sortBy('createdAt', 'desc')
         .fetch()
 
