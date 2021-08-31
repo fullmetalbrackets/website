@@ -51,7 +51,7 @@ h2 {
 
 .art-desc {
     padding: 0 auto;
-    margin: 0 auto 4em auto;
+    margin: 0 auto 5em auto;
     margin-left: 0.75em;
     color: var(--skyblue);
 }

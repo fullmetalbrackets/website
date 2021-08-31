@@ -2,7 +2,7 @@
     <body>
         <div class="main">
             <h2>Who Dis?</h2>
-            <p>
+            <p class="blurb">
                 My name is Ariel. Self-taught web developer that enjoys coding and web design. More to come later. For now, feel free to check out my (somewhat bare at the moment) <a href="https://github.com/fullmetalbrackets" target="_blank" rel="noopener">GitHub profile</a> if you'd like.
             </p>
             <br>
@@ -26,6 +26,10 @@
 </script>
 
 <style scoped>
+.blurb {
+    margin-bottom: 2em;
+}
+
 img {
     width: 80px;
     height: auto;
