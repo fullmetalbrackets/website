@@ -20,6 +20,7 @@ Build for production and launch server:
 ```bash
 $ yarn build
 $ yarn generate
+$ yarn start
 ```
 
 The source code is also available to download as a tarball or zip file from the Releases.
