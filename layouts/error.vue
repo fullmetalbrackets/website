@@ -20,7 +20,7 @@
 .err1 {
     font-size: 6rem;
     text-align: center;
-    color: hsl(316, 99%, 53%);
+    color: var(--heading);
 }
 
 .err2 {

@@ -50,7 +50,7 @@ li {
 }
 
 .art-date {
-    color: var(--hotpink);
+    color: var(--heading);
 }
 
 img {

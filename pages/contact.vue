@@ -50,7 +50,7 @@ label {
     padding: 0 auto;
     font-family: 'Baloo 2', 'Courier New', Courier, monospace;
     font-size: 1.5rem;
-    color: hsl(321, 100%, 67%);
+    color: var(--heading);
 }
 
 input {
@@ -89,7 +89,7 @@ button {
     font-size: 1.25em;
     font-family: 'Baloo 2', 'Courier New', Courier, monospace;
     font-weight: 700;
-    color: hsl(30, 100%, 56%);
+    color: var(--link-color);
     text-decoration: none;
     background: transparent;
     border-style: none;
@@ -100,7 +100,7 @@ button {
 }
 
 button:hover {
-    color: hsl(58, 97%, 63%);
+    color: var(--link-hover);
 }
 
 /* Change autocomplete styles in WebKit */

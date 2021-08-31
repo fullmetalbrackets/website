@@ -53,7 +53,7 @@ h2 {
     padding: 0 auto;
     margin: 0 auto 5em auto;
     margin-left: 0.75em;
-    color: var(--skyblue);
+    color: var(--text-color);
 }
 
 @media screen and (max-width: 600px) {

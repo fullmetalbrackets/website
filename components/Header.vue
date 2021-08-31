@@ -31,17 +31,18 @@ h1 {
     height: auto;
     margin: 0 auto;
     padding: 0 auto;
+    color: var(--heading);
 }
 
 a,
 a:active,
 a:visited {
-    color: var(--hotpink);
+    color: var(--heading);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--lightpink);
+    color: var(--heading-hover);
     text-decoration: none;
 }
 
