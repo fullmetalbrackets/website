@@ -61,23 +61,6 @@ img {
     height: auto;
 }
 
-code {
-    margin: auto;
-    padding: auto 1em auto 1em;
-    border-radius: 0.25em;
-    font-size: 0.875em;
-    line-height: 1;
-    max-width: 80vw;
-    height: auto;
-    overflow-x: scroll;
-}
-
-pre {
-    border-radius: 0.5em;
-    margin: auto;
-    padding: auto 1em auto 1em;
-}
-
 .bottom {
     margin-top: 2em;
 }
