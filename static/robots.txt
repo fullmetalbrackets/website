@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /blog
+Allow: /about
+Allow: /projects
+Allow: /contact
+Disallow: /404
+Disallow: /admin
+Disallow: /thanks
+
+Sitemap: https://arieldiaz.codes/sitemap.xml
