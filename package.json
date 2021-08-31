@@ -16,7 +16,8 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.15.1",
     "glob-parent": "^6.0.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "prismjs": "^1.24.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
