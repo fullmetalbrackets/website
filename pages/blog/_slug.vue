@@ -65,7 +65,6 @@ img {
 code {
     background: hsl(210, 30%, 30%);
     margin: auto;
-    margin-left: 2em;
     padding: auto;
     border-radius: 0.5em;
     color: hsl(50, 90%, 70%);
