@@ -50,7 +50,8 @@ li {
 }
 
 .art-date {
-    color: var(--heading);
+    color: var(--heading-hover);
+    font-weight: bold;
 }
 
 img {
