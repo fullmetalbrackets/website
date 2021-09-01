@@ -33,14 +33,14 @@ export default {
             return new Date(date).toLocaleDateString('en', options)
         },
 
+        mounted() {
+            Prism.highlightAll();
+        },
+
         scrollToTop() {
             window.scrollTo(0,0);
         }
-    },
-
-    mounted() {
-        Prism.highlightAll();
-    },
+    }
 }
 </script>
 
