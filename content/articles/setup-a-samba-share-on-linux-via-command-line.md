@@ -8,59 +8,48 @@ summary: >-
 date: 2021-09-01T00:11:21.930Z
 update: 2021-09-01T00:11:21.938Z
 ---
+
 Linux servers make a great NAS - that is, Network Attached Storage. Nowadays most people consider a NAS to mean a Synology or a rack server running TrueNAS or OpenMediaVault. But any machine with directories accessible by others on the same network fulfills the functions of a NAS. Samba is a tried and true, very basic method of sharing a directory with other machines on the network, including Windows PCs. Setting up shares with a GUI is nice, but unnecessary if you're comfortable with the command line. And why wouldn't a developer, or anyone working in tech, want to get as comfortable with the command line as possible? It can be a bit confusing to set up Samba on Linux the first time, so let's cut through the bullshit.
 
 Samba usually comes installed with most Linux distributions. If you do need to install it, use the following commands (which will also auto-install dependencies). On Ubuntu and other Debian-based distributions:
 
-```
-sudo
-sudo apt install -y samba
-```
+`sudo apt install -y samba`
 
 On Arch Linux and Manjaro distributions, you need to use the following command instead:
 
-```yes
-yes | sudo pacman -S samba
-```
+`yes | sudo pacman -S samba`
 
 After installation, you should have a default Samba configuration file in /etc/samba/ directory called smb.conf -- if you do not, we can get an example file:
 
-```
-cd /etc/samba
-wget https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf
-```
+`cd /etc/samba`<br>
+`wget https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf`
 
 First, make a backup copy of smb.conf (just in case), then open it in a text editor:
 
-```
-sudo cp /etc/samba/smb.conf /etc/samba/smd.conf.backup
-sudo nano /etc/samba/smb.conf
-```
+`sudo cp /etc/samba/smb.conf /etc/samba/smd.conf.backup`<br>
+`sudo nano /etc/samba/smb.conf`
 
 There's a whole lot of text in here and it may be intimidating to first time users. Feel free to delete everything (it's mostly informative/explanatory comments that you should read, but probably won't) and only keep the below, which is all you really need in smb.conf to make it work:
 
-```
-[global]
-workgroup = WORKGROUP
-server string = Samba Server
-netbios name = NETBIOS_NAME
-security = user
-ntlm auth = true
+`[global]`<br>
+`workgroup = WORKGROUP`<br>
+`server string = Samba Server`<br>
+`netbios name = NETBIOS_NAME`<br>
+`security = user`<br>
+`ntlm auth = true`<br>
+`encrypt passwords = yes`<br>
+`smb passwd file = /etc/samba/smbpasswd`<br>
+`interface = 127.0.0.0/8 eth0`<br>
 
-encrypt passwords = yes
-smb passwd file = /etc/samba/smbpasswd
-interface = 127.0.0.0/8 eth0
-
-[public]
-path = /path/to/share
-browseable = yes
-writable = yes
-read only = no
-public = yes
-create mask = 0777
-directory mask = 0777
-force user = 0777
-```
+`[public]`<br>
+`path = /path/to/share`<br>
+`browseable = yes`<br>
+`writable = yes`<br>
+`read only = no`<br>
+`public = yes`<br>
+`create mask = 0777`<br>
+`directory mask = 0777`<br>
+`force user = 0777`<br>
 
 Let's explain these parameters briefly:
 
@@ -84,17 +73,13 @@ Now we can add Bob to Samba. You'll be prompted for a password, make sure to cho
 
 Let's start up the services needed, smbd and winbindd, and enable them to auto-run at boot. Also, if you want to access the share from other computers via hostname instead of IP address, we also need to start & enable nmbd. The commands for Ubuntu/Debian are:
 
-```
-sudo systemctl start smbd nmbd winbindd
-sudo systemctl enable smbd nmbd winbindd
-```
+`sudo systemctl start smbd nmbd winbindd`<br>
+`sudo systemctl enable smbd nmbd winbindd`
 
 For Arch/Manjaro, use these commands instead (notice the the services don't have the trailing d in their names):
 
-```
-sudo systemctl start smb nmb winbind
-sudo systemctl enable smb nmb winbind
-```
+`sudo systemctl start smb nmb winbind`<br>
+`sudo systemctl enable smb nmb winbind`
 
 Now you should be able to connect to the shared directory from other computers on your network! On Windows, go to Start Menu > Run and type the following (replacing with your Linux machine's actual IP) and hit Enter:
 
