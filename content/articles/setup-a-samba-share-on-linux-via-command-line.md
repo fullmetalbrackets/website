@@ -9,7 +9,7 @@ date: 2021-09-01T00:11:21.930Z
 update: 2021-09-01T00:11:21.938Z
 ---
 
-Linux servers make a great NAS - that is, Network Attached Storage. Nowadays most people consider a NAS to mean a Synology or a rack server running TrueNAS or OpenMediaVault. But any machine with directories accessible by others on the same network fulfills the functions of a NAS. Samba is a tried and true, very basic method of sharing a directory with other machines on the network, including Windows PCs. Setting up shares with a GUI is nice, but unnecessary if you're comfortable with the command line. And why wouldn't a developer, or anyone working in tech, want to get as comfortable with the command line as possible? It can be a bit confusing to set up Samba on Linux the first time, so let's cut through the bullshit.
+Samba is a tried and true, very basic method of sharing a directory with other machines on the network, including Windows PCs. Setting up shares with a GUI is nice, but unnecessary if you're comfortable with the command line. And why wouldn't a developer, or anyone working in tech, want to get as comfortable with the command line as possible? It can be a bit confusing to set up Samba on Linux the first time, so let's cut through the bullshit.
 
 Samba usually comes installed with most Linux distributions. If you do need to install it, use the following commands (which will also auto-install dependencies). On Ubuntu and other Debian-based distributions:
 

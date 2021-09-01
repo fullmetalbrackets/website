@@ -37,6 +37,18 @@ Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=604800"
     Content-Type = "application/font-ttf"
 
+[[redirects]]
+  from = "https://arieldiaz.netlify.com/*"
+  to = "https://arieldiaz.codes/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://arieldiaz.netlify.app/*"
+  to = "https://arieldiaz.codes/:splat"
+  status = 301
+  force = true
+
 [[plugins]]
 package = "netlify-plugin-csp-generator"
 
