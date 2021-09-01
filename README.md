@@ -15,7 +15,6 @@ $ yarn dev
 ```bash
 $ yarn build
 $ yarn generate
-$ yarn start
 ```
 
 ## License
