@@ -73,9 +73,16 @@ img {
     justify-content: space-between;
 }
 
-.foot a, a:active, a:visited, a:hover {
+.foot a, a:active, a:visited {
     font-weight: bold;
     cursor: pointer;
+    color: var(--heading)
+}
+
+.foot a:hover {
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--heading-hover);
 }
 
 .return {
