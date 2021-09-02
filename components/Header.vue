@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1><NuxtLink to="/">Ariel Diaz</NuxtLink></h1>
+        <NuxtLink to="/">Ariel Diaz</NuxtLink>
     </header>
 </template>
 
@@ -13,25 +13,18 @@
 header {
     width: auto;
     height: auto;
-    margin: 1em;
-    padding: 1em;
+    margin: 0.35em 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-}
-
-h1 {
     font-size: 6rem;
     font-family: 'streamster', 'Segoe Script Bold', 'Segoe Script';
     font-weight: 700;
     font-display: swap;
+    color: var(--heading);
     text-shadow: 0.5rem 0.5rem 0.15rem var(--shadow);
     text-transform: none;
     text-align: center;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    padding: 0 auto;
-    color: var(--heading);
 }
 
 a,
