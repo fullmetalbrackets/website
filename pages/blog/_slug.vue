@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import Prism from "~/plugins/prism";
+
 export default {
     async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
@@ -29,6 +31,10 @@ export default {
         formatDate(date) {
             const options = { year: 'numeric', month: 'long', day: 'numeric' }
             return new Date(date).toLocaleDateString('en', options)
+        },
+
+        mounted() {
+            Prism.highlightAll();
         },
 
         scrollToTop() {
