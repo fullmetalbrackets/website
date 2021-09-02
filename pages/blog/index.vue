@@ -1,16 +1,14 @@
 <template>
-    <body>
-        <main>
-            <ul>
-            <li v-for="article of articles" :key="article.slug">
-                <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-                    <h2>{{ article.title }}</h2>
-                    <p class="art-desc">{{ article.summary }}</p>
-                </NuxtLink>
-            </li>
-            </ul>
-        </main>
-    </body>
+    <main>
+        <ul>
+        <li v-for="article of articles" :key="article.slug">
+            <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+                <h2>{{ article.title }}</h2>
+                <p class="art-desc">{{ article.summary }}</p>
+            </NuxtLink>
+        </li>
+        </ul>
+    </main>
 </template>
 
 

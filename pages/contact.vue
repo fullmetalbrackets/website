@@ -1,30 +1,28 @@
 <template>
-    <body>
-        <main>
-            <h2>Contact Me, Maybe?</h2>
-            <p>
-                Disclaimer: I will <u><strong>never</strong></u> sign you up for a newsletter or mailing list.
-            </p>
-            <section>
-                <form name="contact" action="/thanks" method="post" netlify netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p class="contact-form">
-                    <label for="name">Name:</label> 
-                    </p>
-                    <input type="text" name="name" required/>
-                    <p class="contact-form">
-                    <label for="email">Email:</label>
-                    </p>
-                    <input type="email" name="email" required/>
-                    <p class="contact-form">
-                    <label for="message">Message:</label>
-                    </p>
-                    <textarea name="message" required></textarea>
-                    <button type="submit" value="Send Message">Send Message</button>
-                </form>
-            </section>
-        </main>
-    </body>
+    <main>
+        <h2>Contact Me, Maybe?</h2>
+        <p>
+            Disclaimer: I will <u><strong>never</strong></u> sign you up for a newsletter or mailing list.
+        </p>
+        <section>
+            <form name="contact" action="/thanks" method="post" netlify netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="contact-form">
+                <label for="name">Name:</label> 
+                </p>
+                <input type="text" name="name" required/>
+                <p class="contact-form">
+                <label for="email">Email:</label>
+                </p>
+                <input type="email" name="email" required/>
+                <p class="contact-form">
+                <label for="message">Message:</label>
+                </p>
+                <textarea name="message" required></textarea>
+                <button type="submit" value="Send Message">Send Message</button>
+            </form>
+        </section>
+    </main>
 </template>
 
 <script>

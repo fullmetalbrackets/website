@@ -1,20 +1,18 @@
 <template>
-    <body>
-        <main>
-                <h2>{{ article.title }}</h2>
-                <hr>
-                <p class="art-info">
-                    <span>Posted on:</span>
-                    <span class="art-date">{{ formatDate(article.date) }}</span>
-                </p>
-                <nuxt-content :document="article" />
-                <hr class="bottom">
-                <p class="foot">
-                    <a href="/blog"><i class="return"></i> Return to Blog</a>
-                    <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
-                </p>
-        </main>
-    </body>
+    <main>
+            <h2>{{ article.title }}</h2>
+            <hr>
+            <p class="art-info">
+                <span>Posted on:</span>
+                <span class="art-date">{{ formatDate(article.date) }}</span>
+            </p>
+            <nuxt-content :document="article" />
+            <hr class="bottom">
+            <p class="foot">
+                <a href="/blog"><i class="return"></i> Return to Blog</a>
+                <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
+            </p>
+    </main>
 </template>
 
 <script>
