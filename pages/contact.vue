@@ -1,11 +1,11 @@
 <template>
     <body>
-        <div class="main">
+        <main>
             <h2>Contact Me, Maybe?</h2>
             <p>
                 Disclaimer: I will <u><strong>never</strong></u> sign you up for a newsletter or mailing list.
             </p>
-            <div class="contact-page">
+            <section>
                 <form name="contact" action="/thanks" method="post" netlify netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact" />
                     <p class="contact-form">
@@ -22,8 +22,8 @@
                     <textarea name="message" required></textarea>
                     <button type="submit" value="Send Message">Send Message</button>
                 </form>
-            </div>
-        </div>
+            </section>
+        </main>
     </body>
 </template>
 
@@ -34,7 +34,7 @@
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
 
-.contact-page {
+section {
     margin: 1em auto 0 auto;
     padding: 0 auto;
     width: 50vw;

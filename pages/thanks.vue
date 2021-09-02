@@ -1,10 +1,8 @@
 <template>
-    <div>
-        <div class="main">
-            <h1 class="sent">Message sent!</h1>
-            <p class="thank">Thanks for contacting me! <NuxtLink to="/">Return to the home page</NuxtLink>.</p>
-        </div>
-    </div>
+    <main>
+        <h1 class="sent">Message sent!</h1>
+        <p class="thank">Thanks for contacting me! <NuxtLink to="/">Return to the home page</NuxtLink>.</p>
+    </main>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
     <body>
-        <div class="main">
+        <main>
                 <h2>{{ article.title }}</h2>
                 <hr>
                 <p class="art-info">
@@ -13,7 +13,7 @@
                     <a href="/blog"><i class="return"></i> Return to Blog</a>
                     <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
                 </p>
-        </div>
+        </main>
     </body>
 </template>
 
