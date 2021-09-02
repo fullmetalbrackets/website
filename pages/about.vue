@@ -1,6 +1,6 @@
 <template>
     <body>
-        <div class="main">
+        <main>
             <h2>Who Dis?</h2>
             <p class="blurb">
                 My name is Ariel. Self-taught web developer that enjoys coding and web design. More to come later. For now, feel free to check out my (somewhat bare at the moment) <a href="https://github.com/fullmetalbrackets" target="_blank" rel="noopener">GitHub profile</a> if you'd like.
@@ -17,7 +17,7 @@
                 <a href="https://docs.docker.com/" target="_blank" rel="noopener"><img src="/img/docker.png"></a>
                 <a href="https://tldp.org/" target="_blank" rel="noopener"><img src="/img/linux.png"></a>
             </p>
-        </div>
+        </main>
     </body>
 </template>
 

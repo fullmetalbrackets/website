@@ -1,5 +1,5 @@
 <template>
-    <div class="nav">
+    <nav>
         <div class="nav-item">
             <NuxtLink to="/about">About</NuxtLink>
         </div>
@@ -12,11 +12,11 @@
         <div class="nav-item">
             <NuxtLink to="/contact">Contact</NuxtLink>
         </div>
-    </div>
+    </nav>
 </template>
 
 <style scoped>
-.nav {
+nav {
     display: flex;
     flex-direction: row;
     width: auto;

@@ -1,6 +1,6 @@
 <template>
     <body>
-        <div class="main">
+        <main>
                 <h2>{{ article.title }}</h2>
                 <hr>
                 <p class="art-info">
@@ -13,7 +13,7 @@
                     <a href="/blog"><i class="return"></i> Return to Blog</a>
                     <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
                 </p>
-        </div>
+        </main>
     </body>
 </template>
 
@@ -56,7 +56,8 @@ li {
 }
 
 .art-date {
-    color: var(--heading);
+    color: var(--heading-hover);
+    font-weight: bold;
 }
 
 img {
@@ -78,9 +79,16 @@ img {
     justify-content: space-between;
 }
 
-.foot a, a:active, a:visited, a:hover {
+.foot a, a:active, a:visited {
     font-weight: bold;
     cursor: pointer;
+    color: var(--heading)
+}
+
+.foot a:hover {
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--heading-hover);
 }
 
 .return {
