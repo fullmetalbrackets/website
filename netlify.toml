@@ -58,7 +58,7 @@ package = "netlify-plugin-csp-generator"
 
   [plugins.inputs.policies]
     defaultSrc = "'none'"
-    scriptSrc = "'self' 'unsafe-inline' *.cloudfront.net *.gstatic.com *.googleapis.com cdn.jsdelivr.net unpkg.com *.netlifystatus.com"
+    scriptSrc = "'self' 'unsafe-inline' 'unsafe-eval' *.cloudfront.net cdn.jsdelivr.net unpkg.com *.netlifystatus.com"
     styleSrc = "'self' 'unsafe-inline' *.cloudfront.net *.gstatic.com *.googleapis.com cdn.jsdelivr.net unpkg.com *.netlifystatus.com"
     fontSrc = "'self' 'unsafe-inline' *.gstatic.com *.googleapis.com *.cloudfront.net"
     frameSrc = "'self' *.cloudfront.net"
