@@ -57,6 +57,12 @@ a:hover {
   text-decoration: none;
 }
 
+code {
+  background: #263e52;
+  color: #f8f8f2;
+  padding: 0.125em 0.5em;
+}
+
 h2 {
   color: var(--heading);
   font-weight: 600;
