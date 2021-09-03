@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+:root {
+  --text-color: hsl(201, 100%, 85%);
+  --heading: hsl(316, 99%, 53%);
+  --heading-hover: hsl(321, 100%, 67%);
+  --link-color: hsl(30, 100%, 56%);
+  --link-hover: hsl(58, 97%, 63%);
+  --shadow: hsl(237, 44%, 10%);
+  font-size: 0.925rem;
+  font-family: 'Fira Sans', 'Courier New', Courier, monospace;
+  color: var(--text-color);
+  background: hsl(237, 44%, 10%);
+  background: linear-gradient(180deg, hsl(237, 44%, 10%) 85%, transparent 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  border-style: none;
+  border-radius: 1rem;
+  margin: 0.5em 5em;
+  padding: 2.75em;
+  height: auto;
+  width: auto;
+  letter-spacing: -0.0125em;
+  line-height: 1.125;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a,
+a:active,
+a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+li {
+  margin: 0.25em;
+}
+
+h2 {
+  color: var(--heading);
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.35em;
+  margin: 0 auto;
+  padding: 0 auto;
+  letter-spacing: -0.0125em;
+}
+
+h3 {
+  margin: 0 auto;
+  margin-top: 2.5em;
+  padding: 0 auto;
+  line-height: 1;
+  font-size: 1.15em;
+  color: var(--heading);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background: hsl(182, 52%, 70%);
+    background: linear-gradient(
+      180deg,
+      hsl(182, 52%, 70%) 85%,
+      transparent 100%
+    );
+    --text-color: hsl(0, 0%, 25%);
+    --link-color: hsl(228, 97%, 70%);
+    --link-hover: hsl(228, 100%, 80%);
+    --heading: hsl(282, 97%, 59%);
+    --heading-hover: hsl(273, 94%, 65%);
+    --shadow: hsl(0, 0%, 60%);
+  }
+}
