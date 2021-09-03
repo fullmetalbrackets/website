@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Prism from "~/plugins/prism";
+import Prism from "~/plugins/prismjs/prism";
 import 'prism/themes/prism-lucario.css';
 
 export default {
