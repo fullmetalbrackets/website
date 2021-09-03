@@ -18,7 +18,7 @@
 <script>
 import Prism from "~/plugins/prism/prism";
 import '~/plugins/prism/themes/prism-okaidia.css';
-import '~/plugins/prism/highlight-keywords/prism-highlight-keywords.js';
+import '~/plugins/prism/plugins/highlight-keywords/prism-highlight-keywords.js';
 
 export default {
     async asyncData({ $content, params }) {
