@@ -16,8 +16,9 @@
 </template>
 
 <script>
-import Prism from "~/plugins/prismjs/prism";
-import '~/plugins/prismjs/themes/prism-lucario.css';
+import Prism from "~/plugins/prism/prism";
+import '~/plugins/prism/themes/prism-okaidia.css';
+import '~/plugins/prism/highlight-keywords/prism-highlight-keywords.js';
 
 export default {
     async asyncData({ $content, params }) {
