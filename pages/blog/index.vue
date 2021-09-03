@@ -14,53 +14,53 @@
 
 <script>
 export default {
-    async asyncData({ $content, params }) {
+  async asyncData({ $content, params }) {
     const articles = await $content('articles')
-        .only(['title', 'summary', 'slug'])
-        .sortBy('update', 'desc')
-        .fetch()
+      .only(['title', 'summary', 'slug'])
+      .sortBy('update', 'desc')
+      .fetch()
 
     return {
         articles
     }
-    }
+  }
 }
 </script>
 
 <style scoped>
-ul {
+  ul {
     list-style-type: none;
     padding: 0 auto;
     margin: 0 auto;
 }
 
 li {
-    list-style-type: none;
-    padding: 0 auto;
-    margin: 0 auto;
-    margin-top: -2.75em;
-    margin-left: -1.75em;
+  list-style-type: none;
+  padding: 0 auto;
+  margin: 0 auto;
+  margin-top: -2.75em;
+  margin-left: -1.75em;
 }
 
 h2 {
-    padding: 0 auto;
-    margin: 2em auto 0 auto;
+  padding: 0 auto;
+  margin: 2em auto 0 auto;
 }
 
 .art-desc {
-    padding: 0 auto;
-    margin: 0 auto 5em auto;
-    margin-left: 0.75em;
-    color: var(--text-color);
+  padding: 0 auto;
+  margin: 0 auto 5em auto;
+  margin-left: 0.75em;
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 600px) {
-    li {
-        list-style-type: none;
-        padding: 0 auto;
-        margin: 0 auto;
-        margin-top: -2.25em;
-        margin-left: -1.8em;
-    }
+  li {
+    list-style-type: none;
+    padding: 0 auto;
+    margin: 0 auto;
+    margin-top: -2.25em;
+    margin-left: -1.8em;
+  }
 }
 </style>
