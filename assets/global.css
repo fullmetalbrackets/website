@@ -60,7 +60,12 @@ a:hover {
 code {
   background: #263e52;
   color: #f8f8f2;
-  padding: 0.125em 0.5em;
+  padding: 0 0.25em;
+  border-radius: 0.3em;
+}
+
+li {
+  margin: 0.25em;
 }
 
 h2 {
