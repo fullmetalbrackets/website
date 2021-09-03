@@ -17,7 +17,7 @@
 
 <script>
 import Prism from "~/plugins/prismjs/prism";
-import 'prism/themes/prism-lucario.css';
+import '~/plugins/prism/themes/prism-lucario.css';
 
 export default {
     async asyncData({ $content, params }) {
