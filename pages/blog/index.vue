@@ -4,6 +4,7 @@
         <li v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
                 <h2>{{ article.title }}</h2>
+                <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
                 <p class="art-desc">{{ article.summary }}</p>
             </NuxtLink>
         </li>
@@ -14,14 +15,18 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData({ $content }) {
     const articles = await $content('articles')
-      .only(['title', 'summary', 'slug'])
       .sortBy('date', 'desc')
       .fetch()
-
     return {
         articles
+    }
+  },
+  methods: {
+    formatDate(date) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' }
+        return new Date(date).toLocaleDateString('en', options)
     }
   }
 }
@@ -47,10 +52,15 @@ h2 {
   margin: 2em auto 0 auto;
 }
 
+.art-date {
+  padding: 0 auto;
+  margin: 0 auto 0 0.75em;
+  color: var(--blog-date);
+}
+
 .art-desc {
   padding: 0 auto;
-  margin: 0 auto 5em auto;
-  margin-left: 0.75em;
+  margin: 0 auto 5em 0.75em;
   color: var(--text-color);
 }
 
