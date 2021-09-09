@@ -135,7 +135,12 @@ Sometimes git will not undo a merge with <b>--abort</b>, usually because there w
 <br>
 Delete a LOCAL branch. This does NOT affect remote branches!
 
-- `git checkout -D branch-name`
+- `git branch -d branch-name`
+
+<br>
+Sometimes git will refuse to delete a branch, like if it has commits that the main branch does not. Force deletion with <b>-D</b>
+
+- `git branch -D branch-name` (capital D instead of lowercase d)
 
 <br>
 Delete a REMOTE branch. Here we don't use <b>git branch</b> but instead <b>git push</b> with added options.
