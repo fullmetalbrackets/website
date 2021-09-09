@@ -54,6 +54,7 @@ main {
   margin: 0.5em calc(2em + 4vw);
   padding: 2.75em;
   background: hsl(237, 44%, 10%);
+  background: linear-gradient(180deg, hsl(237, 44%, 10%) 85%, transparent 100%);
   min-height: 60vh;
   height: auto;
   width: auto;
