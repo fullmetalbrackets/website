@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Prism from "~/plugins/prism.js";
+import Prism from "~/plugins/prism"
 
 export default {
   async asyncData({ $content, params }) {
