@@ -22,7 +22,7 @@
 
 .nav {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
-  font-size: 1.75em;
+  font-size: calc(1em + 1.5vw);
   text-shadow: 0.125rem 0.125rem 0.15rem var(--shadow);
   margin: 0 1rem;
   padding: 0;
