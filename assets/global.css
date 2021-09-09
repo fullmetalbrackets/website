@@ -153,9 +153,11 @@ code {
 }
 
 @media screen and (max-width: 600px) {
+  :root {
+    font-size: 0.95rem;
+  }
   main {
     margin: 0.5em auto;
     padding: 1em;
-    font-size: 1.35em;
   }
 }
