@@ -86,15 +86,16 @@ code {
   font-family: 'Fira Code', 'Courier New', Courier, monospace;
   font-size: 0.875em;
   padding: 0 5px;
+  margin: 2.5px 0;
   border-radius: 0.25em;
 }
 
 .blog-article ul {
-  list-style: none; /* Remove default bullets */
+  list-style: none;
 }
 
 .blog-article ul li::before {
-  content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  content: '\2022';
   color: var(--heading);
   font-weight: bold;
   display: inline-block;
