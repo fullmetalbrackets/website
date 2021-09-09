@@ -100,11 +100,7 @@ code {
   font-weight: bold;
   display: inline-block;
   width: 1em;
-  margin-left: -1em;
-}
-
-li {
-  margin: 0.25em;
+  margin: 0.25em 0.25em 0.25em -1em;
 }
 
 @media (prefers-color-scheme: light) {
