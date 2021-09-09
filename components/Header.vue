@@ -19,10 +19,6 @@
   height: auto;
 }
 
-.logo a:focus, a:hover {
-  color: var(--heading-hover);
-}
-
 .nav {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
   font-size: 1.75em;

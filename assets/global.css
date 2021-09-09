@@ -8,13 +8,13 @@
 :root {
   --text-color: hsl(201, 100%, 85%);
   --heading: hsl(316, 99%, 53%);
-  --heading-hover: hsl(321, 100%, 67%);
   --code-text: hsl(60, 100%, 80%);
-  --code-bg: hsl(260, 80%, 20%);
+  --code-bg: hsl(234, 65%, 25%);
   --link-color: hsl(30, 100%, 56%);
   --link-hover: hsl(58, 97%, 63%);
   --blog-date: hsl(314, 90%, 75%);
   --shadow: hsl(237, 44%, 10%);
+  --line-color: hsl(234, 65%, 25%);
   font-size: 1rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text-color);
@@ -137,12 +137,13 @@ code {
     --code-bg: hsl(216, 35%, 40%);
     --heading: hsl(282, 97%, 59%);
     --heading-hover: hsl(273, 94%, 65%);
-    --blog-date: hsl(228, 97%, 70%);
-    --other-color: hsl(228, 100%, 80%);
+    --blog-date: hsl(230, 100%, 66%);
+    --line-color: hsl(228, 97%, 70%);
     --shadow: hsl(0, 0%, 25%);
   }
+
   main {
-    background: hsl(182, 52%, 70%);
+    background: hsl(191, 56%, 61%);
   }
 }
 
