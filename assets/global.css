@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Fira+Code:wght@400&family=Fira+Sans&display=swap');
 
+@font-face {
+  font-family: 'streamster';
+  src: url(~/assets/streamster.ttf) format('truetype');
+}
+
 :root {
   --text-color: hsl(201, 100%, 85%);
   --heading: hsl(316, 99%, 53%);
@@ -31,10 +36,22 @@
   display: none;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  justify-items: stretch;
+  align-items: center;
+  height: auto;
+  width: auto;
+  margin: 1em calc(4em + 4vw);
+  padding: 0;
+  line-height: 1.25;
+}
+
 main {
   border-style: none;
   border-radius: 1rem;
-  margin: 0.5em 5em;
+  margin: 0.5em calc(2em + 4vw);
   padding: 2.75em;
   background: hsl(237, 44%, 10%);
   min-height: 60vh;
@@ -129,35 +146,22 @@ code {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  main {
-    margin: 0.5em 2em;
-  }
-}
-
 @media screen and (max-width: 1080px) {
   main {
     margin: 0.5em 1em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 1.1em;
-  }
-  main {
-    margin: 0.5em auto;
     padding: 1em;
     font-size: 1.35em;
   }
 }
 
-@media screen and (max-width: 600px) {
-  :root {
-    font-size: 0.95rem;
-  }
+@media screen and (max-width: 768px) {
   main {
-    margin: 0.5em auto;
-    padding: 1em;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin: auto;
   }
 }
