@@ -15,6 +15,7 @@
   font-family: 'streamster';
   font-size: 5rem;
   color: var(--heading);
+  text-shadow: 0.25rem 0.25rem 0.15rem var(--shadow);
   width: auto;
   height: auto;
 }
