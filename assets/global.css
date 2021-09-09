@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Fira+Code:wght@400&family=Fira+Sans&display=swap');
 
 :root {
   --text-color: hsl(201, 100%, 85%);
   --heading: hsl(316, 99%, 53%);
   --heading-hover: hsl(321, 100%, 67%);
+  --code-text: hsl(60, 100%, 80%);
+  --code-bg: hsl(260, 80%, 20%);
   --link-color: hsl(30, 100%, 56%);
   --link-hover: hsl(58, 97%, 63%);
   --shadow: hsl(237, 44%, 10%);
-  font-size: 0.925rem;
+  font-size: 1rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text-color);
   line-height: 1;
@@ -59,10 +61,6 @@ a:hover {
   transition-timing-function: linear;
 }
 
-li {
-  margin: 0.25em;
-}
-
 h2 {
   color: var(--heading);
   font-weight: 600;
@@ -80,6 +78,32 @@ h3 {
   line-height: 1;
   font-size: 1.15em;
   color: var(--heading);
+}
+
+code {
+  background: var(--code-bg);
+  color: var(--code-text);
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 0.875em;
+  padding: 0 5px;
+  border-radius: 0.25em;
+}
+
+.blog-article ul {
+  list-style: none; /* Remove default bullets */
+}
+
+.blog-article ul li::before {
+  content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--heading);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+li {
+  margin: 0.25em;
 }
 
 @media (prefers-color-scheme: light) {
