@@ -14,7 +14,7 @@ So you're learning web development, building things locally and only ever seeing
 
 ### Netlify
 
-A super simple and user-friendly host that automagically builds and deploys your site when you push a commit to a remote Git repository where your site or app lives. The free tier is very generous (300 build minutes and 100GB of bandwidth per month) and the only requirement is for your project to be hosted at either GitHub, GitLab or Bitbucket. The only downside to Netlify is that it doesn't host a back-end for you, it's mainly geared towards static sites and JAMstack apps made with Gatsby, Nuxt, Eleventy, etc. However, you can very easily use serverless functions, which are executed on AWS Lambda, although Netlify handles the whole things behind the scenes. Also, Netlify has some really cool plugins and features that solve problems for you -- for example, Netlify CMS, which I use for this blog!
+A super simple and user-friendly host that automagically builds and deploys your site when you push a commit to a remote Git repository where your site or app lives. The free tier is very generous (300 build minutes and 100GB of bandwidth per month) and the only requirement is for your project to be hosted at either GitHub, GitLab or Bitbucket. The only downside to Netlify is that it doesn't host a back-end for you, it's mainly geared towards static sites and JAMstack apps made with Gatsby, Nuxt, Eleventy, etc. However, you can very easily use serverless functions, which are executed on AWS Lambda, although Netlify handles the whole things behind the scenes. Also, Netlify has some really cool plugins and features that solve problems for you -- for example, built-in form validation and Netlify CMS, both of which I use for this blog!
 - Create an account at **netlify.com**
 - In the team overview, click on "**New site from git**"
 - Under "**continuous deployment**", choose a Git provider.
@@ -53,10 +53,11 @@ You can skip the third-party providers and host your site right on GitHub, thoug
 
 ### Surge.sh
 
-Possibly the simplest hosting solution to ever exist. Literally one command in the terminal, answer a few prompts, and your site is up in seconds. The free tier includes unlimited publishing -- that means infinite sites, build minutes, and custom domains under your account. However,  Here's how brain-dead simple using surge.sh is, although you do need to have access to the command line.
+Possibly the simplest hosting solution to ever exist. Literally one command in the terminal, answer a few prompts, and your site is up in seconds. The free tier includes unlimited publishing -- that means infinite sites, build minutes, and custom domains under your account. Here's how brain-dead simple using surge.sh is, although you do need to have access (and be comfortable with) to the command line.
 - `npm install -g surge` or `yarn add --global surge` - This will install surge.sh globally so you can use it from any directory without first installing/adding it locally.
 - `npx surge` or `yarn surge` - If using Surge.sh for the first time (or from a new machine), it will prompt you for an email and password right in the command line, and log you in or create a new account if one does not exist matching the email address you entered. When logged in you'll be prompted to specify the full path to the directory to upload, then a sub-domain of your choice (or go with the randomly generated one), then hit **⏎Enter** and your project gets uploaded. That's it! If you go to the URL you should see your site, it will literally take only seconds to be online.
-- `npx surge ./ --domain example.surge.sh` - Use this shorthand to specify the current working directory (`./`) is the project you want to upload, and pass the `--domain` flag to specify a sub-domain, this case "example."
+- `npx surge ./ --domain example.surge.sh` - Use this shorthand to specify the current working directory (`./`) is the project you want to upload, and pass the `--domain` flag to specify a sub-domain, this case "example."
+
 
 
 
