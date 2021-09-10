@@ -40,7 +40,7 @@ export default {
 li {
   margin: 0 auto;
   padding: 0 auto;
-  line-height: 1;
+  line-height: 1.15;
 }
 
 .art-info {
