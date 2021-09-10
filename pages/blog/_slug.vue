@@ -43,6 +43,10 @@ li {
   line-height: 1.15;
 }
 
+li::marker {
+  color: var(--heading);
+}
+
 .art-info {
   margin-bottom: 3em;
 }
