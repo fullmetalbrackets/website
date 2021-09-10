@@ -58,3 +58,30 @@ package = "@netlify/plugin-sitemap"
   exclude = [
     './dist/404', './dist/thanks', './dist/admin'
   ]
+
+[[plugins]]
+package = "netlify-plugin-csp-generator"
+
+  [plugins.inputs]
+  buildDir = "dist"
+
+  [plugins.inputs.policies]
+    defaultSrc = "'none'"
+    scriptSrc = "'self' 'unsafe-inline' 'unsafe-eval' *.cloudfront.net cdn.jsdelivr.net unpkg.com *.netlifystatus.com"
+    styleSrc = "'self' 'unsafe-inline' *.cloudfront.net *.gstatic.com *.googleapis.com cdn.jsdelivr.net unpkg.com *.netlifystatus.com"
+    fontSrc = "'self' 'unsafe-inline' *.gstatic.com *.googleapis.com *.cloudfront.net"
+    frameSrc = "'self' *.cloudfront.net"
+    imgSrc = "'self' data: blob: *.cloudfront.net"
+    manifestSrc = "'self' *.cloudfront.net *.netlifystatus.com"
+    mediaSrc = "'self' *.cloudfront.net"
+    objectSrc = "'self' *.cloudfront.net *.netlifystatus.com"
+    prefetchSrc = "'self' *.gstatic.com *.googleapis.com *.cloudfront.net cdn.jsdelivr.net unpkg.com *.netlifystatus.com"
+    scriptSrcElem = "'self' 'unsafe-inline' *.cloudfront.net unpkg.com *.netlifystatus.com"
+    scriptSrcAttr = "'self' 'unsafe-inline' *.cloudfront.net cdn.jsdelivr.net unpkg.com *.netlifystatus.com"
+    styleSrcElem = "'self' 'unsafe-inline' *.gstatic.com *.googleapis.com *.cloudfront.net"
+    styleSrcAttr = "'self' 'unsafe-inline' *.gstatic.com *.googleapis.com *.cloudfront.net cdn.jsdelivr.net unpkg.com *.netlifystatus.com"
+    workerSrc = "'self' *.cloudfront.net *.netlifystatus.com"
+    baseUri = "'self' *.cloudfront.net"
+    formAction = "'self' *.cloudfront.net *.netlifystatus.com"
+    frameAncestors = "'self' *.cloudfront.net"
+    connectSrc = "'self' 'unsafe-inline' blob: *.netlifystatus.com"
