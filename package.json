@@ -27,6 +27,6 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "netlify-plugin-csp-generator": "^1.5.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.4.0"
   }
 }
