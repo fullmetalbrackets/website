@@ -14,7 +14,7 @@
 section {
     margin: 0 auto;
     padding: 0 auto;
-    width: 50vw;
+    width: 70vw;
 }
 @media screen and (max-width: 768px) {
     .contact-page {
