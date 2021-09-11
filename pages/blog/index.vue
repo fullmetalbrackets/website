@@ -47,21 +47,17 @@ li {
   margin-left: -1.75em;
 }
 
+li a,
+li a:active,
+li a:visited,
+li a:hover {
+  color: var(--text);
+  text-shadow: none;
+}
+
 h2 {
   padding: 0 auto;
   margin: 2em auto 0 auto;
-}
-
-.art-date {
-  padding: 0 auto;
-  margin: 0 auto 0 0.35em;
-  color: var(--blog-date);
-}
-
-.art-desc {
-  padding: 0 auto;
-  margin: 0 auto 5em 0.75em;
-  color: var(--text-color);
 }
 
 @media screen and (max-width: 600px) {

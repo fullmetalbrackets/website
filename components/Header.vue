@@ -1,6 +1,6 @@
 <template>
   <header>
-    <NuxtLink to="/" class="logo">Ariel Diaz</NuxtLink>
+    <NuxtLink id="logo" to="/">Ariel Diaz</NuxtLink>
     <nav>
       <NuxtLink to="/blog" class="nav nav1">Blog</NuxtLink>
       <NuxtLink to="/about" class="nav nav2">About</NuxtLink>
@@ -11,7 +11,19 @@
 </template>
 
 <style scoped>
-.logo {
+header {
+  display: flex;
+  justify-content: space-between;
+  justify-items: stretch;
+  align-items: center;
+  height: auto;
+  width: auto;
+  margin: 1em calc(4em + 4vw);
+  padding: 0;
+  line-height: 1.25;
+}
+
+#logo {
   font-family: 'streamster';
   font-size: 5rem;
   color: var(--heading);
@@ -43,7 +55,7 @@
     font-size: 1.35em;
   }
 
-  .logo {
+  #logo {
     font-size: 3.425rem;
   }
 }
@@ -104,7 +116,7 @@
     margin-right: -0.5em;
   }
 
-  .logo {
+  #logo {
     font-size: 2.5rem;
   }
 
