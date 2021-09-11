@@ -21,6 +21,7 @@ html {
   --blog-date: hsl(314, 90%, 75%);
   --shadow: hsl(237, 44%, 10%);
   --line-color: hsl(234, 65%, 25%);
+  --form-bg: hsl(0, 0%, 55%);
   font-size: 1rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text);
@@ -137,6 +138,7 @@ li > code {
     --code-bg: hsl(216, 35%, 40%);
     --blog-date: hsl(230, 100%, 66%);
     --line-color: hsl(228, 26%, 45%);
+    --form-bg: hsl(0, 0%, 80%);
     background: var(--bg);
     background: linear-gradient(0deg, hsl(180, 55%, 55%) 35%, var(--bg) 95%);
     background-repeat: no-repeat;
