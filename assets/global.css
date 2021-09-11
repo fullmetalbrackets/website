@@ -5,25 +5,27 @@
   src: url(~/assets/streamster.ttf) format('truetype');
 }
 
+html {
+  overflow-x: hidden;
+}
+
 :root {
-  --text-color: hsl(201, 100%, 85%);
+  --text: hsl(201, 100%, 85%);
+  --bg: hsl(234, 65%, 25%);
+  --main: hsl(237, 44%, 10%);
   --heading: hsl(316, 99%, 53%);
   --code-text: hsl(60, 100%, 80%);
   --code-bg: hsl(234, 65%, 25%);
-  --link-color: hsl(30, 100%, 56%);
-  --link-hover: hsl(58, 97%, 63%);
+  --link: hsl(30, 100%, 56%);
+  --hover: hsl(58, 97%, 63%);
   --blog-date: hsl(314, 90%, 75%);
   --shadow: hsl(237, 44%, 10%);
   --line-color: hsl(234, 65%, 25%);
   font-size: 1rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
-  color: var(--text-color);
+  color: var(--text);
   line-height: 1;
-  background: linear-gradient(
-    0deg,
-    hsl(240, 76%, 13%) 35%,
-    hsl(234, 65%, 25%) 95%
-  );
+  background: linear-gradient(0deg, hsl(240, 76%, 13%) 35%, var(--bg) 95%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-x: hidden;
@@ -36,25 +38,13 @@
   display: none;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  justify-items: stretch;
-  align-items: center;
-  height: auto;
-  width: auto;
-  margin: 1em calc(4em + 4vw);
-  padding: 0;
-  line-height: 1.25;
-}
-
 main {
   border-style: none;
   border-radius: 1rem;
   margin: 0.5em calc(2em + 4vw);
   padding: 2.75em;
-  background: hsl(237, 44%, 10%);
-  background: linear-gradient(180deg, hsl(237, 44%, 10%) 85%, transparent 100%);
+  background: var(--main);
+  background: linear-gradient(180deg, var(--main) 85%, transparent 100%);
   min-height: 60vh;
   height: auto;
   width: auto;
@@ -67,16 +57,28 @@ main {
 a,
 a:active,
 a:visited {
-  color: var(--link-color);
+  color: var(--link);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--link-hover);
+  color: var(--hover);
   text-decoration: none;
   transition-duration: 0.25s;
   transition-property: color, fill, stroke;
   transition-timing-function: linear;
+}
+
+.art-date {
+  padding: 0 auto;
+  margin: 0 auto 0 0.35em;
+  color: var(--blog-date);
+}
+
+.art-desc {
+  padding: 0 auto;
+  margin: 0 auto 5em 0.75em;
+  color: var(--text-color);
 }
 
 h2 {
@@ -125,28 +127,33 @@ li > code {
 
 @media (prefers-color-scheme: light) {
   :root {
-    background: linear-gradient(
-      0deg,
-      hsl(316, 100%, 75%) 35%,
-      hsl(316, 92%, 85%) 95%
-    );
+    --text: hsl(0, 0%, 25%);
+    --main: hsl(316, 100%, 84%);
+    --heading: hsl(263, 95%, 57%);
+    --bg: hsl(180, 96%, 74%);
+    --hover: hsl(30, 100%, 56%);
+    --link: hsl(59, 100%, 50%);
+    --code-text: hsl(55, 75%, 67%);
+    --code-bg: hsl(216, 35%, 40%);
+    --blog-date: hsl(230, 100%, 66%);
+    --line-color: hsl(228, 26%, 45%);
+    background: var(--bg);
+    background: linear-gradient(0deg, hsl(180, 55%, 55%) 35%, var(--bg) 95%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
-    --text-color: hsl(0, 0%, 15%);
-    --link-color: hsl(58, 100%, 68%);
-    --link-hover: hsl(30, 100%, 56%);
-    --code-text: hsl(55, 75%, 67%);
-    --code-bg: hsl(216, 35%, 40%);
-    --heading: hsl(282, 97%, 59%);
-    --heading-hover: hsl(273, 94%, 65%);
-    --blog-date: hsl(230, 100%, 66%);
-    --line-color: hsl(228, 97%, 70%);
-    --shadow: hsl(0, 0%, 25%);
   }
 
   main {
-    background: hsl(191, 56%, 61%);
+    background: var(--main);
+    background: linear-gradient(180deg, var(--main) 85%, transparent 100%);
+  }
+
+  a,
+  a:active,
+  a:visited,
+  a:hover {
+    text-shadow: 0 0 3px var(--shadow);
   }
 }
 
