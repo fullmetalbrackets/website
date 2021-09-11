@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Fira+Code:wght@400&family=Fira+Sans&display=swap');
 
+@font-face {
+  font-family: 'streamster';
+  src: url(~/assets/streamster.ttf) format('truetype');
+}
+
 :root {
   --text-color: hsl(201, 100%, 85%);
   --heading: hsl(316, 99%, 53%);
-  --heading-hover: hsl(321, 100%, 67%);
   --code-text: hsl(60, 100%, 80%);
-  --code-bg: hsl(260, 80%, 20%);
+  --code-bg: hsl(234, 65%, 25%);
   --link-color: hsl(30, 100%, 56%);
   --link-hover: hsl(58, 97%, 63%);
   --blog-date: hsl(314, 90%, 75%);
   --shadow: hsl(237, 44%, 10%);
+  --line-color: hsl(234, 65%, 25%);
   font-size: 1rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text-color);
@@ -31,12 +36,25 @@
   display: none;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  justify-items: stretch;
+  align-items: center;
+  height: auto;
+  width: auto;
+  margin: 1em calc(4em + 4vw);
+  padding: 0;
+  line-height: 1.25;
+}
+
 main {
   border-style: none;
   border-radius: 1rem;
-  margin: 0.5em 5em;
+  margin: 0.5em calc(2em + 4vw);
   padding: 2.75em;
   background: hsl(237, 44%, 10%);
+  background: linear-gradient(180deg, hsl(237, 44%, 10%) 85%, transparent 100%);
   min-height: 60vh;
   height: auto;
   width: auto;
@@ -122,44 +140,32 @@ li > code {
     --code-bg: hsl(216, 35%, 40%);
     --heading: hsl(282, 97%, 59%);
     --heading-hover: hsl(273, 94%, 65%);
-    --blog-date: hsl(228, 97%, 70%);
-    --other-color: hsl(228, 100%, 80%);
+    --blog-date: hsl(230, 100%, 66%);
+    --line-color: hsl(228, 97%, 70%);
     --shadow: hsl(0, 0%, 25%);
   }
-  main {
-    background: hsl(182, 52%, 70%);
-  }
-}
 
-@media screen and (max-width: 1200px) {
   main {
-    margin: 0.5em 2em;
+    background: hsl(191, 56%, 61%);
   }
 }
 
 @media screen and (max-width: 1080px) {
   main {
     margin: 0.5em 1em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 1.1em;
-  }
-  main {
-    margin: 0.5em auto;
     padding: 1em;
     font-size: 1.35em;
   }
 }
 
-@media screen and (max-width: 600px) {
-  :root {
-    font-size: 0.95rem;
-  }
+@media screen and (max-width: 768px) {
   main {
-    margin: 0.5em auto;
-    padding: 1em;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin: auto;
   }
 }

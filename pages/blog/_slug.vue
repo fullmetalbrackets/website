@@ -37,6 +37,10 @@ export default {
 </script>
 
 <style scoped>
+hr {
+  border: 0.25px solid var(--line-color);
+}
+
 li {
   margin: 0 auto;
   padding: 0 auto;

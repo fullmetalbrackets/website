@@ -54,7 +54,7 @@ h2 {
 
 .art-date {
   padding: 0 auto;
-  margin: 0 auto 0 0.75em;
+  margin: 0 auto 0 0.35em;
   color: var(--blog-date);
 }
 

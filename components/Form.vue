@@ -22,6 +22,7 @@
     margin: 0 auto;
     padding: 0.125em auto;
 }
+
 label {
     margin: 0 auto;
     padding: 0 auto;
@@ -29,6 +30,7 @@ label {
     font-size: 1.5rem;
     color: var(--heading);
 }
+
 input {
     line-height: 1;
     font-size: 1rem;
@@ -43,6 +45,7 @@ input {
     box-sizing: border-box;
     font-family: 'Fira Sans', 'Courier New', Courier, monospace;
 }
+
 textarea {
     line-height: 1;
     font-size: 1rem;
@@ -59,6 +62,7 @@ textarea {
     resize: vertical;
     min-height: 8vh;
 }
+
 button {
     font-size: 1.25em;
     font-family: 'Baloo 2', 'Courier New', Courier, monospace;
@@ -72,9 +76,15 @@ button {
     padding: 0 auto;
     line-height: 1;
 }
+
 button:hover {
     color: var(--link-hover);
 }
+
+button:hover {
+    color: var(--link-hover);
+}
+
 /* Change autocomplete styles in WebKit */
 :-webkit-autofill,
 :-webkit-autofill:hover,
