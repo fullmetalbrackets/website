@@ -1,5 +1,5 @@
 <template>
-    <form name="contact" action="/thanks" method="post" netlify netlify-honeypot="bot-field">
+    <form name="contact" action="/thanks" method="post" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
         <p class="contact-form">
             <label for="name">Name:</label>
@@ -75,6 +75,10 @@ button {
     margin: -1em auto;
     padding: 0 auto;
     line-height: 1;
+}
+
+button:hover {
+    color: var(--link-hover);
 }
 
 button:hover {

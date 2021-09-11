@@ -1,4 +1,4 @@
-  
+
 [[headers]]
 for = "/*"
 
@@ -13,7 +13,7 @@ Access-Control-Allow-Origin = "*"
 
 [[headers]]
   for = "/img/*.png"
-  
+
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Referrer-Policy = "strict-origin-when-cross-origin"
@@ -22,7 +22,7 @@ Access-Control-Allow-Origin = "*"
 
 [[headers]]
   for = "/img/*.jpg"
-  
+
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Referrer-Policy = "strict-origin-when-cross-origin"
@@ -31,7 +31,7 @@ Access-Control-Allow-Origin = "*"
 
 [[headers]]
   for = "/assets/*.ttf"
-  
+
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Referrer-Policy = "strict-origin-when-cross-origin"
@@ -49,6 +49,15 @@ Access-Control-Allow-Origin = "*"
   to = "https://arieldiaz.codes/:splat"
   status = 301
   force = true
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = "dist"
+  exclude = [
+    './dist/404', './dist/thanks', './dist/admin'
+  ]
 
 [[plugins]]
 package = "netlify-plugin-csp-generator"
@@ -76,12 +85,3 @@ package = "netlify-plugin-csp-generator"
     formAction = "'self' *.cloudfront.net *.netlifystatus.com"
     frameAncestors = "'self' *.cloudfront.net"
     connectSrc = "'self' 'unsafe-inline' blob: *.netlifystatus.com"
-
-[[plugins]]
-package = "@netlify/plugin-sitemap"
-
-  [plugins.inputs]
-  buildDir = "dist"
-  exclude = [
-    './dist/404', './dist/thanks', './dist/admin'
-  ]

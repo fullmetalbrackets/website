@@ -98,27 +98,29 @@ h3 {
   color: var(--heading);
 }
 
+pre {
+  padding: 0.25em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+pre,
 code {
   background: var(--code-bg);
   color: var(--code-text);
   font-family: 'Fira Code', 'Courier New', Courier, monospace;
-  font-size: 0.875em;
-  padding: 0 5px;
-  margin: 2.5px 0;
+  font-size: 0.925em;
   border-radius: 0.25em;
+  padding: auto;
+  height: auto;
+  width: auto;
+  white-space: pre-wrap;
 }
 
-.blog-article ul {
-  list-style: none;
-}
-
-.blog-article ul li::before {
-  content: '\2022';
-  color: var(--heading);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin: 0.25em 0.25em 0.25em -1em;
+p > code,
+li > code {
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 @media (prefers-color-scheme: light) {
