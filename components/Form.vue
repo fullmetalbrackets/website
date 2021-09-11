@@ -13,7 +13,7 @@
             <label for="message">Message:</label>
         </p>
         <textarea name="message" required></textarea>
-        <button type="submit" value="Send Message">Send Message</button>
+        <button class="button" type="submit" value="Send Message">Send Message</button>
     </form>
 </template>
 
@@ -39,7 +39,7 @@ input {
     padding: 0 auto;
     line-height: 1;
     border-radius: 0.25em;
-    background: #aaa;
+    background: var(--form-bg);
     height: auto;
     width: 100%;
     box-sizing: border-box;
@@ -54,7 +54,7 @@ textarea {
     padding: 0 auto;
     line-height: 1;
     border-radius: 0.25em;
-    background: #aaa;
+    background: var(--form-bg);
     height: auto;
     width: 100%;
     box-sizing: border-box;
@@ -67,30 +67,30 @@ button {
     font-size: 1.25em;
     font-family: 'Baloo 2', 'Courier New', Courier, monospace;
     font-weight: 700;
-    color: var(--link-color);
-    text-decoration: none;
     background: transparent;
     border-style: none;
     cursor: pointer;
     margin: -1em auto;
     padding: 0 auto;
     line-height: 1;
+    color: hsl(30, 100%, 56%);
 }
 
 button:hover {
-    color: var(--link-hover);
+  color: hsl(59, 100%, 50%);
+  text-decoration: none;
+  transition-duration: 0.25s;
+  transition-property: color, fill, stroke;
+  transition-timing-function: linear;
 }
 
-button:hover {
-    color: var(--link-hover);
-}
 
 /* Change autocomplete styles in WebKit */
 :-webkit-autofill,
 :-webkit-autofill:hover,
 :-webkit-autofill:focus {
-    box-shadow: 0 0 0px 0px #aaa inset;
-    -webkit-box-shadow: 0 0 0px 0px #aaa inset;
+    box-shadow: 0 0 0px 0px var(--form-bg) inset;
+    -webkit-box-shadow: 0 0 0px 0px var(--form-bg) inset;
     transition: background-color 5000s ease-in-out 0s;
 }
 </style>
