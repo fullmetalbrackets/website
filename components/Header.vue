@@ -44,6 +44,12 @@ header {
   margin-right: 0;
 }
 
+@media screen and (prefers-color-scheme: light) {
+  #logo {
+    text-shadow: 0.25rem 0.25rem 0.15rem hsl(0, 0%, 40%);
+  }
+}
+
 @media screen and (max-width: 1080px) {
   header {
     margin: 1em 3em;
@@ -118,6 +124,7 @@ header {
 
   #logo {
     font-size: 2.5rem;
+    text-shadow: 1.5px 1.5px 1.5px var(--shadow);
   }
 
   .nav {
