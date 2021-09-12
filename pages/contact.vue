@@ -6,7 +6,7 @@
     </p>
     <section>
         <form name="contact" action="/thanks" method="post" netlify netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="contact" netlify />
           <p class="contact-form">
               <label for="name">Name:</label>
           </p>
