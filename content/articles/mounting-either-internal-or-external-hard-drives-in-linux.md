@@ -1,8 +1,8 @@
 ---
 title: Mounting (either internal or external) hard drives in Linux
 summary: When using Linux headless, such as via SSH or with no desktop environment, accessing a newly installed hard drive (not just external USB drives, but additional internal HDDs too) is not obvious, and most people end up having to Google it. I know I did. So let's have a quick and dirty guide on how. First, how do we access a newly added hard drive? In Windows, it auto-mounts and shows up in file explorer (most Linux desktop environments do too, or at least have the option to), but how does it work over command line with no GUI?
-date: 2021-09-09T04:23:06.251Z
-update: 2021-09-09T04:23:06.267Z
+date: 2021-09-13
+update: ''
 ---
 
 For purposes of this explanation, let's assume you have a Linux server you just installed a new internal hard drive in. (The process is nearly identical for external drives.) This server has no desktop environment, so we're using only the command line. In Linux, all devices connected to the computer, including hard drives, are located in the root **/dev** directory. Each hard drive, whether internal or external, are given their own sub-directory within it. If your hard drives use SCSI (and they likely do if built in the last decade) then your boot drive will be **/sda**. On the off chance you're still using IDE hard drives, the master drive will be **/hda**, and the slave drive will be **/hdb**.
