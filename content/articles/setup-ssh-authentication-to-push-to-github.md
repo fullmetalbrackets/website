@@ -5,9 +5,10 @@ summary: Setting up SSH keys and pushing to GitHub without needing to enter a
   deprecating basic username and password authentication, it's past time to get
   this set up if you haven't already. It's pretty simple and only takes a few
   minutes, here's the quick and dirty instructions.
-date: 2021-09-09T04:23:06.251Z
-update: 2021-09-09T04:23:06.267Z
+date: 2021-09-09
+update: ''
 ---
+
 First we need to add our computer's SSH public key to GitHub. Login to your GitHub account, click on your profile icon in the top-right corner, then click on **Settings**.
 
 <a href="https://arieldiaz.codes/img/gh1.png" target="_blank"><img src="/img/gh1.png" alt="Screenshot of GitHub with Settings selected from dropdown menu"></a>

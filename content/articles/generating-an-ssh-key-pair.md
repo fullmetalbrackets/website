@@ -1,7 +1,7 @@
 ---
 title: Generating an SSH key pair
 summary: Secure Shell, a protocol for securely connecting from one computer to another. As a web developer, you will probably end up using SSH a lot, and even if you don't it's a handy skill to have. Let's make SSH even more secure by using encrypted key pairs.
-date: 2021-09-12T02:19:01.916Z
+date: 2021-09-12
 update: ''
 ---
 

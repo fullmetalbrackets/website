@@ -7,8 +7,8 @@ summary: >-
     necessary to view live TV from my cable provider, AT&T, without need for a
     separate set-top box. So here's how to sideload the
     DirecTV Stream app on Sony Bravia TVs without using the Google Play Store.
-date: 2021-08-31T03:10:45.265Z
-update: 2021-08-31T03:10:45.279Z
+date: 2021-08-31
+update: ''
 ---
 
 After some internet sleuthing and poring over many forum threads, the answer finally came from [this thread in the XDA-Developers forum](https://forum.xda-developers.com/t/the-ultimate-at-t-tv-and-fire-tv-apk-repository.3854154/), where packages for the different devices are gathered. I'll be giving instructions specifically for sideloading (without Google Play Store) the DirecTV Stream app on a Sony Bravia TV. Here's the gist:
