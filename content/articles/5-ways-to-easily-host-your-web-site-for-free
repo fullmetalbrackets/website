@@ -1,23 +1,25 @@
 ---
-title: 4 ways to easily host your web site or app online for free
+title: 5 ways to easily host your web site for free
 summary: So you're learning web development, building things locally and only
   ever seeing your site or app when you use "npm run dev" (or "yarn dev") on
   your computer. But how do you get this thing online so you can make sure it
   works on the interwebs? How do you learn headers, content-security-policy and
   CORS without having a site hosted online to work with? And how to do it FOR
-  FREE? Here are the four most user-friendly and easy-to-setup hosting
-  providers, in my humble opinion.
-date: 2021-09-10T04:22:01.522Z
-update: 2021-09-12T04:59:01.540Z
+  FREE? Here are the five most user-friendly and easy-to-setup hosting
+  providers, in my experience and opinion.
+date: 2021-09-13
+update: ''
 ---
 
-So you're learning web development, building things locally and only ever seeing your site or app when you use "npm run dev" (or "yarn dev") on your computer. But how do you get this thing online so you can make sure it works on the interwebs? How do you learn headers, content-security-policy and CORS without having a site hosted online to work with? And how to do it FOR FREE? Here are the four most user-friendly and easy-to-setup hosting providers, in my humble opinion.
+So you're learning web development, building things locally and only ever seeing your site or app when you use "npm run dev" (or "yarn dev") on your computer. But how do you get this thing online so you can make sure it works on the interwebs? How do you learn headers, content-security-policy and CORS without having a site hosted online to work with? And how to do it FOR FREE? Here are the five most user-friendly and easy-to-setup hosting providers, in my experience and opinion.
 
 ### Netlify
 
-A super simple and user-friendly host that automagically builds and deploys your site when you push a commit to a remote Git repository where your site or app lives. The free tier is very generous (300 build minutes and 100GB of bandwidth per month) and the only requirement is for your project to be hosted at either GitHub, GitLab or Bitbucket. The only downside to Netlify is that it doesn't host a back-end for you, it's mainly geared towards static sites and JAMstack apps made with static site generators like Gatsby, Nuxt, Eleventy, etc. However, you can very easily use serverless functions, which are executed on AWS Lambda, although Netlify handles the whole things behind the scenes. Also, Netlify has some really cool plugins and features that solve problems for you -- for example, built-in form validation and Netlify CMS, both of which I use for this site.
+A super simple and user-friendly host that automagically builds and deploys your site when you push a commit to a remote Git repository where your site or app lives. The free tier is very generous (300 build minutes and 100GB of bandwidth per month) and the only requirement is for your project to be hosted at either GitHub, GitLab or Bitbucket. The only downside to Netlify is that it doesn't host a back-end for you, it's mainly geared towards static sites and JAMstack apps made with static site generators like Gatsby, Nuxt, Eleventy, etc. However, you can very easily use serverless functions, which are executed on AWS Lambda, although Netlify handles the whole things behind the scenes. Also, Netlify has some really cool plugins and features that solve problems for you, such as built-in form validation and Netlify CMS. A cool feature Netlify has that other choices do not is that you can use a **netlify.toml** file located in your project's root to tweak configurations, plugins, content security policies and more at build time, without needing to go into Netlify's UI before deploying. Optional, but handy.
 
-- Create an account at **netlify.com**
+How to deploy to Netlify:
+
+- Create an account or login at [Netlify](netlify.com).
 - In the team overview, click on "**New site from git**"
 - Under "**continuous deployment**", choose a Git provider.
 - You'll be prompted to login to your Git provider to authorize Netlify. Do so.
@@ -30,7 +32,9 @@ A super simple and user-friendly host that automagically builds and deploys your
 
 Very similar to Netlify, but it has a major feature that Netlify does not -- server-side rendering! This means you can host your Node.js apps and stuff built with Next.js, for example. Another advantage Vercel has over Netlify is that it's free tier is very generous, with seemingly no limit on build minutes or bandwidth (at least not that I've noticed), however you cannot have collaborators on the free tier unlike Netlify. Like Netlify, Vercel auto-deploys from git repos, lets you use serverless functions, and has "branch deploys" for previewing changes before merges or pull requests. Honestly, Vercel is awesome, but I haven't used it much as of yet, though that is already changing as I've been using it for my new projects.
 
-- Create an account at **vercel.com**
+How to deploy to Vercel:
+
+- Create an account or login at [Vercel](https://vercel.com).
 - On your dashboard, click "**New Project**"
 - Under "**import from git repository**" choose a Git provider.
 - You'll be prompted to login to your Git provider and authorize Vercel. Do so, and click "**Import**" on the repository of your project.
@@ -42,11 +46,26 @@ Very similar to Netlify, but it has a major feature that Netlify does not -- ser
 
 You can skip the third-party providers and host your site right on GitHub, though like Netlify will only host static sites, nothing with a back-end like Node.js or PHP. The only limits you really have are that sites served by GitHub pages (and their source repo) may be no larger than 1GB, a soft bandwidth limit of 100GB per month, and a soft limit of 10 builds per hour. What does soft limit mean? Well, apparently your site won't automatically go offline or fail to deploy on new commits past the limits, BUT your builds may be delayed and GitHub will email you with suggestions on how to avoid hitting these limits again. The process for hosting a site is a little weird compared to others, but not difficult at all to grasp.
 
-- Login to your GitHub account, and create a new repository.
+How to deploy to GitHub Pages:
+
+- Create a [GitHub](https://github.com) account or login, and create a new repository.
 - Name the new repository **username.github.io** where "**username**" is your GitHub username, and click "**Create Repository**."
-- You'll have an empty repo now, but GitHub Pages is already set up for it.
+- You'll have an empty repo now, but GitHub Pages is already set up for it automatically.
 - Now either import another repository or push a commit from a local repo.
-- If all goes well (and your site is compatible with GitHub Pages by default, no settings to configure/customize here) then your site will show up shortly at **https://username.github.io**
+- If all goes well (and your site is compatible with GitHub Pages by default, no settings to configure/customize here, except the branch to deploy from) then your site will show up shortly at **https://username.github.io**
+
+### Cloudflare Pages
+
+This is the free hosting option I've used the least, but in my tests it seems like one of the simpler hosts. Like Netlify and Vercel, Cloudflare Pages deploys from a git repo, automatically rebuilding and updating your site/app when you push a commit, and can do "preview deployments" that work the same way as Branch Deploys on the other two. It supports a huge amount of frameworks out of the box and has many more features I haven't even scratched the surface on. However, at the moment Cloudflare Pages only supports deploys from GitHub, and no other git provider.
+
+How to deploy to Cloudflare Pages:
+
+- Create an account at [Cloudflare](https://pages.cloudflare.com).
+- Click on the button that says "**Create a project**".
+- Cloudflare will request you to login to your GitHub account, do so.
+- Choose a repository to associate with your Page, then click "**Begin Setup**".
+- Set up your project name (this will become your sub-domain), production branch, build settings, environmental variables, etc. then click "**Save and Deploy**".
+- After a few minutes, your site will be available at **project-name.dev.pages**
 
 ### Surge.sh
 
@@ -65,4 +84,5 @@ There's many free web hosts I haven't listed here, mostly because I haven't used
 - [Netlify](https://netlify.com) / [documentation](https://docs.netlify.com)
 - [Vercel](https://vercel.com) / [documentation](https://vercel.com/docs)
 - [GitHub Pages](https://pages.github.com) / [documentation](https://docs.github.com/en/pages)
+- [Cloudflare Pages](https://pages.cloudflare.com) / [documentation](https://developers.cloudflare.com/pages)
 - [Surge.sh](https://surge.sh) / [documentation](https://surge.sh/help)
