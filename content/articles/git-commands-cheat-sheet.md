@@ -35,11 +35,6 @@ Set a remote repository (e.g. on Github, Bitbucket, etc.) as the <b>origin</b>, 
 
 - `git remote add origin https://github.com/username/repo.git`
 
-<br>
-You should also sync your local main branch with the remote's main branch by using the <b>-m</b> option.
-
-- `git remote add -m main origin https://github.com/username/repo.git main`
-
 ### Staging and committing files
 
 <br>
@@ -94,15 +89,15 @@ Push to main branch on your default remote.
 - `git push`
 
 <br>
-If didn't previously set a remote origin and synced it's main branch with your local main branch (<code>git remote add origin -u https://github.com/username/repo.git main</code>) then you can just do it with your first push by adding some options.
+The first time you push a commit, you will need to designate an upstream branch (the branch of the remote repo that you will track) or git will bother you about it. If this is your own project, your upstream will probably be the production branch -- i.e. main or master.
 
-- `git push --set-upstream origin https://github.com/username/repo.git main`
+- `git push --set-upstream origin main`
 
 <br>
 To pull and apply changes from remote repos.
 
-- `git pull` - This will pull from origin's main branch as set above.
-- `git pull bitbucket-repo` - If you added more remote repos, this pulls the specified remote instead of origin.
+- `git pull` - This will pull from origin's main branch if it is set as upstream, like above.
+- `git pull bitbucket-repo` - If you added more remote repos, this pulls the specified remote instead of origin, in this case one we set up in a prior example named "bitbucket-repo."
 
 ### Dealing with branches
 
