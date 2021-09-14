@@ -155,8 +155,9 @@ li > code {
   flex-direction: row;
   list-style-type: none;
   background: var(--accent);
+  background: linear-gradient(180deg, var(--accent) 50%, transparent 100%);
   width: 450px;
-  height: 330px;
+  height: 335px;
   margin: auto 1rem;
   padding: 1em;
   border-radius: 1rem;
@@ -182,11 +183,13 @@ li > code {
   padding: 0 auto;
   margin: 0 auto;
   color: var(--blog-date);
+  margin: 0.25em auto;
+  text-align: right;
 }
 
 #desc {
   padding: 0 auto;
-  margin: 0 auto 0 0.25em;
+  margin: 0.25em 0.5em;
   color: var(--text-color);
 }
 
@@ -241,6 +244,7 @@ li > code {
     padding-bottom: 0;
     height: auto;
     width: auto;
+    background: var(--accent);
   }
 
   #recent-posts li:last-child {

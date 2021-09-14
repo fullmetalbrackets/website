@@ -16,8 +16,8 @@
           <li v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
               <h2>{{ article.title }}</h2>
-              <p id="date">Posted on: {{ formatDate(article.date) }}</p>
               <p id="desc">{{ article.summary }}</p>
+              <p id="date">Posted on: {{ formatDate(article.date) }}</p>
             </NuxtLink>
           </li>
         </ul>
