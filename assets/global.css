@@ -236,18 +236,15 @@ li > code {
   }
 
   #recent-posts li {
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1em;
     padding-bottom: 0;
     height: auto;
     width: auto;
   }
 
-  #recent-posts li:first-child {
-    margin-left: 1em;
-  }
-
   #recent-posts li:last-child {
-    margin-right: 1em;
     margin-bottom: 6rem;
   }
 }
