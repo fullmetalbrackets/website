@@ -5,9 +5,8 @@ summary: So you're learning web development, building things locally and only
   your computer. But how do you get this thing online so you can make sure it
   works on the interwebs? How do you learn headers, content-security-policy and
   CORS without having a site hosted online to work with? And how to do it FOR
-  FREE? Here are the five most user-friendly and easy-to-setup hosting
-  providers, in my experience and opinion.
-date: 2021-09-13
+  FREE?
+date: 2021-09-14
 update: ''
 ---
 
