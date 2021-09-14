@@ -11,13 +11,13 @@
       <p>
         Want to see what I've written about lately? Jump right in to my most recent posts below, or <NuxtLink to="/blog">see the full blog</NuxtLink> to read older articles.
       </p>
-      <div>
+      <div id="recent-posts">
         <ul>
           <li v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
               <h2>{{ article.title }}</h2>
-              <p class="date">Posted on: {{ formatDate(article.date) }}</p>
-              <p class="desc">{{ article.summary }}</p>
+              <p id="date">Posted on: {{ formatDate(article.date) }}</p>
+              <p id="desc">{{ article.summary }}</p>
             </NuxtLink>
           </li>
         </ul>
@@ -45,73 +45,3 @@ export default {
 }
 </script>
 
-<style>
-div {
-  font-size: 1rem;
-  margin-bottom: 2.5rem;
-}
-
-ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  background: var(--accent);
-  width: 400px;
-  height: 200px;
-  margin: auto 1rem;
-  padding: 1em;
-  border-radius: .5em;
-}
-
-li:first-child {
-  margin-left: 0;
-}
-
-li:last-child {
-  margin-right: 0;
-}
-
-li a,
-li a:active,
-li a:visited,
-li a:hover {
-  color: var(--text);
-  text-shadow: none;
-}
-
-.recent {
-  margin-top: 5rem;
-}
-
-.date {
-  padding: 0 auto;
-  margin: 0 auto;
-  color: var(--blog-date);
-}
-
-.desc {
-  padding: 0 auto;
-  margin: 0 auto 2.5em 0.25em;
-  color: var(--text-color);
-}
-
-@media screen and (max-width: 900px) {
-  ul {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-  }
-
-  li {
-    margin-bottom: 1em;
-  }
-}
-</style>
