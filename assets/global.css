@@ -12,6 +12,7 @@ html {
 :root {
   --text: hsl(201, 100%, 85%);
   --bg: hsl(234, 65%, 25%);
+  --accent: hsl(240, 76%, 13%);
   --main: hsl(237, 44%, 10%);
   --heading: hsl(316, 99%, 53%);
   --code-text: hsl(60, 100%, 80%);
@@ -26,7 +27,7 @@ html {
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text);
   line-height: 1;
-  background: linear-gradient(0deg, hsl(240, 76%, 13%) 35%, var(--bg) 95%);
+  background: linear-gradient(0deg, var(--accent) 35%, var(--bg) 95%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-x: hidden;
@@ -82,6 +83,7 @@ a:hover {
   color: var(--text-color);
 }
 
+h1,
 h2 {
   color: var(--heading);
   font-weight: 600;
@@ -132,6 +134,7 @@ li > code {
     --main: hsl(316, 100%, 84%);
     --heading: hsl(263, 95%, 57%);
     --bg: hsl(180, 96%, 74%);
+    --accent: hsl(180, 55%, 55%);
     --hover: hsl(30, 100%, 56%);
     --link: hsl(59, 100%, 50%);
     --code-text: hsl(55, 75%, 67%);
@@ -140,7 +143,7 @@ li > code {
     --line-color: hsl(228, 26%, 45%);
     --form-bg: hsl(0, 0%, 80%);
     background: var(--bg);
-    background: linear-gradient(0deg, hsl(180, 55%, 55%) 35%, var(--bg) 95%);
+    background: linear-gradient(0deg, var(--accent) 35%, var(--bg) 95%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
