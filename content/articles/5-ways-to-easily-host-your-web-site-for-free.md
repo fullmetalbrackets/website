@@ -10,7 +10,17 @@ date: 2021-09-14
 update: ''
 ---
 
-So you're learning web development, building things locally and only ever seeing your site or app when you use "npm run dev" (or "yarn dev") on your computer. But how do you get this thing online so you can make sure it works on the interwebs? How do you learn headers, content-security-policy and CORS without having a site hosted online to work with? And how to do it FOR FREE? Here are the five most user-friendly and easy-to-setup hosting providers, in my experience and opinion.
+If you'd like to quickly jump to a specific host instead of reading about all of them, click on it below.
+
+### Table of Contents
+
+1. [Netlify](#netlify)
+2. [Vercel](#vercel)
+3. [GitHub Pages](#github)
+4. [Cloudflare Pages](#cloudflare)
+5. [Surge.sh](#surge)
+
+<div id='netlify'/>
 
 ### Netlify
 
@@ -27,6 +37,8 @@ How to deploy to Netlify:
 - Netlify will begin the process of building your site, if there's no issues with the build then your site will deploy in a minute or two.
 - Be aware: ANY push to the Git repo will force a build & deploy of the site on Netlify, though you can turn off auto-deploys and only deploy manually if you really want to.
 
+<div id='vercel'/>
+
 ### Vercel
 
 Very similar to Netlify, but it has a major feature that Netlify does not -- server-side rendering! This means you can host your Node.js apps and stuff built with Next.js, for example. Another advantage Vercel has over Netlify is that it's free tier is very generous, with seemingly no limit on build minutes or bandwidth (at least not that I've noticed), however you cannot have collaborators on the free tier unlike Netlify. Like Netlify, Vercel auto-deploys from git repos, lets you use serverless functions, and has "branch deploys" for previewing changes before merges or pull requests. Honestly, Vercel is awesome, but I haven't used it much as of yet, though that is already changing as I've been using it for my new projects.
@@ -41,9 +53,11 @@ How to deploy to Vercel:
 - You'll be able to configure project settings, including framework if one is being used for the project (should be auto-detected), build and install commands (the defaults should be fine if the framework is detected correctly), output directory, and environmental variables. When you're done, scroll down and click "**Deploy**."
 - Vercel will begin the process of building your site, if there's no issues with the build then your site will deploy in a minute or two.
 
+<div id='github'/>
+
 ### GitHub Pages
 
-You can skip the third-party providers and host your site right on GitHub, though like Netlify will only host static sites, nothing with a back-end like Node.js or PHP. The only limits you really have are that sites served by GitHub pages (and their source repo) may be no larger than 1GB, a soft bandwidth limit of 100GB per month, and a soft limit of 10 builds per hour. What does soft limit mean? Well, apparently your site won't automatically go offline or fail to deploy on new commits past the limits, BUT your builds may be delayed and GitHub will email you with suggestions on how to avoid hitting these limits again. The process for hosting a site is a little weird compared to others, but not difficult at all to grasp.
+You can skip the third-party providers and host your site right on GitHub, though like Netlify will only host static sites, nothing with a back-end like Node.js or PHP. The only limits you really have are that both your site AND it's source repo may be no larger than 1GB, there is a soft bandwidth limit of 100GB per month, and a soft limit of 10 builds per hour. What does soft limit mean? Well, apparently your site won't automatically go offline or fail to deploy on new commits past the limits, BUT your builds may be delayed and GitHub will email you with suggestions on how to avoid hitting these limits again. The process for hosting a site is a little weird compared to others, but not difficult at all to grasp.
 
 How to deploy to GitHub Pages:
 
@@ -52,6 +66,8 @@ How to deploy to GitHub Pages:
 - You'll have an empty repo now, but GitHub Pages is already set up for it automatically.
 - Now either import another repository or push a commit from a local repo.
 - If all goes well (and your site is compatible with GitHub Pages by default, no settings to configure/customize here, except the branch to deploy from) then your site will show up shortly at **https://username.github.io**
+
+<div id='cloudflare'/>
 
 ### Cloudflare Pages
 
@@ -65,6 +81,8 @@ How to deploy to Cloudflare Pages:
 - Choose a repository to associate with your Page, then click "**Begin Setup**".
 - Set up your project name (this will become your sub-domain), production branch, build settings, environmental variables, etc. then click "**Save and Deploy**".
 - After a few minutes, your site will be available at **project-name.dev.pages**
+
+<div id='surge'/>
 
 ### Surge.sh
 
