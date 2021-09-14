@@ -18,7 +18,8 @@ header {
   align-items: center;
   height: auto;
   width: auto;
-  margin: 1em calc(4em + 4vw);
+  margin: auto calc(4em + 4vw);
+  margin-bottom: 0.5em;
   padding: 0;
   line-height: 1.25;
 }

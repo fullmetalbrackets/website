@@ -43,7 +43,7 @@ html {
 main {
   border-style: none;
   border-radius: 1rem;
-  margin: 0.5em calc(2em + 4vw);
+  margin: auto calc(2em + 4vw);
   padding: 2.75em;
   background: var(--main);
   background: linear-gradient(180deg, var(--main) 85%, transparent 100%);
@@ -131,13 +131,12 @@ li > code {
 /* For blog previews in index */
 
 .recent {
-  margin-top: 2.5em;
+  margin-top: 2em;
 }
 
 #recent-posts {
   box-sizing: border-box;
   font-size: 1rem;
-  margin-bottom: 2.5rem;
 }
 
 #recent-posts ul {
@@ -187,7 +186,7 @@ li > code {
 
 #desc {
   padding: 0 auto;
-  margin: 0 auto 2.5em 0.25em;
+  margin: 0 auto 0 0.25em;
   color: var(--text-color);
 }
 
