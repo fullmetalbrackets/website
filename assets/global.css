@@ -188,7 +188,7 @@ li > code {
   color: var(--text);
   box-sizing: border-box;
   background: var(--accent);
-  background: linear-gradient(180deg, var(--bg) 50%, transparent 100%);
+  background: linear-gradient(180deg, var(--bg) 50%, transparent 90%);
   border-radius: 1rem;
 }
 
