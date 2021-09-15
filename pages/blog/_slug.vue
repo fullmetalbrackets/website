@@ -43,6 +43,7 @@ hr {
 
 li {
   margin: 0 auto;
+  margin-bottom: 1em;
   padding: 0 auto;
   line-height: 1.15;
 }
