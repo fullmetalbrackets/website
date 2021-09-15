@@ -115,4 +115,27 @@ export default {
   margin: 0.25em 0.5em;
   color: var(--text-color);
 }
+
+@media screen and (max-width: 1280px) {
+  #recent-posts ul {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+  }
+
+  #recent-posts li {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    padding-bottom: 0;
+    height: auto;
+    width: auto;
+    background: var(--accent);
+  }
+
+  #recent-posts li:last-child {
+    margin-bottom: 6rem;
+  }
+}
 </style>

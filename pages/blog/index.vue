@@ -80,8 +80,9 @@ li:hover {
     list-style-type: none;
     padding: 0 auto;
     margin: 0 auto;
-    margin-top: -2.25em;
-    margin-left: -1.8em;
+    margin-top: -0.25em;
+    margin-left: -1.85em;
+    margin-bottom: 2em;
   }
 }
 </style>
