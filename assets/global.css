@@ -75,12 +75,18 @@ a:hover {
   padding: 0 auto;
   margin: 0 auto 0 0.35em;
   color: var(--blog-date);
+  text-shadow: none;
 }
 
 .art-desc {
   padding: 0 auto;
-  margin: 0 auto 5em 0.75em;
-  color: var(--text-color);
+  margin: 0 auto 0 0.75em;
+  color: var(--text);
+  text-shadow: none;
+}
+
+.art-title {
+  text-shadow: none;
 }
 
 h1,
@@ -173,10 +179,17 @@ li > code {
 
 #recent-posts li a,
 #recent-posts li a:active,
-#recent-posts li a:visited,
-#recent-posts li a:hover {
+#recent-posts li a:visited {
   color: var(--text);
   text-shadow: none;
+}
+
+#recent-posts li:hover {
+  color: var(--text);
+  box-sizing: border-box;
+  background: var(--accent);
+  background: linear-gradient(180deg, var(--bg) 50%, transparent 100%);
+  border-radius: 1rem;
 }
 
 #date {

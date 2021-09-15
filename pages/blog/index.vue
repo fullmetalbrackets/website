@@ -51,7 +51,7 @@ li {
 }
 
 li:hover {
-  background: var(--accent);
+  background: var(--bg);
 }
 
 @media screen and (max-width: 600px) {
