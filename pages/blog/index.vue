@@ -3,7 +3,7 @@
         <ul>
         <li v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-                <h2>{{ article.title }}</h2>
+                <h2 class="art-title">{{ article.title }}</h2>
                 <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
                 <p class="art-desc">{{ article.summary }}</p>
             </NuxtLink>
@@ -33,31 +33,25 @@ export default {
 </script>
 
 <style scoped>
-  ul {
-    list-style-type: none;
-    padding: 0 auto;
-    margin: 0 auto;
+ul {
+  list-style-type: none;
+  margin: auto;
+  padding: auto;
+  width: auto;
 }
 
 li {
   list-style-type: none;
-  padding: 0 auto;
-  margin: 0 auto;
-  margin-top: -2.75em;
-  margin-left: -1.75em;
+  margin: auto;
+  margin-top: -0.25em;
+  margin-left: -1.85em;
+  margin-bottom: 2em;
+  padding: 10px;
+  border-radius: 0.5em;
 }
 
-li a,
-li a:active,
-li a:visited,
-li a:hover {
-  color: var(--text);
-  text-shadow: none;
-}
-
-h2 {
-  padding: 0 auto;
-  margin: 2em auto 0 auto;
+li:hover {
+  background: var(--accent);
 }
 
 @media screen and (max-width: 600px) {
