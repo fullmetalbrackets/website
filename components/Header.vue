@@ -1,6 +1,6 @@
 <template>
   <header>
-    <NuxtLink id="logo" to="/">Ariel Diaz</NuxtLink>
+    <span id="logo"><NuxtLink to="/">Ariel Diaz</NuxtLink></span>
     <nav>
       <NuxtLink to="/blog" class="nav nav1">Blog</NuxtLink>
       <NuxtLink to="/about" class="nav nav2">About</NuxtLink>
@@ -27,10 +27,17 @@ header {
 #logo {
   font-family: 'streamster';
   font-size: 5rem;
-  color: var(--heading);
   text-shadow: 0.25rem 0.25rem 0.15rem var(--shadow);
   width: auto;
   height: auto;
+}
+
+#logo a, #logo a:active, #logo a:visited {
+  color: var(--heading);
+}
+
+#logo a:hover {
+  color: var(--blog-date);
 }
 
 .nav {
