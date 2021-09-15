@@ -52,6 +52,9 @@ li {
 
 li:hover {
   background: var(--bg);
+  transition-duration: 0.25s;
+  transition-property: background, fill, stroke;
+  transition-timing-function: linear;
 }
 
 @media screen and (max-width: 600px) {
