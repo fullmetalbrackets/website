@@ -71,24 +71,6 @@ a:hover {
   transition-timing-function: linear;
 }
 
-.art-date {
-  padding: 0 auto;
-  margin: 0 auto 0 0.35em;
-  color: var(--blog-date);
-  text-shadow: none;
-}
-
-.art-desc {
-  padding: 0 auto;
-  margin: 0 auto 0 0.75em;
-  color: var(--text);
-  text-shadow: none;
-}
-
-.art-title {
-  text-shadow: none;
-}
-
 h1,
 h2 {
   color: var(--heading);
