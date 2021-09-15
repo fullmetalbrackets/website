@@ -134,8 +134,6 @@ li > code {
   padding-left: 5px;
 }
 
-/* For blog previews in index */
-
 /* detect light or dark mode */
 
 @media (prefers-color-scheme: light) {
