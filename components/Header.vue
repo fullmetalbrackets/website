@@ -27,17 +27,35 @@ header {
 #logo {
   font-family: 'streamster';
   font-size: 5rem;
-  text-shadow: 0.25rem 0.25rem 0.15rem var(--shadow);
+  text-shadow: 0.1rem 0.1rem 0.1rem var(--shadow);
   width: auto;
   height: auto;
 }
 
-#logo a, #logo a:active, #logo a:visited {
+#logo a {
+  display: block;
+	position: relative;
+	padding: 2px 0;
   color: var(--heading);
 }
 
-#logo a:hover {
-  color: var(--blog-date);
+#logo a::after {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: var(--heading);
+	opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
+  transition: opacity 300ms, transform 300ms;
+}
+
+#logo a:hover::after,
+#logo a:focus::after {
+	transform: scale(1);
 }
 
 .nav {
@@ -50,6 +68,30 @@ header {
 
 .nav:last-child {
   margin-right: 0;
+}
+
+nav a {
+  position: relative;
+  padding: 0.25px 0;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--hover);
+	opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
+  transition: opacity 300ms, transform 300ms;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+	transform: scale(1);
 }
 
 @media screen and (prefers-color-scheme: light) {
