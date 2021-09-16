@@ -85,11 +85,11 @@ For Arch/Manjaro, use these commands instead (notice the the services don't have
 
 Now you should be able to connect to the shared directory from other computers on your network! On Windows, go to Start Menu > Run and type the following (replacing with your Linux machine's actual IP) and hit Enter:
 
-[![Screenshot of Windows Run](/img/samba1.png 'screenshot of Windows Run')](https://arieldiaz.codes/img/samba1.png)
+<a href="https://arieldiaz.codes/img/samba1.png" target="_blank"><img src="/img/samba1.png" alt="Screenshot of Windows Run" loading="lazy"></a>
 
 Or you can connect by hostname rather than IP, but remember the nmbd/nmb service must be running:
 
-[![Screenshot of Windows Run](/img/samba2.png 'screenshot of Windows Run')](https://arieldiaz.codes/img/samba2.png)
+<a href="https://arieldiaz.codes/img/samba2.png" target="_blank"><img src="/img/samba2.png" alt="Screenshot of Windows Run" loading="lazy"></a>
 
 Your PC should take a moment to connect and then prompt you for a login. That is the username you use on the Linux machine, and the password you chose when adding that user to Samba earlier. Check the "save my credentials" checkbox to avoid having to enter the login again in the future. You should now have the shared folder open in your Windows PC!
 
