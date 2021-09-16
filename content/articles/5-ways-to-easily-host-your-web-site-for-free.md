@@ -90,7 +90,8 @@ Possibly the simplest hosting solution to ever exist. Literally one command in t
 
 - `npm install -g surge` - This will install surge.sh globally so you can use it from any directory without first installing/adding it locally.
 - `npx surge` - If using Surge.sh for the first time (or from a new machine), it will prompt you for an email and password right in the command line, and log you in or create a new account if one does not exist matching the email address you entered. When logged in you'll be prompted to specify the full path to the directory to upload (it usually defaults to your present working directory), then a provides a randomly generated sub-domain of your choice (though you can specify your own sub-domain), then hit **⏎Enter** and your project gets uploaded. That's it! If you go to the URL you should see your site, it will literally take only seconds to be online.
-- `npx surge --domain https://example.surge.sh` - Pass the **--domain** option plus the URL to skip the sub-domain prompt. Also, if you specifically include **https://** in your URL it will force HTTPS for the site, so that going to `http://example.surge.sh` will auto-redirect to `https://example.surge.sh`.
+- NOTE: If your site is made with a static site generator like Nuxt or Gastby, make sure to first **build** and **generate** commands, then add the `/dist` directory as the one to serve.
+- TIP: `npx surge --domain https://example.surge.sh` - Pass the **--domain** option plus the URL to skip the sub-domain prompt. Also, if you specifically include **https://** in your URL it will force HTTPS for the site, so that going to `http://example.surge.sh` will auto-redirect to `https://example.surge.sh`.
 
 ### Other options
 
