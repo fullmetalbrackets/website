@@ -148,7 +148,7 @@ li > code {
   a:active,
   a:visited,
   a:hover {
-    text-shadow: 0 0 3px var(--shadow);
+    text-shadow: 1px 1px 2px var(--shadow);
   }
 }
 
