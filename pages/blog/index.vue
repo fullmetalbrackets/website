@@ -48,6 +48,7 @@ li {
   margin-bottom: 2em;
   padding: 10px;
   border-radius: 0.5em;
+  background: var(--accent);
 }
 
 li:hover {
