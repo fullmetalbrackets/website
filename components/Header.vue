@@ -2,10 +2,8 @@
   <header>
     <span id="logo"><NuxtLink to="/">Ariel Diaz</NuxtLink></span>
     <nav>
-      <NuxtLink to="/blog" class="nav nav1">Blog</NuxtLink>
-      <NuxtLink to="/about" class="nav nav2">About</NuxtLink>
-      <NuxtLink to="/projects" class="nav nav3">Projects</NuxtLink>
-      <NuxtLink to="/contact" class="nav nav4">Contact</NuxtLink>
+      <div><NuxtLink to="/about" class=".nav2">About</NuxtLink></div>
+      <div id="edge"><NuxtLink to="/blog">Blog</NuxtLink></div>
     </nav>
   </header>
 </template>
@@ -22,6 +20,19 @@ header {
   margin-bottom: 0.5em;
   padding: 0;
   line-height: 1.25;
+}
+
+img {
+  width: 36px;
+  height: auto;
+}
+
+div {
+  margin-left: 1.5em
+}
+
+#edge {
+  margin-right: -0.25em;
 }
 
 #logo {
@@ -58,16 +69,13 @@ header {
 	transform: scale(1);
 }
 
-.nav {
+nav {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
-  font-size: calc(1em + 1.5vw);
+  font-size: calc(1rem + 2.25vw);
   text-shadow: 0.125rem 0.125rem 0.15rem var(--shadow);
-  margin: 0 1rem;
-  padding: 0;
-}
-
-.nav:last-child {
-  margin-right: 0;
+  display: flex;
+  justify-content: space-between;
+  justify-items: right;
 }
 
 nav a {
@@ -120,43 +128,6 @@ nav a:focus::after {
   main {
     margin: auto;
   }
-
-  nav {
-    display: grid;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    margin-right: 0;
-  }
-
-  .nav1 {
-    display: grid;
-    grid-row: 1;
-    grid-column: 1;
-    text-align: center;
-  }
-
-  .nav2 {
-    display: grid;
-    grid-row: 2;
-    grid-column: 1;
-    text-align: center;
-  }
-
-  .nav3 {
-    display: grid;
-    grid-row: 1;
-    grid-column: 2;
-    text-align: center;
-  }
-
-  .nav4 {
-    display: grid;
-    grid-row: 2;
-    grid-column: 2;
-    text-align: center;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -168,33 +139,9 @@ nav a:focus::after {
     margin: auto;
   }
 
-  nav {
-    margin-right: -0.5em;
-  }
-
   #logo {
     font-size: 2.5rem;
     text-shadow: 1.5px 1.5px 1.5px var(--shadow);
-  }
-
-  .nav {
-    justify-content: center;
-    font-size: 1.425rem;
-  }
-
-  .nav1,
-  .nav2 {
-    margin: 0 0.5em 0 0;
-  }
-
-  .nav3,
-  .nav4 {
-    margin: 0 0 0 0.5em;
-  }
-
-  .nav1, .nav3 {
-    margin-top: 0.125em;
-    margin-bottom: 0.5em;
   }
 }
 </style>
