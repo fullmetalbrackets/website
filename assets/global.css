@@ -15,8 +15,8 @@ html {
   --accent: hsl(240, 76%, 13%);
   --main: hsl(237, 44%, 10%);
   --heading: hsl(316, 99%, 53%);
-  --code-text: hsl(60, 100%, 80%);
-  --code-bg: hsl(234, 65%, 25%);
+  --code-text: #f8f8f2; /* use same color as Prism theme */
+  --code-bg: #272822; /* use same color as Prism theme */
   --link: hsl(30, 100%, 56%);
   --hover: hsl(58, 97%, 63%);
   --blog-date: hsl(314, 90%, 75%);
@@ -103,18 +103,15 @@ code {
   height: auto;
   width: auto;
   white-space: pre-wrap;
-}
-
-/* FROM ^ PRE,CODE ^
-  background: var(--code-bg);
-  color: var(--code-text);
   font-family: 'Fira Code', 'Courier New', Courier, monospace;
-*/
+}
 
 p > code,
 li > code {
   padding-right: 5px;
   padding-left: 5px;
+  background: var(--code-bg);
+  color: var(--code-text);
 }
 
 /* detect light or dark mode */
