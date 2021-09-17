@@ -15,14 +15,14 @@ html {
   --accent: hsl(240, 76%, 13%);
   --main: hsl(237, 44%, 10%);
   --heading: hsl(316, 99%, 53%);
-  --code-text: #f8f8f2; /* use same color as Prism theme */
-  --code-bg: #272822; /* use same color as Prism theme */
   --link: hsl(30, 100%, 56%);
   --hover: hsl(58, 97%, 63%);
   --blog-date: hsl(314, 90%, 75%);
   --shadow: hsl(237, 44%, 10%);
   --line-color: hsl(234, 65%, 25%);
   --form-bg: hsl(0, 0%, 55%);
+  --code-text: #f8f8f2; /* use same color as Prism theme */
+  --code-bg: #272822; /* use same color as Prism theme */
   font-size: 1rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text);
@@ -110,8 +110,6 @@ li > code {
     --accent: hsl(180, 55%, 55%);
     --hover: hsl(30, 100%, 56%);
     --link: hsl(59, 100%, 50%);
-    --code-text: hsl(55, 75%, 67%);
-    --code-bg: hsl(216, 35%, 40%);
     --blog-date: hsl(230, 100%, 66%);
     --line-color: hsl(228, 26%, 45%);
     --form-bg: hsl(0, 0%, 80%);
