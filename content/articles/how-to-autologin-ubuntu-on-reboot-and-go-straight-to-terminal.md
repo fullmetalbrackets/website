@@ -11,7 +11,7 @@ Note: I've only personally done this on Ubuntu, but it should work for most Linu
 
 In your server, use the following command:
 
-```shell
+```bash
 sudo systemctl edit getty@.service
 ```
 
