@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Fira+Code:wght@400&family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Fira+Sans&display=swap');
 
 @font-face {
   font-family: 'streamster';
@@ -89,21 +89,6 @@ h3 {
   line-height: 1;
   font-size: 1.15em;
   color: var(--heading);
-}
-
-pre {
-  padding: 0.25em;
-}
-
-pre,
-code {
-  font-size: 0.925em;
-  border-radius: 0.25em;
-  padding: auto;
-  height: auto;
-  width: auto;
-  white-space: pre-wrap;
-  font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
 p > code,
