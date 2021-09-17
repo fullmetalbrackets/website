@@ -1,17 +1,13 @@
 import Prism from "prismjs";
 
-// Include a theme:
+// Include theme:
 import "prismjs/themes/prism-okaidia.css";
 
-// Include the toolbar plugin:
+// Include toolbar plugin:
 import "prismjs/plugins/toolbar/prism-toolbar";
 import "prismjs/plugins/toolbar/prism-toolbar.css";
 
-// Include the line highlight plugin:
-import "prismjs/plugins/line-highlight/prism-line-highlight";
-import "prismjs/plugins/line-highlight/prism-line-highlight.css";
-
-// Include some other plugins:
+// Include some plugins:
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
 import "prismjs/plugins/highlight-keywords/prism-highlight-keywords";
 import "prismjs/plugins/show-language/prism-show-language";
