@@ -3,7 +3,7 @@
     <h2>{{ article.title }}</h2>
     <hr>
     <p class="art-info">
-      <span>articleed on</span>
+      <span>Posted on</span>
       <span class="art-date">{{ formatDate(article.date) }}</span>
     </p>
     <nuxt-content :document="article" class="blog-article" />
