@@ -64,7 +64,7 @@ Prism.languages.vue = Prism.languages.markup
 export default Prism
 ```
 
-This particular file will import Prism, import the Okaida theme (which comes included in Prism), and also import what I consider some essential plugins for it. Add or remove any to your liking.
+This particular file will import Prism, import the Okaidia theme (which comes included in Prism), and also import what I consider some essential plugins for it. Add or remove any to your liking.
 
 ### Import Prism to \_slug.vue
 
