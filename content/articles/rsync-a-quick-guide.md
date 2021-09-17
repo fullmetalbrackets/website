@@ -7,7 +7,7 @@ update: ''
 
 To explain Rsync, let's pretend we want to transfer a directory of photos between two Linux hosts. The hostname of the computer with the photos is called **Workstation**, and the main user is **Monica**. The hostname of the receiving computer is unknown, but it's IP address is **192.168.1.100** and it's user is **Chandler**. Monica only wants photos in .jpg format to be transferred, wants to skip transferring any photos that already exist at the destination unless she has a newer version of it, and wants to NOT transfer files over 100MB in size. She will use the below command and options:
 
-```shell
+```bash
 rsync -rvuz --progress --max-size=100M /home/Monica/photos/*.jpg Chandler@192.168.1.100:/mnt/storage/photos/
 ```
 
@@ -27,7 +27,9 @@ This is just a small sample of the options available, but this set of options is
 
 Let's have Monica do that now with the following command:
 
-- `crontab -e`
+```bash
+crontab -e
+```
 
 This will open the Cron file in your default text editor. Monica wants to run the same Rsync command as above every Saturday at 3:00AM, so the transfer happens when no one is using the Workstation. She'll have to put this into the crontab just below the commented text:
 

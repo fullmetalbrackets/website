@@ -97,9 +97,6 @@ pre {
 
 pre,
 code {
-  background: var(--code-bg);
-  color: var(--code-text);
-  font-family: 'Fira Code', 'Courier New', Courier, monospace;
   font-size: 0.925em;
   border-radius: 0.25em;
   padding: auto;
@@ -107,6 +104,12 @@ code {
   width: auto;
   white-space: pre-wrap;
 }
+
+/* FROM ^ PRE,CODE ^
+  background: var(--code-bg);
+  color: var(--code-text);
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+*/
 
 p > code,
 li > code {

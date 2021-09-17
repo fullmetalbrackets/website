@@ -15,17 +15,23 @@ First, let's list out our hard drives on the terminal. There are several ways to
 
 The output shows this computer has a primary hard drive, **/sda**, with two partitions. **/sdb** is an additional 1TB hard drive installed. In my case this drive was previously partitioned, has data on it, but the data is inaccessible because it is not mounted. If you need to partition the hard drive, use the following command and follow the prompts to create a primary partition:
 
-- `fdisk /dev/sdb`
+```bash
+fdisk /dev/sdb
+```
 
 Now you mount that partition onto a specific directory. Common practice is to mount internal hard drives that will stay at work long-term to `/mnt` in the root directory. Or at least I heard that somewhere and adopted it as a common practice for myself. I'll create a sub-directory within like this: `mkdir /mnt/DATA`
 
 Now we mount the **sdb1** partition to that new directory with this command:
 
-- `mount /dev/sdb1 /mnt/DATA`
+```bash
+mount /dev/sdb1 /mnt/DATA
+```
 
 Let's check out our list of devices again, but it's refine the output of lsblk by piping it into grep like so:
 
-- `lsblk | grep -v 7:`
+```bash
+lsblk | grep -v 7:
+```
 
 The `-v` option will filter out any lines with the character `7:`. Without getting into the weeds of device numbers, in the prior output of lsblk it shows block devices have the major number 7 while hard drives have the major number 8, both separated from the minor number by a colon. So by piping `7:` through grep I can list only hard drives. Here's the output:
 

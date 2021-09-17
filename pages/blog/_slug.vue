@@ -3,7 +3,7 @@
     <h2>{{ article.title }}</h2>
     <hr>
     <p class="art-info">
-      <span>Posted on</span>
+      <span>articleed on</span>
       <span class="art-date">{{ formatDate(article.date) }}</span>
     </p>
     <nuxt-content :document="article" class="blog-article" />
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import Prism from "~/plugins/prism.js";
+
 export default {
   async asyncData({ $content, params }) {
   const article = await $content('articles', params.slug).fetch()
@@ -24,14 +26,29 @@ export default {
   },
 
   methods: {
-      formatDate(date) {
-          const options = { year: 'numeric', month: 'long', day: 'numeric' }
-          return new Date(date).toLocaleDateString('en', options)
-      },
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    },
 
-      scrollToTop() {
-          window.scrollTo(0,0);
-      }
+    scrollToTop() {
+      window.scrollTo(0,0);
+    }
+  },
+    mounted() {
+    Prism.highlightAll();
+  },
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.article.summary,
+        }
+      ]
+    }
   }
 }
 </script>

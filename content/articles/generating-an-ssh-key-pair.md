@@ -9,8 +9,17 @@ Usually when to a computer or server via SSH, you are prompted for a username an
 
 The **.ssh** directory is where SSH configurations live and where your public/private key pairs are located by default. First, it's important to know where that directory is located your computer and the server you will connect to:
 
-- On Windows: `C:\Users\{{username}}\.ssh`
-- On Linux: `/home/{{username}}/.ssh` or `~/.ssh` if you prefer
+On Windows:
+
+```powershell
+C:\Users\{{username}}\.ssh
+```
+
+On Linux:
+
+```bash
+~/.ssh
+```
 
 ### Generate an SSH key pair
 
@@ -27,7 +36,15 @@ It should go without saying, the private key should NEVER be given out to anyone
 
 Copying SSH keys between Linux machines is easy with the command `ssh-copy-id` by specifying the IP or hostname of the server, and the user, like so.
 
-- `ssh-copy-id user@192.168.1.100` or `ssh-copy-id user@hostname`
+```bash
+ssh-copy-id user@192.168.1.100
+```
+
+Or if you prefer to use the hostname:
+
+```bash
+ssh-copy-id user@hostname
+```
 
 That's it, easy peasy. Now when you SSH into the server, it should skip asking for a login. But Windows is special and does not have the **ssh-copy-id** command.
 
@@ -35,7 +52,9 @@ That's it, easy peasy. Now when you SSH into the server, it should skip asking f
 
 Since Powershell does not recognize the ssh-copy-id command, we'll do the following to copy the SSH public key to a Linux server.
 
-- `cat ~/.ssh/id_rsa.pub | ssh bob@hostname 'cat >> .ssh/authorized_keys && echo "Key copied"'`
+```shell
+cat ~/.ssh/id_rsa.pub | ssh bob@hostname 'cat >> .ssh/authorized_keys && echo "Key copied"'
+```
 
 If it's your first time using SSH to connect to the server, you'll be prompted for a username and password -- but it will be the last time, once the key is copied over. All done!
 
