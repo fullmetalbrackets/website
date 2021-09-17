@@ -11,11 +11,15 @@ Note: I've only personally done this on Ubuntu, but it should work for most Linu
 
 In your server, use the following command:
 
-- `sudo systemctl edit getty@.service`
+```shell
+sudo systemctl edit getty@.service
+```
 
 This should open the **override.conf** file in your default text editor, creating one if it does not already exist. Most likely it will not exist so the file will be newly created and empty, copy and paste this string of text into it (where `{{USER}}` is an existing user **with sudo privileges**):
 
-- `ExecStart=-/sbin/agetty -a {{USER}} --noclear %I $TERM`
+```bash
+ExecStart=-/sbin/agetty -a {{USER}} --noclear %I $TERM
+```
 
 If the file is already pre-populated with stuff, just look for the line `ExecStart=` and replace whatever is in there with the options above. Save and exit the editor. Next time you reboot, it should skip the login and go straight to the terminal.
 
