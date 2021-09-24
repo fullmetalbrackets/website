@@ -15,7 +15,7 @@
     "@netlify/plugin-sitemap": "^0.8.1",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/pwa": "^3.3.5",
-    "core-js": "^3.17.3",
+    "core-js": "^3.18.0",
     "glob-parent": "^6.0.1",
     "netlify-plugin-csp-generator": "^1.5.0",
     "nuxt": "^2.15.7",
@@ -23,13 +23,13 @@
     "prismjs": "^1.25.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.15.4",
+    "@babel/eslint-parser": "^7.15.7",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.12.1",
+    "eslint-plugin-vue": "^7.18.0",
     "prettier": "^2.4.1"
   }
 }
