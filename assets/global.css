@@ -100,6 +100,37 @@ li > code {
   border-radius: 0.25em;
 }
 
+/* Typewriting effect borrowed from Geoff Graham - https://css-tricks.com/snippets/css/typewriter-effect */
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  border-right: 0.65em solid transparent;
+  width: 5.35em;
+  float: left;
+  animation: typing 0.5s steps(40, end), blink-caret 1s step-end 5;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 6em;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--heading);
+  }
+}
+
 /* detect light or dark mode */
 
 @media (prefers-color-scheme: light) {

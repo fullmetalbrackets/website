@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Hello World</h1>
+    <h1 class="typing">Hello World</h1><br>
     <p>
       I'm Ariel, learning web development and living life in sunny/rainy (depending on the time of year) South Florida.
     </p>
