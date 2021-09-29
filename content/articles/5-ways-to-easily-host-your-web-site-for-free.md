@@ -28,14 +28,14 @@ A super simple and user-friendly host that automagically builds and deploys your
 
 How to deploy to Netlify:
 
-- Create an account or login at [Netlify](netlify.com).
-- In the team overview, click on "**New site from git**"
-- Under "**continuous deployment**", choose a Git provider.
-- You'll be prompted to login to your Git provider to authorize Netlify. Do so.
-- Next a list of your repositories should appear, choose one.
-- On the next page, you'll configure the branch to deploy and the build settings, so for example if your project uses yarn instead of npm, change the build command to "yarn build." Once you're done click "**Deploy site.**"
-- Netlify will begin the process of building your site, if there's no issues with the build then your site will deploy in a minute or two.
-- Be aware: ANY push to the Git repo will force a build & deploy of the site on Netlify, though you can turn off auto-deploys and only deploy manually if you really want to.
+1. Create an account or login at [Netlify](netlify.com).
+2. In the team overview, click on "**New site from git**"
+3. Under "**continuous deployment**", choose a Git provider.
+4. You'll be prompted to login to your Git provider to authorize Netlify. Do so.
+5. Next a list of your repositories should appear, choose one.
+6. On the next page, you'll configure the branch to deploy and the build settings, so for example if your project uses yarn instead of npm, change the build command to "yarn build." Once you're done click "**Deploy site.**"
+7. Netlify will begin the process of building your site, if there's no issues with the build then your site will deploy in a minute or two.
+8. Be aware: ANY push to the Git repo will force a build & deploy of the site on Netlify, though you can turn off auto-deploys and only deploy manually if you really want to.
 
 <div id='vercel'/>
 
@@ -45,13 +45,13 @@ Very similar to Netlify, but it has a major feature that Netlify does not -- ser
 
 How to deploy to Vercel:
 
-- Create an account or login at [Vercel](https://vercel.com).
-- On your dashboard, click "**New Project**"
-- Under "**import from git repository**" choose a Git provider.
-- You'll be prompted to login to your Git provider and authorize Vercel. Do so, and click "**Import**" on the repository of your project.
-- On the next screen, press "**Skip**" to ignore the team setup (that's for pro accounts).
-- You'll be able to configure project settings, including framework if one is being used for the project (should be auto-detected), build and install commands (the defaults should be fine if the framework is detected correctly), output directory, and environmental variables. When you're done, scroll down and click "**Deploy**."
-- Vercel will begin the process of building your site, if there's no issues with the build then your site will deploy in a minute or two.
+1. Create an account or login at [Vercel](https://vercel.com).
+2. On your dashboard, click "**New Project**"
+3. Under "**import from git repository**" choose a Git provider.
+4. You'll be prompted to login to your Git provider and authorize Vercel. Do so, and click "**Import**" on the repository of your project.
+5. On the next screen, press "**Skip**" to ignore the team setup (that's for pro accounts).
+6. You'll be able to configure project settings, including framework if one is being used for the project (should be auto-detected), build and install commands (the defaults should be fine if the framework is detected correctly), output directory, and environmental variables. When you're done, scroll down and click "**Deploy**."
+7. Vercel will begin the process of building your site, if there's no issues with the build then your site will deploy in a minute or two.
 
 <div id='github'/>
 
@@ -61,11 +61,11 @@ You can skip the third-party providers and host your site right on GitHub, thoug
 
 How to deploy to GitHub Pages:
 
-- Create a [GitHub](https://github.com) account or login, and create a new repository.
-- Name the new repository **username.github.io** where "**username**" is your GitHub username, and click "**Create Repository**."
-- You'll have an empty repo now, but GitHub Pages is already set up for it automatically.
-- Now either import another repository or push a commit from a local repo.
-- If all goes well (and your site is compatible with GitHub Pages by default, no settings to configure/customize here, except the branch to deploy from) then your site will show up shortly at **https://username.github.io**
+1. Create a [GitHub](https://github.com) account or login, and create a new repository.
+2. Name the new repository **username.github.io** where "**username**" is your GitHub username, and click "**Create Repository**."
+3. You'll have an empty repo now, but GitHub Pages is already set up for it automatically.
+4. Now either import another repository or push a commit from a local repo.
+5. If all goes well (and your site is compatible with GitHub Pages by default, no settings to configure/customize here, except the branch to deploy from) then your site will show up shortly at **https://username.github.io**
 
 <div id='cloudflare'/>
 
@@ -75,12 +75,12 @@ This is the free hosting option I've used the least, but in my tests it seems li
 
 How to deploy to Cloudflare Pages:
 
-- Create an account at [Cloudflare](https://pages.cloudflare.com).
-- Click on the button that says "**Create a project**".
-- Cloudflare will request you to login to your GitHub account, do so.
-- Choose a repository to associate with your Page, then click "**Begin Setup**".
-- Set up your project name (this will become your sub-domain), production branch, build settings, environmental variables, etc. then click "**Save and Deploy**".
-- After a few minutes, your site will be available at **project-name.dev.pages**
+1. Create an account at [Cloudflare](https://pages.cloudflare.com).
+2. Click on the button that says "**Create a project**".
+3. Cloudflare will request you to login to your GitHub account, do so.
+4. Choose a repository to associate with your Page, then click "**Begin Setup**".
+5. Set up your project name (this will become your sub-domain), production branch, build settings, environmental variables, etc. then click "**Save and Deploy**".
+6. After a few minutes, your site will be available at **project-name.dev.pages**
 
 <div id='surge'/>
 
@@ -88,10 +88,10 @@ How to deploy to Cloudflare Pages:
 
 Possibly the simplest hosting solution to ever exist. Literally one command in the terminal, answer a few prompts, and your site is up in seconds. The free tier includes unlimited publishing -- that means infinite sites, build minutes, and custom domains under your account. Here's how brain-dead simple using surge.sh is, although you do need to have access (and be comfortable with) to the command line.
 
-- `npm install -g surge` - This will install surge.sh globally so you can use it from any directory without first installing/adding it locally.
-- `npx surge` - If using Surge.sh for the first time (or from a new machine), it will prompt you for an email and password right in the command line, and log you in or create a new account if one does not exist matching the email address you entered. When logged in you'll be prompted to specify the full path to the directory to upload (it usually defaults to your present working directory), then a provides a randomly generated sub-domain of your choice (though you can specify your own sub-domain), then hit **⏎Enter** and your project gets uploaded. That's it! If you go to the URL you should see your site, it will literally take only seconds to be online.
-- NOTE: If your site is made with a static site generator like Nuxt or Gastby, make sure to first **build** and **generate** commands, then add the `/dist` directory as the one to serve.
-- TIP: `npx surge --domain https://example.surge.sh` - Pass the **--domain** option plus the URL to skip the sub-domain prompt. Also, if you specifically include **https://** in your URL it will force HTTPS for the site, so that going to `http://example.surge.sh` will auto-redirect to `https://example.surge.sh`.
+1. `npm install -g surge` - This will install surge.sh globally so you can use it from any directory without first installing/adding it locally.
+2. `npx surge` - If using Surge.sh for the first time (or from a new machine), it will prompt you for an email and password right in the command line, and log you in or create a new account if one does not exist matching the email address you entered. When logged in you'll be prompted to specify the full path to the directory to upload (it usually defaults to your present working directory), then a provides a randomly generated sub-domain of your choice (though you can specify your own sub-domain), then hit **⏎Enter** and your project gets uploaded. That's it! If you go to the URL you should see your site, it will literally take only seconds to be online.
+3. NOTE: If your site is made with a static site generator like Nuxt or Gastby, make sure to first **build** and **generate** commands, then add the `/dist` directory as the one to serve.
+4. TIP: `npx surge --domain https://example.surge.sh` - Pass the **--domain** option plus the URL to skip the sub-domain prompt. Also, if you specifically include **https://** in your URL it will force HTTPS for the site, so that going to `http://example.surge.sh` will auto-redirect to `https://example.surge.sh`.
 
 ### Other options
 
