@@ -7,7 +7,7 @@ summary: So you're learning web development, building things locally and only
   CORS without having a site hosted online to work with? And how to do it FOR
   FREE?
 date: 2021-09-14
-update: ''
+update: 2021-09-28
 ---
 
 If you'd like to quickly jump to a specific host instead of reading about all of them, click on it below.
@@ -86,7 +86,7 @@ How to deploy to Cloudflare Pages:
 
 ### Surge.sh
 
-Possibly the simplest hosting solution to ever exist. Literally one command in the terminal, answer a few prompts, and your site is up in seconds. The free tier includes unlimited publishing -- that means infinite sites, build minutes, and custom domains under your account. Here's how brain-dead simple using surge.sh is, although you do need to have access (and be comfortable with) to the command line.
+Possibly the simplest hosting solution to ever exist. Literally one command in the terminal, answer a few prompts, and your site is up in seconds. The free tier includes unlimited publishing -- that means infinite sites, build minutes, and custom domains under your account. Here's how brain-dead simple using surge.sh is, although you do need to have access to (and be comfortable with) the command line.
 
 1. `npm install -g surge` - This will install surge.sh globally so you can use it from any directory without first installing/adding it locally.
 2. `npx surge` - If using Surge.sh for the first time (or from a new machine), it will prompt you for an email and password right in the command line, and log you in or create a new account if one does not exist matching the email address you entered. When logged in you'll be prompted to specify the full path to the directory to upload (it usually defaults to your present working directory), then a provides a randomly generated sub-domain of your choice (though you can specify your own sub-domain), then hit **⏎Enter** and your project gets uploaded. That's it! If you go to the URL you should see your site, it will literally take only seconds to be online.
