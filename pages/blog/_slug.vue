@@ -60,9 +60,13 @@ hr {
 
 li {
   margin: 0 auto;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   padding: 0 auto;
   line-height: 1.15;
+}
+
+li:last-child {
+  margin-bottom: 1em;
 }
 
 li::marker {
