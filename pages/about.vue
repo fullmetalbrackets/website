@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h2>Who Dis?</h2>
+    <h1>Who Dis?</h1>
     <p>
       My name is Ariel. Self-taught web developer that enjoys coding and web design. Born and raised in South Florida, currently living in the St. Augustine area. Feel free to check out my (somewhat bare at the moment) <a href="https://github.com/fullmetalbrackets" target="_blank" rel="noopener">GitHub profile</a> if you'd like to see what I'm working on.
     </p>
