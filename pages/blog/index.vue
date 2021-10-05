@@ -1,5 +1,10 @@
 <template>
     <main>
+    <section>
+      <h1 class="blog">Blog</h1>
+      <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
+    </section>
+    <hr/>
         <ul>
         <li v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
@@ -29,7 +34,27 @@ export default {
         articles
     }
   },
-  methods: {
+  data () {
+  return {
+    query: '',
+    articles: []
+    }
+  },
+  watch: {
+    async query (query) {
+      if (!query) {
+        this.articles = []
+        return
+      }
+      this.articles = await this.$content('articles')
+        .only(['title', 'summary', 'date', 'tags', 'slug'])
+        .sortBy('date', 'asc')
+        .limit(12)
+        .search(query)
+        .fetch()
+    }
+  },
+    methods: {
     formatDate(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('en', options)
@@ -39,6 +64,45 @@ export default {
 </script>
 
 <style scoped>
+section {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+.blog {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+span {
+  text-align: right;
+}
+
+input {
+  line-height: 1;
+  font-size: 1rem;
+  border-style: none;
+  margin: auto;
+  padding: 5px;
+  line-height: 1;
+  border-radius: 0.25em;
+  background: var(--form-bg);
+  height: auto;
+  width: 70%;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', 'Courier New', Courier, monospace;
+  outline: none;
+}
+
+hr {
+  border: 0.25px solid var(--line-color);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
 ul {
   list-style-type: none;
   margin: auto;
@@ -97,7 +161,15 @@ li:hover {
   padding: 2px 4px;
 }
 
-.tag a, a:active, a:focus, a:hover {
+.tag a {
+  color: var(--main);
+}
+
+.tag a:visited {
+  color: var(--main);
+}
+
+.tag a:active {
   color: var(--main);
 }
 
