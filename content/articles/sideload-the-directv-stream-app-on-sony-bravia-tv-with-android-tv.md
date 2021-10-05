@@ -9,6 +9,9 @@ summary: >-
     DirecTV Stream app on Sony Bravia TVs without using the Google Play Store.
 date: 2021-08-31
 update: ''
+tags:
+  - tech
+  - hacks
 ---
 
 After some internet sleuthing and poring over many forum threads, the answer finally came from [this thread in the XDA-Developers forum](https://forum.xda-developers.com/t/the-ultimate-at-t-tv-and-fire-tv-apk-repository.3854154/), where packages for the different devices are gathered. I'll be giving instructions specifically for sideloading (without Google Play Store) the DirecTV Stream app on a Sony Bravia TV. Here's the gist:

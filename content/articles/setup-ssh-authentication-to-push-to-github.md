@@ -7,6 +7,10 @@ summary: Setting up SSH keys and pushing to GitHub without needing to enter a
   minutes, here's the quick and dirty instructions.
 date: 2021-09-09
 update: ''
+tags:
+  - linux
+  - ssh
+  - command line
 ---
 
 First we need to add our computer's SSH public key to GitHub. Login to your GitHub account, click on your profile icon in the top-right corner, then click on **Settings**.

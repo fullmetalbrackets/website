@@ -3,6 +3,9 @@ title: Using Prism.js in a Nuxt static site
 summary: I was having some issue getting this to work on a static (not SSR) site made with Nuxt, and although I read through a bunch of blog articles, most of them seemed to be missing some piece of information or other that made it not work for me. After mixing and matching some of the instructions, and combining the useful info with the official Nuxt documentation, I finally did all the necessary steps and got it to work. So here's a clear, succinct guide to using Prism.js in a Nuxt static site.
 date: 2021-09-17
 update: ''
+tags:
+  - web development
+  - nuxtjs
 ---
 
 These instructions assume you are using the [Nuxt/Content](https://github.com/nuxt/content) module. First things first, let's add Prism.js as a dependency.

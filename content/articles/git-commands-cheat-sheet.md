@@ -6,6 +6,10 @@ summary: When I was learning Git, in order to avoid giant articles and get right
   dirty guide of Git commands that you will likely use often as a web developer.
 date: 2021-09-08
 update: ''
+tags:
+  - linux
+  - git
+  - command line
 ---
 
 ### Setting up git locally
