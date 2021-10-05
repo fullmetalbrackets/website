@@ -40,9 +40,6 @@ export default {
       window.scrollTo(0,0);
     }
   },
-    mounted() {
-    Prism.highlightAll();
-  },
   head() {
     return {
       title: this.article.title,
@@ -51,10 +48,13 @@ export default {
           hid: "description",
           name: "description",
           content: this.article.summary,
-        }
-      ]
+        },
+      ],
     }
-  }
+  },
+  mounted() {
+    Prism.highlightAll();
+  },
 }
 </script>
 
