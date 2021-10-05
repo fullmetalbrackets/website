@@ -17,6 +17,11 @@
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
               <h2>{{ article.title }}</h2>
               <p id="desc">{{ article.summary }}</p>
+              <p id="tags">
+                <span v-for="tag in article.tags" :key="tag" class="tag">
+                <nuxt-link :to="`/tags/${tag}`"><span>{{ tag }}</span></nuxt-link>
+                </span>
+              </p>
               <p id="date">Posted on: {{ formatDate(article.date) }}</p>
             </NuxtLink>
           </li>
@@ -106,7 +111,7 @@ export default {
   padding: 0 auto;
   margin: 0 auto;
   color: var(--blog-date);
-  margin: 0.25em auto;
+  margin: 0;
   text-align: right;
 }
 
@@ -115,6 +120,28 @@ export default {
   margin: 0.25em 0.5em;
   color: var(--text-color);
 }
+
+#tags {
+  margin: 0;
+}
+
+.tag {
+  padding: 2px 4px;
+  margin-right: 6px;
+  background: var(--heading);
+  font-weight: bold;
+  border-radius: 0.25em;
+}
+
+.tag a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+span {
+  color: var(--accent);
+}
+
 
 @media screen and (max-width: 1280px) {
   #recent-posts ul {

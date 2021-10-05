@@ -2,9 +2,14 @@
   <main>
     <h2>{{ article.title }}</h2>
     <hr>
-    <p class="art-info">
-      <span>Posted on</span>
-      <span class="art-date">{{ formatDate(article.date) }}</span>
+    <p class="art-date">
+      Posted on {{ formatDate(article.date) }}
+    </p>
+    <p class="art-tags">
+      Tags:
+      <span v-for="tag in article.tags" :key="tag" class="tag">
+      <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+      </span>
     </p>
     <nuxt-content :document="article" class="blog-article" />
     <hr class="bottom">
@@ -73,12 +78,33 @@ li::marker {
   color: var(--heading);
 }
 
-.art-info {
-  margin-bottom: 3em;
-}
-
 .art-date {
   color: var(--blog-date);
+  margin-bottom: 0;
+}
+
+.art-tags {
+  padding: 0 auto;
+  margin-top: 0.15em;
+  margin-bottom: 3em;
+  color: var(--blog-date);
+  font-size: 0.8em;
+}
+
+.tag {
+  background: var(--heading);
+  font-weight: bold;
+  border-radius: 0.25em;
+  margin-right: 6px;
+  padding: 2px 4px;
+}
+
+.tag a, a:active, a:focus, a:hover {
+  color: var(--main);
+}
+
+.tag a:hover {
+  text-decoration: underline;
 }
 
 img {
