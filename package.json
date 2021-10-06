@@ -15,7 +15,7 @@
     "@netlify/plugin-sitemap": "^0.8.1",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/pwa": "^3.3.5",
-    "core-js": "^3.18.1",
+    "core-js": "^3.18.2",
     "glob-parent": "^6.0.2",
     "netlify-plugin-csp-generator": "^1.5.0",
     "nuxt": "^2.15.7",
