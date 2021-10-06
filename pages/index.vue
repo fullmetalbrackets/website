@@ -116,6 +116,7 @@ export default {
   margin: 0 auto;
   color: var(--blog-date);
   margin: 0;
+  margin-top: 4px;
   text-align: right;
 }
 
@@ -145,7 +146,6 @@ export default {
 span {
   color: var(--accent);
 }
-
 
 @media screen and (max-width: 1280px) {
   #recent-posts ul {
