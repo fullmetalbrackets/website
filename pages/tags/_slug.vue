@@ -27,21 +27,54 @@ export default {
     try {
       const articles = await $content("articles", { deep: true })
         .where({ tags: { $contains: params.slug } })
-        .fetch();
-      return { articles };
+        .fetch()
+      return { articles }
     } catch (err) {
       error({
         statusCode: 404,
         message: "Page could not be found",
-      });
+      })
     }
   },
   methods: {
     formatDate(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('en', options)
-    },
+    }
   },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          {
+            property: "article:published_time",
+            content: this.article.createdAt,
+          },
+          {
+            property: "article:modified_time",
+            content: this.article.updatedAt,
+          },
+          {
+            property: "article:tag",
+            content: this.article.tags ? this.article.tags.toString() : "",
+          },
+          { name: "twitter:label1", content: "Written by" },
+          { name: "twitter:data1", content: "Ariel Diaz" },
+          { name: "twitter:label2", content: "Tagged under" },
+          {
+            name: "twitter:data2",
+            content: this.article.tags ? this.article.tags.toString() : "",
+          }
+        ]
+      }
+    },
+  link: [
+    {
+      hid: "canonical",
+      rel: "canonical",
+      href: `https://arieldiaz.codes/blog/${this.$route.params.slug}`,
+    }
+  ]
 };
 </script>
 
