@@ -127,9 +127,6 @@ export default {
       const { $content } = require('@nuxt/content')
       const data = await $content('articles').only(['slug']).fetch()
       return data.map((post) => `/blog/${post.slug}`)
-    },
-    defaults: {
-      priority: 1,
     }
   },
 
