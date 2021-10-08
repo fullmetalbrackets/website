@@ -3,7 +3,7 @@
     <span id="logo"><NuxtLink to="/">Ariel Diaz</NuxtLink></span>
     <nav>
       <div><NuxtLink to="/about" class=".nav2">About</NuxtLink></div>
-      <div id="edge"><NuxtLink to="/blog">Blog</NuxtLink></div>
+      <div id="edge"><NuxtLink to="/articles">Blog</NuxtLink></div>
     </nav>
   </header>
 </template>
