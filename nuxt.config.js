@@ -125,7 +125,7 @@ export default {
     routes: async () => {
       const { $content } = require('@nuxt/content')
       const data = await $content('articles').only(['slug']).fetch()
-      return data.map((blog) => `/blog/${blog.slug}`)
+      return data.map((post) => `/blog/${post.slug}`)
     },
     defaults: {
       priority: 1,
