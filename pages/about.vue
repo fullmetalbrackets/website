@@ -25,7 +25,7 @@
       Disclaimer: I will <u><strong>never</strong></u> sign you up for a newsletter or mailing list.
     </p>
     <section>
-      <form name="contact" action="/thanks" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="contact" action="/thanks" method="POST" netlify-honeypot="bot-field" netlify>
         <input value="contact" name="form-name" type="hidden" />
         <p class="contact-form">
           <label for="name">Name:</label>
