@@ -8,6 +8,10 @@ summary: So you're learning web development, building things locally and only
   FREE?
 date: 2021-09-14
 update: 2021-09-28
+dir: '/articles'
+extension: '.md'
+path: '/index'
+slug: 'index'
 tags:
   - web development
 ---
