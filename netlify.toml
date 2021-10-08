@@ -51,15 +51,6 @@ Access-Control-Allow-Origin = "*"
   force = true
 
 [[plugins]]
-package = "@netlify/plugin-sitemap"
-
-  [plugins.inputs]
-  buildDir = "dist"
-  exclude = [
-    './dist/404', './dist/thanks', './dist/admin'
-  ]
-
-[[plugins]]
 package = "netlify-plugin-csp-generator"
 
   [plugins.inputs]
