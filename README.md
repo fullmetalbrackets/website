@@ -17,6 +17,10 @@ $ yarn generate
 $ yarn start
 ```
 
+## Or deploy to Netlify with one click:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/fullmetalbrackets/website)
+
 ## License
 
 MIT License
