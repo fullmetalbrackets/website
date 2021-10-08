@@ -7,7 +7,7 @@ tags:
   - web development
 ---
 
-I've written before about <a href="https://arieldiaz.codes/blog/5-ways-to-easily-host-your-web-site-for-free" target="_blank">other ways to host your website</a>, and those other options may be better for a beginner, but let's ignore that for now. This is about getting our feet wet in AWS by using their Amplify service, which more or less works just like those other options anyway! First, go [create your free AWS account](https://aws.amazon.com) if you haven't already. Once that's done, we begin:
+I've written before about <a href="https://arieldiaz.codes/articles/5-ways-to-easily-host-your-web-site-for-free" target="_blank">other ways to host your website</a>, and those other options may be better for a beginner, but let's ignore that for now. This is about getting our feet wet in AWS by using their Amplify service, which more or less works just like those other options anyway! First, go [create your free AWS account](https://aws.amazon.com) if you haven't already. Once that's done, we begin:
 
 1. Login to the [AWS console](https://console.aws.amazon.com), and in Services click on **AWS Amplify**.
 2. Once in AWS Amplify, click on the button that says **Get Started**.
