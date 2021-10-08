@@ -121,7 +121,8 @@ export default {
     gzip: true,
     exclude: [
       '/thanks',
-      '/404'
+      '/404',
+      '/form.html'
     ],
     routes: async () => {
       const { $content } = require('@nuxt/content')
