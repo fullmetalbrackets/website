@@ -14,7 +14,7 @@
     <nuxt-content :document="article" class="blog-article" />
     <hr class="bottom">
     <p class="foot">
-      <a href="/blog"><i class="return"></i> Return to Blog</a>
+      <a href="/articles"><i class="return"></i> Return to Blog</a>
       <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
     </p>
   </main>
@@ -30,16 +30,6 @@ export default {
   return { article }
   },
 
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    },
-
-    scrollToTop() {
-      window.scrollTo(0,0);
-    }
-  },
   head() {
     return {
       title: this.article.title,
@@ -56,9 +46,21 @@ export default {
       ],
     }
   },
-  mounted() {
+
+mounted() {
     Prism.highlightAll();
   },
+
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    },
+
+    scrollToTop() {
+      window.scrollTo(0,0);
+    }
+  }
 }
 </script>
 
