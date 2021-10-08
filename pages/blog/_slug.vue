@@ -30,16 +30,6 @@ export default {
   return { article }
   },
 
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    },
-
-    scrollToTop() {
-      window.scrollTo(0,0);
-    }
-  },
   head() {
     return {
       title: this.article.title,
@@ -52,13 +42,44 @@ export default {
         { hid: 'og:title', property: 'og:title', content: this.article.title },
         { hid: 'og:description', property: 'og:description', content: this.article.summary },
         { hid: 'twitter:title', name: 'twitter:title', content: this.article.title },
-        { hid: 'twitter:description', name: 'twitter:description', content: this.article.summary }
-      ],
+        { hid: 'twitter:description', name: 'twitter:description', content: this.article.summary },
+        {
+          property: "article:published_time",
+          content: this.article.createdAt,
+        },
+        {
+          property: "article:modified_time",
+          content: this.article.updatedAt,
+        },
+        {
+          property: "article:tag",
+          content: this.article.tags ? this.article.tags.toString() : "",
+        },
+        { name: "twitter:label1", content: "Written by" },
+        { name: "twitter:data1", content: "Ariel Diaz" },
+        { name: "twitter:label2", content: "Tagged under" },
+        {
+          name: "twitter:data2",
+          content: this.article.tags ? this.article.tags.toString() : "",
+        }
+      ]
     }
   },
+
   mounted() {
     Prism.highlightAll();
   },
+
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    },
+
+    scrollToTop() {
+      window.scrollTo(0,0);
+    }
+  }
 }
 </script>
 

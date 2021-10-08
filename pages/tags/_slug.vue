@@ -5,7 +5,7 @@
   </h1>
   <ul>
     <li v-for="article in articles" :key="article.slug">
-      <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+      <NuxtLink :to="{ name: 'article-slug', params: { slug: article.slug } }">
         <h2 class="art-title">{{ article.title }}</h2>
         <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
         <p class="art-desc">{{ article.summary }}</p>
@@ -25,7 +25,7 @@
 export default {
   async asyncData({ params, error, $content }) {
     try {
-      const articles = await $content("articles", { deep: true })
+      const articles = await $content('articles')
         .where({ tags: { $contains: params.slug } })
         .fetch()
       return { articles }
@@ -36,12 +36,7 @@ export default {
       })
     }
   },
-  methods: {
-    formatDate(date) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' }
-        return new Date(date).toLocaleDateString('en', options)
-    }
-  },
+
     head() {
       return {
         title: this.title,
@@ -65,16 +60,23 @@ export default {
             name: "twitter:data2",
             content: this.article.tags ? this.article.tags.toString() : "",
           }
+        ],
+        link: [
+          {
+            hid: "canonical",
+            rel: "canonical",
+            href: `https://arieldiaz.codes/blog/${this.$route.params.slug}`,
+          }
         ]
       }
     },
-  link: [
-    {
-      hid: "canonical",
-      rel: "canonical",
-      href: `https://arieldiaz.codes/blog/${this.$route.params.slug}`,
+
+  methods: {
+    formatDate(date) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' }
+        return new Date(date).toLocaleDateString('en', options)
     }
-  ]
+  }
 };
 </script>
 
