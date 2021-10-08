@@ -62,6 +62,14 @@ export default {
           name: "twitter:data2",
           content: this.article.tags ? this.article.tags.toString() : "",
         }
+      ],
+
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: `https://arieldiaz.codes/blog/${this.$route.params.slug}`,
+        }
       ]
     }
   },

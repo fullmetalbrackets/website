@@ -31,7 +31,7 @@ export default {
       .sortBy('date', 'desc')
       .fetch()
     return {
-        articles
+      articles
     }
   },
   data () {
@@ -40,6 +40,19 @@ export default {
     articles: []
     }
   },
+
+  head() {
+      return {
+        link: [
+          {
+            hid: "canonical",
+            rel: "canonical",
+            href: `https://arieldiaz.codes/blog`,
+          }
+        ]
+      }
+    },
+
   watch: {
     async query (query) {
       if (!query) {
@@ -47,9 +60,7 @@ export default {
         return
       }
       this.articles = await this.$content('articles')
-        .only(['title', 'summary', 'date', 'tags', 'slug'])
         .sortBy('date', 'asc')
-        .limit(12)
         .search(query)
         .fetch()
     }
