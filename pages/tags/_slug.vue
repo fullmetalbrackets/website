@@ -1,8 +1,10 @@
 <template>
 <main>
-  <h1 class="articles">Articles tagged:<br>
-    <span class="art-tag">{{ $route.params.slug }}</span>
-  </h1>
+  <h1 class="articles">Articles tagged: <span class="art-tag">{{ $route.params.slug }}</span></h1>
+  <p class="blog-return">
+  <a href="/blog"><i class="return"></i> Return to Blog</a>
+  </p>
+  <hr/>
   <ul>
     <li v-for="article in articles" :key="article.slug">
       <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
@@ -25,7 +27,7 @@
 export default {
   async asyncData({ params, $content }) {
       const articles = await $content('articles')
-        .sortBy('date', 'asc')
+        .sortBy('date', 'desc')
         .where({ tags: { $contains: params.slug } })
         .fetch()
       return { articles }
@@ -41,15 +43,38 @@ export default {
 </script>
 
 <style scoped>
-.articles {
-  font-size: 2em;
+hr {
+  border: 0.25px solid var(--line-color);
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 
+.blog-return {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-return a:hover {
+  color: var(--hover);
+}
+
+.return {
+  border: solid;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin: 0;
+}
+
+.articles {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
 .art-tag {
-  color: var(--link);
-  text-decoration: underline;
-  margin-left: 0.5em;
+  color: var(--text);
 }
 
 .art-tags {
