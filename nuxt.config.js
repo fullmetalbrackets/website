@@ -120,7 +120,8 @@ export default {
     path: '/sitemap.xml',
     gzip: true,
     exclude: [
-      '/thanks'
+      '/thanks',
+      '/404'
     ],
     routes: async () => {
       const { $content } = require('@nuxt/content')
