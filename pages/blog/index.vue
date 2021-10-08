@@ -1,25 +1,26 @@
 <template>
     <main>
-    <section>
-      <h1 class="blog">Blog</h1>
-      <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
-    </section>
-    <hr/>
+      <section>
+        <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
+      </section>
+      <hr/>
+      <section>
         <ul>
-        <li v-for="article of articles" :key="article.slug">
-            <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-                <h2 class="art-title">{{ article.title }}</h2>
-                <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
-                <p class="art-desc">{{ article.summary }}</p>
-                <p class="art-tags">
-                  Tags:
-                  <span v-for="tag in article.tags" :key="tag" class="tag">
-                  <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
-                  </span>
-                </p>
-            </NuxtLink>
-        </li>
+          <li v-for="article of articles" :key="article.slug">
+              <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+                  <h2 class="art-title">{{ article.title }}</h2>
+                  <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
+                  <p class="art-desc">{{ article.summary }}</p>
+                  <p class="art-tags">
+                    Tags:
+                    <span v-for="tag in article.tags" :key="tag" class="tag">
+                    <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+                    </span>
+                  </p>
+              </NuxtLink>
+          </li>
         </ul>
+      </section>
     </main>
 </template>
 
@@ -77,9 +78,9 @@ export default {
 <style scoped>
 section {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   line-height: 1;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .blog {
@@ -159,7 +160,7 @@ li:hover {
 
 .art-tags {
   padding: 0 auto;
-  margin: 0.15em auto 0 0.35em;
+  margin: 0.5em auto 0 0.35em;
   color: var(--blog-date);
   font-size: 0.75em;
 }
@@ -168,6 +169,7 @@ li:hover {
   background: var(--heading);
   font-weight: bold;
   border-radius: 0.25em;
+  margin-top: 2px;
   margin-right: 6px;
   padding: 2px 4px;
 }
