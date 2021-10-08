@@ -4,6 +4,10 @@ export default {
 
   ssr: false,
 
+  env: {
+    baseUrl: process.env.BASE_URL || 'https://arieldiaz.codes'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Ariel Diaz',
@@ -25,20 +29,13 @@ export default {
       {
         hid: "og:title",
         property: "og:title",
-        content: "WAriel Diaz",
+        content: "Ariel Diaz",
       },
       {
         hid: "og:description",
         property: "og:description",
         content: "Website and blog of Ariel Diaz.",
       },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: "/icon.png",
-      },
-      { property: "og:image:width", content: "250" },
-      { property: "og:image:height", content: "250" },
       {
         hid: "twitter:url",
         name: "twitter:url",
@@ -53,11 +50,6 @@ export default {
         hid: "twitter:description",
         name: "twitter:description",
         content: "Website and blog of Ariel Diaz.",
-      },
-      {
-        hid: "twitter:image",
-        name: "twitter:image",
-        content: "/icon.png",
       },
     ],
     link: [
@@ -90,10 +82,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -122,6 +113,23 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  sitemap: {
+    hostname: 'https://arieldiaz.codes',
+    path: '/sitemap.xml',
+    gzip: true,
+    exclude: [
+      '/thanks'
+    ],
+    routes: async () => {
+      const { $content } = require('@nuxt/content')
+      const data = await $content('articles').only(['slug']).fetch()
+      return data.map((blog) => `/blog/${blog.slug}`)
+    },
+    defaults: {
+      priority: 1,
+    }
   },
 
   generate: {
