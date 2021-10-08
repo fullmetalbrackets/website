@@ -1,8 +1,19 @@
+let Routes = async () => {
+  const { $content } = require("@nuxt/content");
+  const files = await $content({ deep: true }).only(["path"]).fetch();
+
+  return files.map((file) => (file.path === "/index" ? "/" : file.path));
+}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   ssr: false,
+
+  env: {
+    baseUrl: process.env.BASE_URL || 'https://arieldiaz.codes'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -37,8 +48,8 @@ export default {
         property: "og:image",
         content: "/icon.png",
       },
-      { property: "og:image:width", content: "250" },
-      { property: "og:image:height", content: "250" },
+      { property: "og:image:width", content: "740" },
+      { property: "og:image:height", content: "300" },
       {
         hid: "twitter:url",
         name: "twitter:url",
@@ -65,7 +76,7 @@ export default {
       {
         hid: "canonical",
         rel: "canonical",
-        href: "https://arieldiaz.codes",
+        href: process.env.BASE_URL,
       },
     ]
   },
@@ -90,10 +101,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -122,6 +132,18 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  sitemap: {
+    hostname: 'https://arieldiaz.codes',
+    path: '/sitemap.xml',
+    gzip: true,
+    exclude: [
+      '/thanks'
+    ],
+    routes() {
+      return Routes();
+    },
   },
 
   generate: {
