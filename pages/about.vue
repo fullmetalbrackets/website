@@ -45,6 +45,22 @@
   </main>
 </template>
 
+<script>
+export default {
+  head() {
+      return {
+        link: [
+          {
+            hid: "canonical",
+            rel: "canonical",
+            href: `https://arieldiaz.codes/about`,
+          }
+        ]
+      }
+    },
+}
+</script>
+
 <style scoped>
 p {
   margin-bottom: 4em;

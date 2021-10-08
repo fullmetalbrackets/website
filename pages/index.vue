@@ -41,6 +41,19 @@ export default {
         articles
     }
   },
+
+  head() {
+      return {
+        link: [
+          {
+            hid: "canonical",
+            rel: "canonical",
+            href: `https://arieldiaz.codes/`,
+          }
+        ]
+      }
+    },
+
   methods: {
     formatDate(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
