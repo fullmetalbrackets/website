@@ -65,7 +65,7 @@ export default {
 }
 ```
 
-Voila! Now the sitemap module will generate the dynamic routes correctly with only a few extra lines of code, right inside your `nuxt.config.js` file.
+Voila! Now the sitemap module will generate the dynamic routes correctly with only a few extra lines of code, right inside your `nuxt.config.js` file. If you want to test it locally before deploy, do `yarn build && yarn generate` then go into your `/dist` folder and open the `sitemap.xml` file -- all your blog post routes should appear.
 
 ### References
 
