@@ -4,7 +4,6 @@ summary: I was having some issue getting this to work on a static (not SSR) site
 date: 2021-09-17
 update: ''
 tags:
-  - web development
   - nuxtjs
 ---
 
@@ -19,14 +18,16 @@ yarn add prism
 Install via NPM:
 
 ```shell
-npm install -D prism
+npm install prism
 ```
 
 ### Edit nuxt config file
 
 You need to add this line to your `nuxt.config.js` file:
 
-```javascript
+```js
+// nuxt.config.js
+
 content: {
   markdown: {
     prism: {
@@ -42,7 +43,9 @@ I know setting `theme: false` seems counter-intuitive, but it's necessary for Pr
 
 If it doesn't already exist, create a directory in your project root named **/plugins**, and within it create a file named **prism.js**. We want to import all the things we need in **/plugins/prism.js**:
 
-```javascript
+```js
+// prism.js
+
 import Prism from 'prismjs'
 
 // Include a theme:
@@ -73,15 +76,15 @@ This particular file will import Prism, import the Okaidia theme (which comes in
 
 Now we need to edit the **\_slug.vue** file in the **/pages** directory that is used to generate your individual blog posts/articles/whatever. It may be located in another sub-directory like **/pages/blog/\_slug.vue**. Edit the file and add this to the script section:
 
-```javascript
+```js
+// _slug.vue
+
 import Prism from '~/plugins/prism'
 
 export default {
-  // the rest of your code
   mounted() {
     Prism.highlightAll()
   },
-  // the rest of your code
 }
 ```
 
