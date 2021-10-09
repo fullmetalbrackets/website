@@ -132,7 +132,7 @@ li::marker {
   padding: 2px 4px;
 }
 
-.tag a, a:active, a:focus, a:hover {
+.tag a, a:active, a:focus {
   color: var(--main);
 }
 
@@ -159,7 +159,7 @@ img {
   justify-content: space-between;
 }
 
-.foot a, a:active, a:visited, a:focus, a:hover {
+.foot a, a:active, a:visited, a:focus {
   font-weight: bold;
   cursor: pointer;
 }
