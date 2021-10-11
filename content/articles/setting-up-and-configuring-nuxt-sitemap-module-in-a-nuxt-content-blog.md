@@ -1,12 +1,15 @@
 ---
 title: Setting up and configuring Nuxt/Sitemap module in a Nuxt/Content blog
-summary: The excellent Nuxt/Sitemap module can automatically generate a new sitemap.xml at each build, and you can set either static and/or dynamic routes in it's config. It can also auto-generate routes to your blog posts (or whatever other content) fetched and displayed in a _slug.vue file, so a new post shows up with the correct route in the sitemap when created. Here's a quick and simple guide for Nuxt/Sitemap to generate routes to your Nuxt/Content blog posts, whether static or SSR.
 date: 2021-10-08
 update: ''
 tags:
   - nuxtjs
   - webdev
 ---
+
+The excellent Nuxt/Sitemap module can automatically generate a new sitemap.xml at each build, and you can set either static and/or dynamic routes in it's config. It can also auto-generate routes to your blog posts (or whatever other content) fetched and displayed in a \_slug.vue file, so a new post shows up with the correct route in the sitemap when created. Here's a quick and simple guide for Nuxt/Sitemap to generate routes to your Nuxt/Content blog posts, whether static or SSR.
+
+<!--more-->
 
 This guide assumes you are working on a Nuxt site using the Content module as a headless CMS for blog posts, but it's easily modified to work with other use cases of Nuxt/Content. First, we have to add Nuxt/Sitemap to our dependencies, of course.
 
@@ -23,7 +26,7 @@ Next we go into the `nuxt.config.js` file to enable it. Under `modules:[]` you w
   ],
 ```
 
-When using the Nuxt content module, your markdown files are stored in `./content/articles` by default, though you can do `./content/posts` or whatever instead, as long as the sub-directory with the actual markdown files is inside of `./content` -- the module works off that assumption unless you configure it to do otherwise, which is beyond the scope here. To display those markdown files as blog posts on your site, you'd go into one of your views inside the `./pages` directory and use the query builder API to fetch and display the content to our liking, or maybe we'll create a separate page just for that, like `./pages/blog.vue` for example. In either case, to actually serve your individual blog posts you'll need a `_slug.vue` file that fetches, hydrates and routes a specific post.
+When using the Nuxt content module, your markdown files are stored in `./content/articles` by default, though you can do `./content/posts` or whatever instead, as long as the sub-directory with the actual markdown files is inside of `./content` -- the module works off that assumption unless you configure it to do otherwise, which is beyond the scope here. To display those markdown files as blog posts on your site, you'd go into one of your views inside the `./pages` directory and use the query builder API to fetch and display the content to our liking, or maybe we'll create a separate page just for that, like `./pages/blog.vue` for example. In either case, to actually serve your individual blog posts you'll need a `_slug.vue` file that fetches and routes a specific post.
 
 Your URLs would then look something like this:
 

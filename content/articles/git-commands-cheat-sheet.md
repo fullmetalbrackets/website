@@ -1,15 +1,15 @@
 ---
 title: Git commands cheat sheet
-summary: When I was learning Git, in order to avoid giant articles and get right
-  to the commands I needed reminding of, I made myself a cheat sheet that
-  plainly and succinctly explained each Git command. Here is that quick and
-  dirty guide of Git commands that you will likely use often as a web developer.
 date: 2021-09-08
 update: '2021-10-11'
 tags:
   - git
   - terminal
 ---
+
+When I was learning Git, in order to avoid giant articles and get right to the commands I needed reminding of, I made myself a cheat sheet that plainly and succinctly explained each Git command. Here is that quick and dirty guide of Git commands that you will likely use often as a web developer.
+
+<!--more-->
 
 ### Setting up git locally
 
