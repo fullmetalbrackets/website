@@ -79,7 +79,7 @@ hr {
 
 .art-tags {
   padding: 0 auto;
-  margin: 0.15em auto 0 0.35em;
+  margin: 0.25em auto 0 0.35em;
   color: var(--blog-date);
   font-size: 0.75em;
 }
@@ -92,12 +92,13 @@ hr {
   padding: 2px 4px;
 }
 
-.tag a, a:active, a:focus, a:hover {
+.tag a, a:active, a:focus {
   color: var(--main);
 }
 
-.tag a:hover {
-  text-decoration: underline;
+.tag:hover {
+  background-color: var(--blog-date);
+  text-decoration: none;
 }
 
 ul {

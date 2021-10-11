@@ -186,10 +186,10 @@ li:hover {
   color: var(--main);
 }
 
-.tag a:hover {
-  text-decoration: underline;
+.tag:hover {
+  background-color: var(--blog-date);
+  text-decoration: none;
 }
-
 
 @media screen and (max-width: 600px) {
   li {
