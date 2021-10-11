@@ -138,9 +138,12 @@ export default {
       path: '/feed.xml',
       async create(feed) {
         feed.options = {
-          title: 'Ariel Diaz Blog',
-          description: 'I write stuff about tech stuff',
+          title: 'Ariel Diaz - Blog',
+          description: 'I write about tech stuff',
           link: 'https://arieldiaz.codes/feed.xml',
+          favicon: "https://arieldiaz.codes/favicon.ico",
+          copyright: "All rights reserved 2021, Ariel Diaz",
+          language: "en",
         };
         const { $content } = require('@nuxt/content');
         const posts = await $content('articles').fetch();
@@ -153,6 +156,7 @@ export default {
             date: new Date(post.date),
             description: post.summary,
             content: post.bodyText,
+            author: 'Ariel Diaz',
           });
         });
       },
@@ -165,8 +169,6 @@ export default {
     'content:file:beforeInsert': (document) => {
       const md = require('markdown-it')();
       if (document.extension === '.md') {
-        const { text } = require('reading-time')(document.text);
-        document.readingTime = text;
         const mdToHtml = md.render(document.text);
         document.bodyText = mdToHtml;
       }

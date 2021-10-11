@@ -24,8 +24,7 @@
     "markdown-it-div": "^1.1.0",
     "netlify-plugin-csp-generator": "^1.5.0",
     "nuxt": "^2.15.7",
-    "prismjs": "^1.25.0",
-    "reading-time": "^1.5.0"
+    "prismjs": "^1.25.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.8",
