@@ -45,7 +45,7 @@ main {
   border-radius: 1rem;
   margin: auto calc(2em + 4vw);
   padding: 2em;
-  padding-bottom: 0.25em;
+  padding-bottom: 1em;
   background: var(--main);
   min-height: 60vh;
   height: auto;
@@ -161,7 +161,6 @@ li > code {
 
   main {
     background: var(--main);
-    background: linear-gradient(180deg, var(--main) 85%, transparent 100%);
   }
 
   a,
