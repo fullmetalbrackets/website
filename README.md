@@ -1,7 +1,11 @@
 ![Netlify](https://img.shields.io/netlify/4598f4f1-67bb-4ca2-bc47-d6819bf126f1) ![Website](https://img.shields.io/website?style=flat&url=https%3A%2F%2Farieldiaz.codes%2F) ![GitHub last commit](https://img.shields.io/github/last-commit/fullmetalbrackets/website) ![Security Headers](https://img.shields.io/security-headers?style=flat&url=https%3A%2F%2Farieldiaz.codes%2F) ![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/arieldiaz.codes?publish) ![GitHub repo size](https://img.shields.io/github/repo-size/fullmetalbrackets/website) ![Lines of code](https://img.shields.io/tokei/lines/github/fullmetalbrackets/website)
 
-## Install locally and run in development:
+## Latest blog posts
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
+
+## Install locally and run in development:
 ```bash
 $ git clone https://github.com/fullmetalbrackets/website.git
 $ cd website
@@ -10,7 +14,6 @@ $ yarn dev
 ```
 
 ## Build for production and launch server:
-
 ```bash
 $ yarn build
 $ yarn generate
