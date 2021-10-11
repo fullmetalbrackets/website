@@ -5,6 +5,10 @@
     <p class="art-date">
       Posted on {{ formatDate(article.date) }}
     </p>
+    <p v-if="article.update === ''" class="hide"></p>
+    <p v-else class="art-date">
+      Updated on {{ formatDate(article.update) }}
+    </p>
     <p class="art-tags">
       Tags:
       <span v-for="tag in article.tags" :key="tag" class="tag">
@@ -111,17 +115,22 @@ li::marker {
   color: var(--heading);
 }
 
+.hide {
+  display: none;
+}
+
 .art-date {
   color: var(--blog-date);
-  margin-bottom: 0;
+  margin: 0.25em auto;
+  font-size: 0.85em;
 }
 
 .art-tags {
   padding: 0 auto;
-  margin-top: 0.15em;
+  margin-top: 1em;
   margin-bottom: 3em;
   color: var(--blog-date);
-  font-size: 0.8em;
+  font-size: 0.85em;
 }
 
 .tag {
@@ -130,14 +139,16 @@ li::marker {
   border-radius: 0.25em;
   margin-right: 6px;
   padding: 2px 4px;
+  font-size: inherit;
 }
 
 .tag a, a:active, a:focus {
   color: var(--main);
 }
 
-.tag a:hover {
-  text-decoration: underline;
+.tag:hover {
+  background-color: var(--blog-date);
+  text-decoration: none;
 }
 
 img {
