@@ -71,6 +71,12 @@ Access-Control-Allow-Origin = "*"
   force = true
 
 [[redirects]]
+  from = "/form.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://arieldiaz.netlify.com/*"
   to = "https://arieldiaz.codes/:splat"
   status = 301
