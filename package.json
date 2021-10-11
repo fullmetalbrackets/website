@@ -13,10 +13,15 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
+    "@nuxtjs/feed": "^2.0.0",
+    "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.18.2",
     "glob-parent": "^6.0.2",
+    "markdown-it": "^12.2.0",
+    "markdown-it-attrs": "^4.1.0",
+    "markdown-it-div": "^1.1.0",
     "netlify-plugin-csp-generator": "^1.5.0",
     "nuxt": "^2.15.7",
     "prismjs": "^1.25.0"
