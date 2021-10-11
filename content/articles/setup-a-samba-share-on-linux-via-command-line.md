@@ -9,7 +9,6 @@ date: 2021-09-01
 update: ''
 tags:
   - linux
-  - command line
 ---
 
 Samba is a tried and true, very basic method of sharing a directory with other machines on the network, including Windows PCs. Setting up shares with a GUI is nice, but unnecessary if you're comfortable with the command line. And why wouldn't a developer, or anyone working in tech, want to get as comfortable with the command line as possible? It can be a bit confusing to set up Samba on Linux the first time, so let's cut through the bullshit.

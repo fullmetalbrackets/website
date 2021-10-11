@@ -5,7 +5,6 @@ date: 2021-09-14
 update: ''
 tags:
   - linux
-  - command line
 ---
 
 Note: I've only personally done this on Ubuntu, but it should work for most Linux distros, and almost certainly will also work for Debian-based distros at the very least.

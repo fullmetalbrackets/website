@@ -8,7 +8,6 @@ date: 2021-09-08
 update: ''
 tags:
   - git
-  - command line
 ---
 
 ### Setting up git locally
