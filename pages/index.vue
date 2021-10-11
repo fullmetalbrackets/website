@@ -99,9 +99,8 @@ export default {
   flex-direction: row;
   list-style-type: none;
   background: var(--accent);
-  background: linear-gradient(180deg, var(--accent) 50%, transparent 100%);
   width: 450px;
-  height: 335px;
+  height: 325px;
   margin: auto 1rem;
   padding: 1em;
   border-radius: 1rem;
@@ -126,8 +125,7 @@ export default {
   color: var(--text);
   box-sizing: border-box;
   border-radius: 1rem;
-  background: var(--accent);
-  background: linear-gradient(180deg, var(--bg) 50%, transparent 90%);
+  background: var(--bg);
 }
 
 #date {
