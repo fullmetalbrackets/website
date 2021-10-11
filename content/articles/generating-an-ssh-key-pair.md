@@ -5,6 +5,7 @@ date: 2021-09-11
 update: ''
 tags:
   - ssh
+  - terminal
 ---
 
 Usually when to a computer or server via SSH, you are prompted for a username and password, but you can skip this and make your SSH sessions even more secure by using key pairs. Basically you will generate two encrypted keys that are associated with each other -- a private key and a public key. These are used to verify your identity.
