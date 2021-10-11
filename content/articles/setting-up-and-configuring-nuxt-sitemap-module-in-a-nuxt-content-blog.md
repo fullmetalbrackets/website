@@ -5,7 +5,7 @@ date: 2021-10-08
 update: ''
 tags:
   - nuxtjs
-  - web dev
+  - webdev
 ---
 
 This guide assumes you are working on a Nuxt site using the Content module as a headless CMS for blog posts, but it's easily modified to work with other use cases of Nuxt/Content. First, we have to add Nuxt/Sitemap to our dependencies, of course.

@@ -5,7 +5,7 @@ date: 2021-10-11
 update: ''
 tags:
   - netlify
-  - web dev
+  - webdev
 ---
 
 I was breaking my head against this one for a while until I found [this post on Medium](https://medium.com/@kimbjrkman/adding-netlify-forms-on-your-nuxt-website-20ffba3e5ba8) that finally gave me the answer, although they are over-engineering a bit, in my opinion. The issue is that Netlify's crawler will only detect HTML forms, and even though you're using HTML to create the form Nuxt will spit it out as JavaScript after build time. Netlify won't detect it. But as that post explains, there is a way, you just have to "fool" Netlify's bots a little bit. Here is a quick guide on how.

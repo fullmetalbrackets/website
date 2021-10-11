@@ -5,7 +5,7 @@ date: 2021-09-17
 update: ''
 tags:
   - nuxtjs
-  - web dev
+  - webdev
 ---
 
 These instructions assume you are using the [Nuxt/Content](https://github.com/nuxt/content) module. First things first, let's add Prism.js as a dependency.

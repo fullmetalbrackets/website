@@ -9,7 +9,7 @@ summary: So you're learning web development, building things locally and only
 date: 2021-09-14
 update: 2021-09-28
 tags:
-  - web dev
+  - webdev
   - hosting
 ---
 
