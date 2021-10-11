@@ -1,14 +1,11 @@
 name: Latest blog post
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - content/articles/**
+  repository_dispatch:
+    types: [blog.post]
 
 jobs:
   update-readme-with-blog:
-    name: Update this repo's README with latest blog posts
+    name: Update GitHub profile README with latest blog posts
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
