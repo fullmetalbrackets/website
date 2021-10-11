@@ -1,11 +1,11 @@
 name: Latest blog post
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
     paths:
       - content/articles/**
-    workflow_dispatch:
 
 jobs:
   update-readme-with-blog:
