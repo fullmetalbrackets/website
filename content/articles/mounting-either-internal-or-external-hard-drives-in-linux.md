@@ -14,7 +14,7 @@ For purposes of this explanation, let's assume you have a Linux server you just 
 
 First, let's list out our hard drives on the terminal. There are several ways to do this, but the one I find most user friendly is `lsblk` -- using it will output a nicely formatted list of all devices, including hard drives and their partitions. Partitions within a hard drive are named, for example, **sda1**, **sda2**, etc. Let's see the output of `lsblk`:
 
-<a href="https://arieldiaz.codes/img/mount1.png" target="_blank"><img src="/img/mount1.png" alt="Screenshot of lsblk output" loading="lazy"></a>
+[![Screenshot of lsblk output](/img/mount1.png)](https://arieldiaz.codes/img/mount1.png)
 
 The output shows this computer has a primary hard drive, **/sda**, with two partitions. **/sdb** is an additional 1TB hard drive installed. In my case this drive was previously partitioned, has data on it, but the data is inaccessible because it is not mounted. If you need to partition the hard drive, use the following command and follow the prompts to create a primary partition:
 
@@ -38,19 +38,19 @@ lsblk | grep -v 7:
 
 The `-v` option will filter out any lines with the character `7:`. Without getting into the weeds of device numbers, in the prior output of lsblk it shows block devices have the major number 7 while hard drives have the major number 8, both separated from the minor number by a colon. So by piping `7:` through grep I can list only hard drives. Here's the output:
 
-<a href="https://arieldiaz.codes/img/mount2.png" target="_blank"><img src="/img/mount2.png" alt="Screenshot of output from command lsblk | grep -v 7:" loading="lazy"></a>
+[![Screenshot of output from command lsblk | grep -v 7:](/img/mount2.png)](https://arieldiaz.codes/img/mount2.png)
 
 There it is! In my case I made a primary partition taking up the entire 1TB hard drive. Now I can see the contents by using `ls /mnt/DATA`. But there's one last thing to do. This drive will not stay mounted on reboot by default, so let's make sure we make it stay. This is done by editing the **fstab** file. Let's do that with `sudo nano /etc/fstab`.
 
-<a href="https://arieldiaz.codes/img/mount3.png" target="_blank"><img src="/img/mount3.png" alt="Screenshot of fstab file" loading="lazy"></a>
+[![Screenshot of fstab file](/img/mount3.png)](https://arieldiaz.codes/img/mount3.png)
 
 It gives you the instructions right there, very plainly. Let's do as it says and use the command `blkid`. (If there's no output, do it with **sudo**.)
 
-<a href="https://arieldiaz.codes/img/mount4.png" target="_blank"><img src="/img/mount4.png" alt="Screenshot of blkid output" loading="lazy"></a>
+[![Screenshot of blkid output](/img/mount4.png)](https://arieldiaz.codes/img/mount4.png)
 
 Since the drive is mounted, it's helpfully labeled, so you can figure out which one it is at a glance. Copy the **UUID**, then paste it into the fstab file and add the other options as instructed:
 
-<a href="https://arieldiaz.codes/img/mount5.png" target="_blank"><img src="/img/mount5.png" alt="Screenshot of fstab file" loading="lazy"></a>
+[![Screenshot of fstab file](/img/mount5.png)](https://arieldiaz.codes/img/mount5.png)
 
 Simple. We're using **ext4** as the file system, which is how I partitioned it, but if it the file system is different use the correct one -- e.g **ntfs**, **zfs**, etc. We are using the same options as the swap partition for this hard drive, let's call these basic options.
 
