@@ -1,3 +1,39 @@
+const fs = require('fs').promises;
+const path = require('path');
+
+let posts = [];
+
+const constructFeedItem = async (post, dir, hostname) => {
+  const filePath = path.join(__dirname, `content/articles/${post.slug}.md`);
+  const content = await fs.readFile(filePath, 'utf8');
+  const url = `${hostname}/${dir}/${post.slug}`;
+  return {
+    title: post.title,
+    id: url,
+    link: url,
+    description: post.description,
+    content: post.bodyText
+  }
+}
+
+const create = async (feed, filePath) => {
+  const hostname = 'https://arieldiaz.codes';
+  feed.options = {
+    title: "My Blog",
+    description: "I write about tech stuff",
+    link: `${hostname}/feed.xml`
+  }
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content('articles').fetch();
+
+  for (const post of posts) {
+    const feedItem = await constructFeedItem(post, filePath, hostname);
+    feed.addItem(feedItem);
+  }
+  return feed;
+}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -85,6 +121,8 @@ export default {
     '@nuxtjs/pwa',
     '@nuxt/content',
     '@nuxtjs/sitemap',
+    '@nuxtjs/feed',
+    '@nuxtjs/markdownit'
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -108,7 +146,7 @@ export default {
       prism: {
         theme: false,
       }
-    }
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -130,6 +168,54 @@ export default {
       return data.map((post) => `/blog/${post.slug}`)
     }
   },
+
+  feed: [
+    {
+      path: '/feed.xml',
+      async create(feed) {
+        feed.options = {
+          title: 'Ariel Diaz Blog',
+          description: 'I stuff about tech stuff',
+          link: 'https://arieldiaz.codes/feed.xml',
+        };
+        const { $content } = require('@nuxt/content');
+        const posts = await $content('articles').fetch();
+        posts.forEach((post) => {
+          const url = `https://arieldiaz.codes/blog/${post.slug}`;
+          feed.addItem({
+            title: post.title,
+            id: url,
+            link: url,
+            description: post.description,
+            content: post.bodyText,
+          });
+        });
+      },
+
+      cacheTime: 1000 * 60 * 15,
+      type: 'rss2',
+    },
+  ],
+
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      const md = require('markdown-it')();
+      if (document.extension === '.md') {
+        const { text } = require('reading-time')(document.text);
+
+        document.readingTime = text;
+        const mdToHtml = md.render(document.text);
+        document.bodyText = mdToHtml;
+      }
+    },
+  },
+
+  markdownit: {
+      preset: 'default',
+      linkify: true,
+      breaks: true,
+      use: ['markdown-it-div', 'markdown-it-attrs'],
+    },
 
   generate: {
     fallback: true
