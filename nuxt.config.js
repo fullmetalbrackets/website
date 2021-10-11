@@ -154,7 +154,7 @@ export default {
             id: url,
             link: url,
             date: new Date(post.date),
-            description: post.summary,
+            description: post.description,
             content: post.bodyText,
             author: 'Ariel Diaz',
           });

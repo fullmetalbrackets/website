@@ -41,12 +41,12 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.article.summary,
+          content: this.article.description,
         },
         { hid: 'og:title', property: 'og:title', content: this.article.title },
-        { hid: 'og:description', property: 'og:description', content: this.article.summary },
+        { hid: 'og:description', property: 'og:description', content: this.article.description },
         { hid: 'twitter:title', name: 'twitter:title', content: this.article.title },
-        { hid: 'twitter:description', name: 'twitter:description', content: this.article.summary },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.article.description },
         {
           property: "article:published_time",
           content: this.article.createdAt,

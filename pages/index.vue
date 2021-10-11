@@ -27,7 +27,7 @@
                 </span>
               </span>
               </p>
-              <p id="desc">{{ article.summary }}</p>
+              <p id="desc">{{ article.description }}</p>
             </NuxtLink>
           </li>
         </ul>
