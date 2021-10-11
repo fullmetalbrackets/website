@@ -8,7 +8,6 @@ summary: Setting up SSH keys and pushing to GitHub without needing to enter a
 date: 2021-09-09
 update: ''
 tags:
-  - linux
   - ssh
   - command line
 ---

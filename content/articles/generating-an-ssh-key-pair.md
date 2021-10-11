@@ -4,7 +4,6 @@ summary: Secure Shell, a protocol for securely connecting from one computer to a
 date: 2021-09-11
 update: ''
 tags:
-  - linux
   - ssh
   - command line
 ---

@@ -7,7 +7,6 @@ summary: When I was learning Git, in order to avoid giant articles and get right
 date: 2021-09-08
 update: ''
 tags:
-  - linux
   - git
   - command line
 ---

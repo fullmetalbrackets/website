@@ -10,7 +10,6 @@ summary: >-
 date: 2021-08-31
 update: ''
 tags:
-  - tech
   - hacks
 ---
 
