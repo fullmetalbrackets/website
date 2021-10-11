@@ -79,7 +79,7 @@ export default {
 section {
   display: flex;
   justify-content: right;
-  line-height: 1;
+  line-height: 1.15;
   margin-bottom: 0.5em;
 }
 
