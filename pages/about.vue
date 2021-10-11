@@ -40,7 +40,7 @@
         </p>
         <textarea name="message" required></textarea>
         <button class="button" type="submit" value="Send Message">Send Message</button>
-    </form>
+      </form>
     </section>
   </main>
 </template>
