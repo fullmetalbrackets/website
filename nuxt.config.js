@@ -11,6 +11,7 @@ const constructFeedItem = async (post, dir, hostname) => {
     title: post.title,
     id: url,
     link: url,
+    date: new Date(post.createdAt),
     description: post.description,
     content: post.bodyText
   }
@@ -186,6 +187,7 @@ export default {
             title: post.title,
             id: url,
             link: url,
+            date: new Date(post.createdAt),
             description: post.description,
             content: post.bodyText,
           });
