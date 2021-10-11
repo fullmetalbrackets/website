@@ -16,13 +16,18 @@
           <li v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
               <h2>{{ article.title }}</h2>
-              <p id="desc">{{ article.summary }}</p>
-              <p id="tags">
-                <span v-for="tag in article.tags" :key="tag" class="tag">
-                <nuxt-link :to="`/tags/${tag}`"><span>{{ tag }}</span></nuxt-link>
+              <hr/>
+              <p id="info">
+                <span id="date">Posted: {{ formatDate(article.date) }}</span>
+                <span id="tags">
+                  <span v-for="tag in article.tags" :key="tag" class="tag">
+                    <nuxt-link :to="`/tags/${tag}`">
+                      <span>{{ tag }}</span>
+                    </nuxt-link>
                 </span>
+              </span>
               </p>
-              <p id="date">Posted on: {{ formatDate(article.date) }}</p>
+              <p id="desc">{{ article.summary }}</p>
             </NuxtLink>
           </li>
         </ul>
@@ -75,6 +80,7 @@ export default {
 #recent-posts {
   box-sizing: border-box;
   font-size: 1rem;
+  margin-bottom: 1em;
 }
 
 #recent-posts ul {
@@ -130,7 +136,6 @@ export default {
   color: var(--blog-date);
   margin: 0;
   margin-top: 4px;
-  text-align: right;
 }
 
 #desc {
@@ -143,6 +148,12 @@ export default {
   margin: 0;
 }
 
+#info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25em;
+}
+
 .tag {
   padding: 2px 4px;
   margin-right: 6px;
@@ -151,9 +162,14 @@ export default {
   border-radius: 0.25em;
 }
 
-.tag a:hover {
-  color: var(--accent);
-  text-decoration: underline;
+.tag:hover {
+  background-color: var(--blog-date);
+  text-decoration: none;
+}
+
+hr {
+  border: 0.25px solid;
+  opacity: 0.25;
 }
 
 span {
