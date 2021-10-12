@@ -23,7 +23,7 @@ html {
   --form-bg: hsl(0, 0%, 55%);
   --code-text: #f8f8f2; /* use same color as Prism theme */
   --code-bg: #272822; /* use same color as Prism theme */
-  font-size: 1rem;
+  font-size: 0.975rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text);
   line-height: 1;
