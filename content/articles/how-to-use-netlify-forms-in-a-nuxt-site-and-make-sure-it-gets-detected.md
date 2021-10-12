@@ -16,7 +16,7 @@ I was breaking my head against this one for a while until I found [this post on 
 First, let's say your form is in your site's `contact.vue` page and it looks something like this:
 
 ```html
-pages/contact.vue
+<!-- pages/contact.vue -->
 
 <form name="contact" method="POST" netlify>
   <input type="text" name="name" required />
@@ -28,7 +28,7 @@ pages/contact.vue
 [Netlify's documentation](https://docs.netlify.com/forms/setup/) says you only need either `netlify` (as above) or alternately `data-netlify="true"` on your form element for it to work. We're going to copy and paste this code exactly into a "dummy form" that will be detected by Netlify, even though the data will be coming from the real form above. In your Nuxt project's `/static` folder, create an HTML file. The name doesn't matter, I used `form.html`. Copy and paste the code exactly, using the same form name, same input name and types, and make sure to include the `netlify` attribute within the form element:
 
 ```html
-static/form.html
+<!-- static/form.html -->
 
 <form name="contact" method="POST" netlify hidden>
   <input type="text" name="name" />
