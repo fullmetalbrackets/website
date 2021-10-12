@@ -153,10 +153,15 @@ export default {
             title: post.title,
             id: url,
             link: url,
-            date: new Date(post.date),
+            published: new Date(post.date),
             description: post.description,
             content: post.bodyText,
-            author: 'Ariel Diaz',
+            author: [
+              {
+                name: 'Ariel Diaz',
+                email: 'fullmetalbrackets@gmail.com',
+              }
+            ]
           });
         });
       },
