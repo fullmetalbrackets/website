@@ -107,6 +107,16 @@ li > code {
   border-radius: 0.25em;
 }
 
+/* Page transition effect */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
 /* Typewriting effect borrowed from Geoff Graham - https://css-tricks.com/snippets/css/typewriter-effect */
 
 .typing {
