@@ -180,7 +180,7 @@ git push origin --delete branch-name
 Above I explained how to add a remote repo as **_origin_**, making it the default. But what if you want to push your project to multiple remotes, even on different git hosts? For example, say your origin is on Github, but you also want copies of your project on Bitbucket and Gitlab. (Let's assume you name these **_bitbucket-repo_** & **_gitlab-repo_** locally.)
 
 ```shell
-git remote add gitlab-repo https://gitlab.com/fullmetalbrackets/website.git
+git remote add gitlab-repo https://username@bitbucket.org/username/repo.git
 git remote add bitbucket-repo https://username@bitbucket.org/username/repo.git
 ```
 
@@ -194,7 +194,7 @@ git push gitlab-repo main
 To "track" a branch when adding a remote, making that branch the default for the remote.
 
 ```shell
-git remote add -t main gitlab-repo https://gitlab.com/fullmetalbrackets/website.git
+git remote add -t main gitlab-repo https://username@bitbucket.org/username/repo.git
 ```
 
 By tracking the main branch on the remote "gitlab-repo" and can do the following.
