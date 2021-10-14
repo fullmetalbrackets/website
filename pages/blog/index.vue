@@ -1,27 +1,27 @@
 <template>
-    <main>
-      <section>
-        <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
-      </section>
-      <hr/>
-      <section>
-        <ul>
-          <li v-for="article of articles" :key="article.slug">
-              <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-                  <h2 class="art-title">{{ article.title }}</h2>
-                  <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
-                  <p class="art-desc">{{ article.description }}</p>
-                  <p class="art-tags">
-                    Tags:
-                    <span v-for="tag in article.tags" :key="tag" class="tag">
-                    <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
-                    </span>
-                  </p>
-              </NuxtLink>
-          </li>
-        </ul>
-      </section>
-    </main>
+  <main>
+    <section>
+      <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
+    </section>
+    <hr/>
+    <section>
+      <ul>
+        <li v-for="article of articles" :key="article.slug">
+            <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+                <h2 class="art-title">{{ article.title }}</h2>
+                <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
+                <p class="art-desc">{{ article.description }}</p>
+                <p class="art-tags">
+                  Tags:
+                  <span v-for="tag in article.tags" :key="tag" class="tag">
+                  <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+                  </span>
+                </p>
+            </NuxtLink>
+        </li>
+      </ul>
+    </section>
+  </main>
 </template>
 
 
