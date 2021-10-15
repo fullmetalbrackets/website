@@ -29,6 +29,7 @@
 export default {
   async asyncData({ $content }) {
     const articles = await $content('articles')
+      .without('body')
       .sortBy('date', 'desc')
       .fetch()
     return {
@@ -61,7 +62,7 @@ export default {
         return
       }
       this.articles = await this.$content('articles')
-        .sortBy('date', 'asc')
+        .sortBy('date', 'desc')
         .search(query)
         .fetch()
     }
