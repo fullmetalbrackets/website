@@ -1,26 +1,28 @@
 <template>
   <main>
-    <h2>{{ article.title }}</h2>
-    <hr>
-    <p class="art-date">
-      Posted on {{ formatDate(article.date) }}
-    </p>
-    <p v-if="article.update === ''" class="hide"></p>
-    <p v-else class="art-date">
-      Updated on {{ formatDate(article.update) }}
-    </p>
-    <p class="art-tags">
-      Tags:
-      <span v-for="tag in article.tags" :key="tag" class="tag">
-      <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
-      </span>
-    </p>
-    <nuxt-content :document="article" class="blog-article" />
-    <hr class="bottom">
-    <p class="foot">
-      <a href="/blog"><i class="return"></i> Return to Blog</a>
-      <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
-    </p>
+    <article>
+      <h2>{{ article.title }}</h2>
+      <hr>
+      <p class="art-date">
+        Posted on {{ formatDate(article.date) }}
+      </p>
+      <p v-if="article.update === ''" class="hide"></p>
+      <p v-else class="art-date">
+        Updated on {{ formatDate(article.update) }}
+      </p>
+      <p class="art-tags">
+        Tags:
+        <span v-for="tag in article.tags" :key="tag" class="tag">
+        <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+        </span>
+      </p>
+      <nuxt-content :document="article" class="blog-article" />
+      <hr class="bottom">
+      <p class="foot">
+        <a href="/blog"><i class="return"></i> Return to Blog</a>
+        <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
+      </p>
+    </article>
   </main>
 </template>
 
@@ -96,6 +98,11 @@ export default {
 </script>
 
 <style scoped>
+article {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
 hr {
   border: 0.25px solid var(--line-color);
 }
