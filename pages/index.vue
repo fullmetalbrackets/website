@@ -11,7 +11,7 @@
       <p>
         Want to see what I've written about lately? Jump right in to my most recent posts below, or <NuxtLink to="/blog">see the full blog</NuxtLink> to read older articles.
       </p>
-      <div id="recent-posts">
+      <section>
         <ul>
           <li v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
@@ -31,7 +31,7 @@
             </NuxtLink>
           </li>
         </ul>
-      </div>
+      </section>
   </main>
 </template>
 
@@ -39,11 +39,12 @@
 export default {
   async asyncData ({ $content }) {
     const articles = await $content('articles')
+      .without('body')
       .sortBy('date', 'desc')
       .limit(3)
       .fetch()
     return {
-        articles
+      articles
     }
   },
 
@@ -77,13 +78,13 @@ export default {
   margin-top: 2em;
 }
 
-#recent-posts {
+section {
   box-sizing: border-box;
   font-size: 1rem;
   margin-bottom: 1em;
 }
 
-#recent-posts ul {
+section ul {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -93,7 +94,7 @@ export default {
   padding: 0;
 }
 
-#recent-posts li {
+section li {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -106,22 +107,22 @@ export default {
   border-radius: 1rem;
 }
 
-#recent-posts li:first-child {
+section li:first-child {
   margin-left: 0;
 }
 
-#recent-posts li:last-child {
+section li:last-child {
   margin-right: 0;
 }
 
-#recent-posts li a,
-#recent-posts li a:active,
-#recent-posts li a:visited {
+section li a,
+section li a:active,
+section li a:visited {
   color: var(--text);
   text-shadow: none;
 }
 
-#recent-posts li:hover {
+section li:hover {
   color: var(--text);
   box-sizing: border-box;
   border-radius: 1rem;
@@ -175,14 +176,14 @@ span {
 }
 
 @media screen and (max-width: 1280px) {
-  #recent-posts ul {
+  section ul {
     display: flex;
     flex-direction: column;
     height: auto;
     margin: auto;
   }
 
-  #recent-posts li {
+  section li {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
@@ -192,7 +193,7 @@ span {
     background: var(--accent);
   }
 
-  #recent-posts li:last-child {
+  section li:last-child {
     margin-bottom: 6rem;
   }
 }
