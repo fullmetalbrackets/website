@@ -53,7 +53,7 @@ export default {
 }
 ```
 
-If however you use another folder structure on your site, like in my case even though the raw markdown files are stored in `./content/articles` they are served via `./blog/` name-of-post because I wanted a dedicated page at [https://arieldiaz.codes/blog](https://arieldiaz.codes/blog) to list all my posts by date and have a search function. The above code won't work and when I went in search of a solution that would let me point the dynamic route at a specified directory, I couldn't really find a succinct way to do it. Finally I happened upon this Stack Overflow question that made me understand how to make it happen -- though in this case they are using axios, and I'm using Nuxt/Content's MongoDB-like query builder API, I just needed to use a mapping.  So to make the sitemap module route correctly in this case, instead of the above, use this code in the `nuxt.config.js` file:
+If however you use another folder structure on your site, like in my case even though the raw markdown files are stored in `./content/articles` they are served via `./blog/name-of-post` because I wanted a dedicated page at [https://arieldiaz.codes/blog](https://arieldiaz.codes/blog) to list all my posts by date and have a search function. The above code won't work and when I went in search of a solution that would let me point the dynamic route at a specified directory, I couldn't really find a succinct way to do it. Finally I happened upon this Stack Overflow question that made me understand how to make it happen -- though in this case they are using axios, and I'm using Nuxt/Content's MongoDB-like query builder API, I just needed to use a mapping.  So to make the sitemap module route correctly in this case, instead of the above, use this code in the `nuxt.config.js` file:
 
 ```js
 // nuxt.config.js
@@ -69,7 +69,7 @@ export default {
 }
 ```
 
-Voila! Now the sitemap module will generate the dynamic routes correctly with only a few extra lines of code, right inside your `nuxt.config.js` file. If you want to test it locally before deploy, do `yarn build && yarn generate` then go into your `/dist` folder and open the `sitemap.xml` file -- all your blog post routes should appear.
+Voila! Now the sitemap module will generate the dynamic routes correctly with only a few extra lines of code, right inside your `nuxt.config.js` file. If you want to test it locally before deploy, do `yarn generate` then go into your `/dist` folder and open the `sitemap.xml` file -- all your blog post routes should appear.
 
 ### References
 
