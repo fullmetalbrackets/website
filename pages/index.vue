@@ -41,7 +41,7 @@ export default {
     const articles = await $content('articles')
       .without('body')
       .sortBy('date', 'desc')
-      .limit(3)
+      .limit(4)
       .fetch()
     return {
       articles
@@ -79,43 +79,28 @@ export default {
 }
 
 section {
+  display: flex;
+  justify-content: space-around;
   box-sizing: border-box;
   font-size: 1rem;
-  margin-bottom: 1em;
 }
 
 section ul {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: initial;
-  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  height: auto;
   width: auto;
-  margin: 0;
-  padding: 0 calc(1rem + 1vw);
+  padding: 0;
 }
 
 section li {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  margin: 1rem;
   list-style-type: none;
-  background: var(--accent);
-  width: 450px;
-  min-height: 225px;
-  max-height: auto;
-  margin: 0 1rem;
+  height: auto;
+  width: auto;
   padding: 1em;
-  border-radius: 1rem;
-}
-
-section li:first-child {
-  margin-left: 0;
-}
-
-section li:last-child {
-  margin-right: 0;
+  border-radius: 1em;
+  background: var(--accent);
 }
 
 section li a,
@@ -127,8 +112,6 @@ section li a:visited {
 
 section li:hover {
   color: var(--text);
-  box-sizing: border-box;
-  border-radius: 1rem;
   background: var(--bg);
 }
 
@@ -144,8 +127,10 @@ section li:hover {
   padding: 0 auto;
   margin: 0.25em 0.5em;
   color: var(--text-color);
-  min-height: 225px;
-  max-height: 300px;
+  min-height: 150px;
+  max-height: auto;
+  min-width: 300px;
+  max-width: auto;
 }
 
 #tags {
@@ -181,32 +166,53 @@ span {
   color: var(--accent);
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  main {
+    padding: 20px;
+    margin: 0 auto;
+  }
+
   section ul {
     display: flex;
     flex-direction: column;
     height: auto;
-    margin: auto;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: auto;
   }
 
   section li {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
+    list-style-type: none;
+    min-height: auto;
+    max-height: 1000px;
+    min-width: auto;
+    max-width: auto;
+    padding: 1em;
     margin-bottom: 1em;
-    padding-bottom: 1em;
-    min-height: 200px;
-    max-height: auto;
-    width: auto;
+    border-radius: 1em;
     background: var(--accent);
   }
 
-  section li:last-child {
-    margin-bottom: 2rem;
+  section li a,
+  section li a:active,
+  section li a:visited {
+    color: var(--text);
+    text-shadow: none;
+  }
+
+  section li:hover {
+    color: var(--text);
+    background: var(--bg);
   }
 
   #desc {
-    min-height: 100px;
-    max-height: auto;
+    min-height: auto;
+    max-height: 1000px;
+    min-width: auto;
+    max-width: auto;
   }
 }
 </style>
