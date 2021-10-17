@@ -18,7 +18,7 @@
               <h2>{{ article.title }}</h2>
               <hr/>
               <p id="info">
-                <span id="date">Posted: {{ formatDate(article.date) }}</span>
+                <span id="date">{{ formatDate(article.date) }}</span>
                 <span id="tags">
                   <span v-for="tag in article.tags" :key="tag" class="tag">
                     <nuxt-link :to="`/tags/${tag}`">
@@ -88,6 +88,7 @@ section ul {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  align-items: initial;
   list-style-type: none;
   width: auto;
   margin: 0;
@@ -101,8 +102,9 @@ section li {
   list-style-type: none;
   background: var(--accent);
   width: 450px;
-  height: 325px;
-  margin: auto 1rem;
+  min-height: 225px;
+  max-height: auto;
+  margin: 0 1rem;
   padding: 1em;
   border-radius: 1rem;
 }
@@ -141,6 +143,8 @@ section li:hover {
   padding: 0 auto;
   margin: 0.25em 0.5em;
   color: var(--text-color);
+  min-height: 225px;
+  max-height: 300px;
 }
 
 #tags {
@@ -150,6 +154,7 @@ section li:hover {
 #info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 0.25em;
 }
 
@@ -187,14 +192,19 @@ span {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
-    padding-bottom: 0;
-    height: auto;
+    padding-bottom: 1em;
+    min-height: 200px;
+    max-height: auto;
     width: auto;
     background: var(--accent);
   }
 
   section li:last-child {
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  #desc {
+    height: auto;
   }
 }
 </style>
