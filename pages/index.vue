@@ -92,12 +92,13 @@ section ul {
   list-style-type: none;
   width: auto;
   margin: 0;
-  padding: 0;
+  padding: 0 calc(1rem + 1vw);
 }
 
 section li {
   box-sizing: border-box;
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
   list-style-type: none;
   background: var(--accent);
@@ -204,7 +205,8 @@ span {
   }
 
   #desc {
-    height: auto;
+    min-height: 100px;
+    max-height: auto;
   }
 }
 </style>
