@@ -11,7 +11,6 @@
         Updated on {{ formatDate(article.update) }}
       </p>
       <p class="art-tags">
-        Tags:
         <span v-for="tag in article.tags" :key="tag" class="tag">
         <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
         </span>
@@ -107,6 +106,19 @@ hr {
   border: 0.25px solid var(--line-color);
 }
 
+.art-date {
+  padding: 0 auto;
+  margin: 0 auto;
+  color: var(--blog-date);
+  text-shadow: none;
+}
+
+.art-tags {
+  padding: 0 auto;
+  margin: 0.5em auto 0 auto;
+  color: var(--blog-date);
+}
+
 li {
   margin: 0 auto;
   margin-bottom: 0.25em;
@@ -126,42 +138,10 @@ li::marker {
   display: none;
 }
 
-.art-date {
-  color: var(--blog-date);
-  margin: 0.25em auto;
-  font-size: 0.85em;
-}
-
-.art-tags {
-  padding: 0 auto;
-  margin-top: 1em;
-  margin-bottom: 3em;
-  color: var(--blog-date);
-  font-size: 0.85em;
-}
-
-.tag {
-  background: var(--heading);
-  font-weight: bold;
-  border-radius: 0.25em;
-  margin-right: 6px;
-  padding: 2px 4px;
-  font-size: inherit;
-}
-
-.tag a, a:active, a:focus {
-  color: var(--main);
-}
-
-.tag:hover {
-  background-color: var(--blog-date);
-  text-decoration: none;
-}
-
 img {
   display: flex;
   justify-content: center;
-  width: auto;
+  min-width: auto;
   max-width: 100%;
   height: auto;
 }
@@ -202,9 +182,4 @@ img {
   margin-bottom: 0.025em;
 }
 
-@media screen and (max-width: 600px) {
-  .foot {
-    font-size: 0.75em;
-  }
-}
 </style>

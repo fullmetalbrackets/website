@@ -39,7 +39,7 @@
           <label for="message">Message:</label>
         </p>
         <textarea name="message" required></textarea>
-        <button class="button" type="submit" value="Send Message">Send Message</button>
+        <button class="button" type="submit" value="Submit">Submit</button>
       </form>
     </section>
   </main>
@@ -74,9 +74,8 @@ img {
 
 section {
   margin: 0 auto;
-  margin-bottom: 2em;
   padding: 0 auto;
-  width: 70vw;
+  width: 60%;
 }
 
 .contact-form {
@@ -92,13 +91,13 @@ label {
   margin: 0 auto;
   padding: 0 auto;
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--heading);
 }
 
 input {
   line-height: 1;
-  font-size: 1rem;
+  font-size: 2rem;
   border-style: none;
   margin: 0.25em auto 1em auto;
   padding: 0 auto;
@@ -114,7 +113,7 @@ input {
 
 textarea {
   line-height: 1;
-  font-size: 1rem;
+  font-size: 2rem;
   border-style: none;
   margin: 0.25em auto 1em auto;
   padding: 0 auto;
@@ -131,21 +130,19 @@ textarea {
 }
 
 button {
-  font-size: 1.25em;
+  font-size: 2rem;
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
   font-weight: 700;
-  background: transparent;
+  background: var(--heading);
   border-style: none;
+  border-radius: 0.25em;
   cursor: pointer;
-  margin: -1em auto;
-  padding: 0 auto;
-  line-height: 1;
-  color: hsl(30, 100%, 56%);
+  margin: 0 auto;
+  padding: 5px 15px 3px 15px;
 }
 
 button:hover {
-  color: hsl(59, 100%, 50%);
-  text-decoration: none;
+  background: var(--blog-date);
   transition-duration: 0.25s;
   transition-property: color, fill, stroke;
   transition-timing-function: linear;
@@ -160,10 +157,9 @@ button:hover {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-@media screen and (max-width: 600px) {
-  img {
-    width: 50px;
-    height: auto;
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  section {
+    width: auto;
   }
 }
 </style>

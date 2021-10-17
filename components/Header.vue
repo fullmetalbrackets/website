@@ -16,9 +16,11 @@ header {
   align-items: center;
   height: auto;
   width: auto;
-  margin: auto calc(4em + 4vw);
+  margin: 0;
   margin-bottom: 0.5em;
   padding: 0;
+  padding-right: 10px;
+  padding-left: 10px;
   line-height: 1.25;
 }
 
@@ -37,7 +39,7 @@ div {
 
 #logo {
   font-family: 'streamster';
-  font-size: 5rem;
+  font-size: calc(2.25rem + 2.25vw);
   text-shadow: 0.1rem 0.1rem 0.1rem var(--shadow);
   width: auto;
   height: auto;
@@ -105,43 +107,6 @@ nav a:focus::after {
 @media screen and (prefers-color-scheme: light) {
   #logo {
     text-shadow: 0.25rem 0.25rem 0.15rem hsl(0, 0%, 40%);
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  header {
-    margin: 1em 3em;
-  }
-
-  main {
-    margin: 0.5em 1em;
-    padding: 1em;
-    font-size: 1.35em;
-  }
-
-  #logo {
-    font-size: 3.425rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  main {
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  header {
-    margin: 0.5em 1em;
-  }
-
-  main {
-    margin: auto;
-  }
-
-  #logo {
-    font-size: 2.5rem;
-    text-shadow: 1.5px 1.5px 1.5px var(--shadow);
   }
 }
 </style>

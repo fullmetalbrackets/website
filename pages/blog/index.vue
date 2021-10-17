@@ -1,8 +1,8 @@
 <template>
   <main>
-    <section>
+    <aside>
       <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
-    </section>
+    </aside>
     <hr/>
     <section>
       <ul>
@@ -12,7 +12,6 @@
                 <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
                 <p class="art-desc">{{ article.description }}</p>
                 <p class="art-tags">
-                  Tags:
                   <span v-for="tag in article.tags" :key="tag" class="tag">
                   <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
                   </span>
@@ -81,7 +80,8 @@ section {
   display: flex;
   justify-content: right;
   line-height: 1.15;
-  margin-bottom: 0.5em;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .blog {
@@ -90,8 +90,10 @@ section {
   font-size: 2em;
 }
 
-span {
-  text-align: right;
+aside {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
 }
 
 input {
@@ -104,7 +106,7 @@ input {
   border-radius: 0.25em;
   background: var(--form-bg);
   height: auto;
-  width: 70%;
+  width: 250px;
   box-sizing: border-box;
   font-family: 'Fira Sans', 'Courier New', Courier, monospace;
   outline: none;
@@ -118,17 +120,14 @@ hr {
 
 ul {
   list-style-type: none;
-  margin: auto;
-  padding: auto;
+  margin: 0 auto;
+  padding: 0;
   width: auto;
 }
 
 li {
   list-style-type: none;
   margin: auto;
-  margin-top: -0.25em;
-  margin-left: -1.85em;
-  margin-bottom: 2em;
   padding: 10px;
   border-radius: 0.5em;
   background: var(--accent);
@@ -141,65 +140,13 @@ li:hover {
   transition-timing-function: linear;
 }
 
-.art-date {
-  padding: 0 auto;
-  margin: 0 auto 0 0.35em;
-  color: var(--blog-date);
-  text-shadow: none;
-}
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  section li {
+    margin: 1em 0;
+  }
 
-.art-desc {
-  padding: 0 auto;
-  margin: 0 auto 0 0.75em;
-  color: var(--text);
-  text-shadow: none;
-}
-
-.art-title {
-  text-shadow: none;
-}
-
-.art-tags {
-  padding: 0 auto;
-  margin: 0.5em auto 0 0.35em;
-  color: var(--blog-date);
-  font-size: 0.75em;
-}
-
-.tag {
-  background: var(--heading);
-  font-weight: bold;
-  border-radius: 0.25em;
-  margin-top: 2px;
-  margin-right: 6px;
-  padding: 2px 4px;
-}
-
-.tag a {
-  color: var(--main);
-}
-
-.tag a:visited {
-  color: var(--main);
-}
-
-.tag a:active {
-  color: var(--main);
-}
-
-.tag:hover {
-  background-color: var(--blog-date);
-  text-decoration: none;
-}
-
-@media screen and (max-width: 600px) {
-  li {
-    list-style-type: none;
-    padding: 0 auto;
-    margin: 0 auto;
-    margin-top: -0.25em;
-    margin-left: -1.85em;
-    margin-bottom: 2em;
+  section li:first-child {
+    margin: 0;
   }
 }
 </style>

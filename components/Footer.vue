@@ -16,8 +16,6 @@ footer {
   width: auto;
   margin: 0 auto;
   margin-top: 0.75em;
-  margin-bottom: 0;
-  padding: 0;
   line-height: 1.25;
 }
 

@@ -23,9 +23,9 @@
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .err1 {
     font-size: 4rem;
   }
-}
+} */
 </style>

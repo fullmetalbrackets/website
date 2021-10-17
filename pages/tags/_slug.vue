@@ -12,7 +12,6 @@
         <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
         <p class="art-desc">{{ article.description }}</p>
         <p class="art-tags">
-          Tags:
           <span v-for="tag in article.tags" :key="tag" class="tag">
           <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
           </span>
@@ -69,46 +68,6 @@ hr {
   margin: 0;
 }
 
-.articles {
-  font-size: 2em;
-  margin-bottom: 0.5em;
-}
-
-.art-tag {
-  color: var(--text);
-}
-
-.art-tags {
-  padding: 0 auto;
-  margin: 0.25em auto 0 0.35em;
-  color: var(--blog-date);
-  font-size: 0.75em;
-}
-
-.tag {
-  background: var(--heading);
-  font-weight: bold;
-  border-radius: 0.25em;
-  margin-right: 6px;
-  padding: 2px 4px;
-}
-
-.tag a, a:active, a:focus {
-  color: var(--main);
-}
-
-.tag:hover {
-  background-color: var(--blog-date);
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-  margin: auto;
-  padding: auto;
-  width: auto;
-}
-
 li {
   list-style-type: none;
   margin: auto;
@@ -145,14 +104,17 @@ li:hover {
   text-shadow: none;
 }
 
-@media screen and (max-width: 600px) {
-  li {
-    list-style-type: none;
-    padding: 0 auto;
-    margin: 0 auto;
-    margin-top: -0.25em;
-    margin-left: -1.85em;
-    margin-bottom: 2em;
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  main {
+    font-size: 1.25em;
+  }
+
+  section li {
+    margin: 1em 0;
+  }
+
+  section li:first-child {
+    margin: 0;
   }
 }
 </style>

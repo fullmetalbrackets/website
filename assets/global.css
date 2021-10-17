@@ -10,6 +10,7 @@ html {
 }
 
 :root {
+  /* colors */
   --text: hsl(201, 100%, 85%);
   --bg: hsl(234, 65%, 25%);
   --accent: hsl(240, 76%, 13%);
@@ -43,11 +44,9 @@ html {
 main {
   border-style: none;
   border-radius: 1rem;
-  margin: auto calc(2em + 4vw);
-  padding: 2em;
-  padding-bottom: 1em;
+  padding: 2.5em;
   background: var(--main);
-  min-height: 60vh;
+  min-height: auto;
   height: auto;
   width: auto;
   font-size: 1.5em;
@@ -105,6 +104,56 @@ li > code {
   background: var(--code-bg);
   color: var(--code-text);
   border-radius: 0.25em;
+}
+
+.art-date {
+  padding: 0 auto;
+  margin: 0 auto 0 0.35em;
+  color: var(--blog-date);
+  text-shadow: none;
+}
+
+.art-desc {
+  padding: 0 auto;
+  margin: 0 auto 0 0.75em;
+  color: var(--text);
+  text-shadow: none;
+}
+
+.art-title {
+  text-shadow: none;
+}
+
+.art-tags {
+  padding: 0 auto;
+  margin: 0.5em auto 0 0.35em;
+  color: var(--blog-date);
+}
+
+.art-tags .tag {
+  background: var(--heading);
+  font-weight: bold;
+  border-radius: 0.25em;
+  margin-top: 2px;
+  margin-right: 6px;
+  padding: 2px 4px;
+}
+
+.art-tags .tag a {
+  color: var(--main);
+}
+
+.art-tags .tag a:visited {
+  color: var(--main);
+}
+
+.art-tags .tag a:active {
+  color: var(--main);
+}
+
+.art-tags .tag:hover {
+  background-color: var(--blog-date);
+  text-decoration: none;
 }
 
 /* Typewriting effect borrowed from Geoff Graham - https://css-tricks.com/snippets/css/typewriter-effect */
@@ -171,23 +220,33 @@ li > code {
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 200px) and (max-width: 767px) {
   main {
-    margin: 0.5em 1em;
+    font-size: 1.25em;
     padding: 1em;
-    font-size: 1.35em;
   }
 }
 
-@media screen and (max-width: 768px) {
-  main {
-    margin: auto;
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .wrapper {
+    margin: 0;
   }
 }
 
-@media screen and (max-width: 600px) {
-  main {
-    margin: auto;
-    min-height: 75vh;
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .wrapper {
+    margin: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .wrapper {
+    margin: 0 10rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    margin: 0 20rem;
   }
 }
