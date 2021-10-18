@@ -48,6 +48,7 @@ h2 {
 
 form {
   margin: 1em;
+  margin-bottom: 2em;
 }
 
 input {
@@ -126,7 +127,7 @@ button:hover {
   }
 
   label, button {
-    font-size: 0.85em;
+    font-size: 1rem;
   }
 }
 </style>
