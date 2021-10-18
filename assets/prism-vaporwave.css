@@ -11,7 +11,9 @@ pre[class*='language-'] {
   color: #fe10bf;
   background: none;
   border-radius: 0.5em;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: 'JetBrainsMono NF', 'JetBrainsMono Nerd Font',
+    'JetBrainsMono Nerd Font Mono', Consolas, Monaco, 'Andale Mono',
+    'Ubuntu Mono', monospace;
   font-size: 0.9em;
   text-align: left;
   white-space: pre;
