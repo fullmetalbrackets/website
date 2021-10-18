@@ -132,7 +132,7 @@ ul {
 li {
   list-style-type: none;
   margin: auto;
-  padding: 10px;
+  padding: 1em;
   border-radius: 0.5em;
   background: var(--accent);
   margin-bottom: 1.5em;

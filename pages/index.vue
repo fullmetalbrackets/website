@@ -82,7 +82,7 @@ section {
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: 0.6em;
 }
 
 section ul {
