@@ -108,7 +108,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism/themes/prism-vaporwave.css'
+        theme: 'plugins/prism-vaporwave.css'
       }
     },
   },
