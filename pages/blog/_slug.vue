@@ -1,7 +1,7 @@
 <template>
   <main>
     <article>
-      <h2>{{ article.title }}</h2>
+      <h1>{{ article.title }}</h1>
       <hr>
       <p class="art-date">
         Posted on {{ formatDate(article.date) }}
