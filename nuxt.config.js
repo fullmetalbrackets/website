@@ -108,7 +108,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: false
+        theme: 'prismjs/themes/okaidia.css'
       }
     },
   },
