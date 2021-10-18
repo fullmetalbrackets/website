@@ -83,6 +83,7 @@ h2 {
   line-height: 1;
   font-size: 1.35em;
   margin: 0 auto;
+  margin-top: 2.25em;
   padding: 0 auto;
   letter-spacing: -0.0125em;
 }
@@ -126,6 +127,7 @@ li > code {
 }
 
 .art-title {
+  margin: 0;
   text-shadow: none;
 }
 

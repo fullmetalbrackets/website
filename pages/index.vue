@@ -15,7 +15,7 @@
       <ul>
         <li v-for="article of articles" :key="article.slug">
           <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-            <h2>{{ article.title }}</h2>
+            <h2 class="art-title">{{ article.title }}</h2>
             <hr/>
             <p id="info">
               <span id="date">{{ formatDate(article.date) }}</span>
