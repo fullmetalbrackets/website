@@ -30,6 +30,15 @@ pre[class*='language-'] {
   hyphens: none;
 }
 
+.toolbar-item {
+  margin-right: 5px;
+  color: var(--heading);
+}
+
+.copy-to-clipboard-button:hover {
+  cursor: pointer;
+}
+
 /* Code blocks */
 pre[class*='language-'] {
   padding: 1em;
