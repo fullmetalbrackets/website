@@ -41,7 +41,7 @@ export default {
     const articles = await $content('articles')
       .without('body')
       .sortBy('date', 'desc')
-      .limit(4)
+      .limit(3)
       .fetch()
     return {
       articles
