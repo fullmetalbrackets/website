@@ -5,33 +5,36 @@
       I'm Ariel, learning web development and living life in sunny/rainy (depending on the time of year) South Florida.
     </p>
     <p>
-      This is my personal website, made with Nuxt.js as a way to learn the framework. Feel free to check out <a href="https://github.com/fullmetalbrackets/website" target="_blank" rel="noopener">this site's source code</a>. Eventually this site will have a portfolio of projects I've worked on, but for now feel free to read my blog -- really just a dump of documentation I've made for myself as I've learned web development, Linux, the command line, etc. If you want to reach out, please use the <Nuxt-Link to="/about#contact">contact form</Nuxt-Link>. Thanks for visiting!
+      This is my personal website, made with Nuxt.js as a way to learn the framework. Feel free to check out <a href="https://github.com/fullmetalbrackets/website" target="_blank" rel="noopener">this site's source code</a>. Eventually this site will have a portfolio of projects I've worked on, but for now feel free to read my blog -- really just a dump of documentation I've made for myself as I've learned web development, Linux, the command line, etc. If you want to reach out, please use the <Nuxt-Link to="#contact">contact form</Nuxt-Link>. Thanks for visiting!
     </p>
       <h2 class="recent">Recent Posts</h2>
       <p>
         Want to see what I've written about lately? Jump right in to my most recent posts below, or <NuxtLink to="/blog">see the full blog</NuxtLink> to read older articles.
       </p>
-      <section>
-        <ul>
-          <li v-for="article of articles" :key="article.slug">
-            <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-              <h2>{{ article.title }}</h2>
-              <hr/>
-              <p id="info">
-                <span id="date">{{ formatDate(article.date) }}</span>
-                <span id="tags">
-                  <span v-for="tag in article.tags" :key="tag" class="tag">
-                    <nuxt-link :to="`/tags/${tag}`">
-                      <span>{{ tag }}</span>
-                    </nuxt-link>
-                </span>
+    <section>
+      <ul>
+        <li v-for="article of articles" :key="article.slug">
+          <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+            <h2>{{ article.title }}</h2>
+            <hr/>
+            <p id="info">
+              <span id="date">{{ formatDate(article.date) }}</span>
+              <span id="tags">
+                <span v-for="tag in article.tags" :key="tag" class="tag">
+                  <nuxt-link :to="`/tags/${tag}`">
+                    <span>{{ tag }}</span>
+                  </nuxt-link>
               </span>
-              </p>
-              <p id="desc">{{ article.description }}</p>
-            </NuxtLink>
-          </li>
-        </ul>
-      </section>
+            </span>
+            </p>
+            <p id="desc">{{ article.description }}</p>
+          </NuxtLink>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <LazyAbout />
+    </section>
   </main>
 </template>
 
@@ -83,6 +86,8 @@ section {
   justify-content: space-around;
   box-sizing: border-box;
   font-size: 0.6em;
+  padding: 0;
+  margin: 0;
 }
 
 section ul {
@@ -91,6 +96,7 @@ section ul {
   height: auto;
   width: auto;
   padding: 0;
+  margin: 0;
 }
 
 section li {
