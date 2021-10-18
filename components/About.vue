@@ -117,8 +117,8 @@ button:hover {
 }
 
 @media screen and (min-width: 200px) and (max-width: 767px) {
-  section {
-    width: auto;
+  .about {
+    font-size: 1.25rem;
   }
 
   h2 {
