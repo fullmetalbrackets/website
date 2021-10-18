@@ -229,18 +229,21 @@ li > code {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .wrapper {
+    font-size: 1.25em;
     margin: 0;
   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .wrapper {
+    font-size: 1.5em;
     margin: 0 5rem;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
   .wrapper {
+    font-size: 1.5em;
     margin: 0 10rem;
   }
 }
@@ -248,5 +251,6 @@ li > code {
 @media screen and (min-width: 1440px) {
   .wrapper {
     margin: 0 20rem;
+    font-size: 1.5rem;
   }
 }
