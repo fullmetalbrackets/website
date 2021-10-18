@@ -1,6 +1,7 @@
 <template>
   <main>
     <aside>
+      <span><h1>Blog</h1></span>
       <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
     </aside>
     <hr/>
@@ -77,8 +78,6 @@ export default {
 
 <style scoped>
 section {
-  display: flex;
-  justify-content: right;
   line-height: 1.15;
   margin: 0 auto;
   padding: 0 auto;
@@ -92,8 +91,13 @@ section {
 
 aside {
   display: flex;
-  justify-content: center;
-  margin-bottom: 1em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5em;
 }
 
 input {
@@ -106,7 +110,7 @@ input {
   border-radius: 0.25em;
   background: var(--form-bg);
   height: auto;
-  width: 250px;
+  width: 350px;
   box-sizing: border-box;
   font-family: 'Fira Sans', 'Courier New', Courier, monospace;
   outline: none;
@@ -131,6 +135,13 @@ li {
   padding: 10px;
   border-radius: 0.5em;
   background: var(--accent);
+  margin-bottom: 1.5em;
+  height: auto;
+  max-width: 1200px;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 li:hover {
@@ -141,11 +152,17 @@ li:hover {
 }
 
 @media screen and (min-width: 200px) and (max-width: 767px) {
-  section li {
-    margin: 1em 0;
+  input {
+    width: 125px;
+    margin: 0;
   }
 
-  section li:first-child {
+  span {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 1.75em;
     margin: 0;
   }
 }
