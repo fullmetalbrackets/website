@@ -181,5 +181,4 @@ img {
   -webkit-transform: rotate(-135deg);
   margin-bottom: 0.025em;
 }
-
 </style>
