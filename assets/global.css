@@ -22,8 +22,7 @@ html {
   --shadow: hsl(237, 44%, 10%);
   --line-color: hsl(234, 65%, 25%);
   --form-bg: hsl(0, 0%, 55%);
-  --code-text: #f8f8f2; /* use same color as Prism theme */
-  --code-bg: #272822; /* use same color as Prism theme */
+  --code-text: #f8f8f2;
   font-size: 0.975rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text);
@@ -101,7 +100,7 @@ p > code,
 li > code {
   padding-right: 5px;
   padding-left: 5px;
-  background: var(--code-bg);
+  background: #08083a;
   color: var(--code-text);
   border-radius: 0.25em;
   font-size: 0.9em;
