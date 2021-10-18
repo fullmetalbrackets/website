@@ -1,8 +1,8 @@
 <template>
   <footer>
-    <a href="https://github.com/fullmetalbrackets" target="_blank"><img src="/img/gh.svg"></a>
-    <NuxtLink to="/about#contact"><img src="/img/mail.svg"></NuxtLink>
-    <a href="/feed.xml" target="_blank"><img src="/img/rss.svg"></a>
+    <a href="https://github.com/fullmetalbrackets" target="_blank" rel="noreferrer"><img src="/img/gh.svg" alt="GitHub"></a>
+    <NuxtLink to="#contact"><img src="/img/mail.svg" alt="Contact Me"></NuxtLink>
+    <a href="/feed.xml" target="_blank"><img src="/img/rss.svg" alt="RSS Feed"></a>
   </footer>
 </template>
 
