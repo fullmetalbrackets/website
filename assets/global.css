@@ -97,8 +97,8 @@ h3 {
   color: var(--heading);
 }
 
-article > code,
-article > code {
+p > code,
+li > code {
   padding-right: 5px;
   padding-left: 5px;
   background: var(--code-bg);
