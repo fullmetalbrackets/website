@@ -98,12 +98,17 @@ h3 {
 
 p > code,
 li > code {
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   background: #08083a;
   color: var(--code-text);
   border-radius: 0.25em;
   font-size: 0.9em;
+  font-family: 'JetBrainsMono NF', 'JetBrainsMono Nerd Font',
+    'JetBrainsMono Nerd Font Mono', Consolas, Monaco, 'Andale Mono',
+    'Ubuntu Mono', monospace;
 }
 
 .art-date {
