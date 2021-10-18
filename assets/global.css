@@ -104,6 +104,7 @@ li > code {
   background: var(--code-bg);
   color: var(--code-text);
   border-radius: 0.25em;
+  font-size: 0.9em;
 }
 
 .art-date {
