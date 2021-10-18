@@ -1,7 +1,7 @@
 import Prism from "prismjs";
 
 // Include theme:
-import "prismjs/themes/prism-okaidia.css";
+import "assets/prism-vaporwave.css";
 
 // Include toolbar plugin:
 import "prismjs/plugins/toolbar/prism-toolbar";
