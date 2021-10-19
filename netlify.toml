@@ -90,3 +90,7 @@ Access-Control-Allow-Origin = "*"
 
 [context.deploy-preview]
   ignore = "git log -1 --pretty=%B | grep dependabot"
+
+[context.production]
+    [[context.production.plugins]]
+    package = "netlify-plugin-image-optim"
