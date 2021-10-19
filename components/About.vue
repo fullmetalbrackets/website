@@ -1,12 +1,13 @@
 <template>
   <div class="about">
     <div id='about'/>
-    <h2>Who Dis?</h2>
     <p>
       I'm a self-taught web developer born and raised in South Florida, currently living in the St. Augustine area. Feel free to check out my <a href="https://github.com/fullmetalbrackets" target="_blank" rel="noopener">GitHub profile</a> if you'd like to see what I've been working on, or just check this space for future updates.
     </p>
     <div id='contact'/>
-    <h2>Contact Me, Maybe?</h2>
+    <p>
+      If you'd like to get in touch, please use the contact form below.
+    </p>
       <form name="contact" action="/thanks" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input value="contact" name="form-name" type="hidden" />
         <label for="name">Name:</label>
@@ -31,7 +32,10 @@
 
 .about {
   display: unset;
-  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 label {
@@ -39,11 +43,6 @@ label {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
   font-size: 2rem;
   color: var(--heading);
-}
-
-h2 {
-  margin: 1em auto;
-  margin-top: 2.5em;
 }
 
 form {

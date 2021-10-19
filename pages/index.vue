@@ -11,7 +11,7 @@
       <p>
         Want to see what I've written about lately? Jump right in to my most recent posts below, or <NuxtLink to="/blog">see the full blog</NuxtLink> to read older articles.
       </p>
-    <section>
+    <section class="recent-posts">
       <ul>
         <li v-for="article of articles" :key="article.slug">
           <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
@@ -32,6 +32,7 @@
         </li>
       </ul>
     </section>
+    <h2 class="about-me">About Me</h2>
     <section>
       <LazyAbout />
     </section>
@@ -85,7 +86,6 @@ section {
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
-  font-size: 0.6em;
   padding: 0;
   margin: 0;
 }
@@ -161,6 +161,16 @@ section li:hover {
 .tag:hover {
   background-color: var(--blog-date);
   text-decoration: none;
+}
+
+.recent-posts {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.75em;
+}
+
+.about-me {
+  margin-bottom: 1em;
 }
 
 hr {
