@@ -36,6 +36,9 @@
     <section>
       <LazyAbout />
     </section>
+    <div class="site-update">
+      <img alt="Last Updated" src="https://img.shields.io/github/last-commit/fullmetalbrackets/website/main?color=%23fe10bf&label=Last%20Updated&logo=github&logoColor=%23fe10bf&style=for-the-badge">
+    </div>
   </main>
 </template>
 
@@ -180,6 +183,12 @@ hr {
 
 span {
   color: var(--accent);
+}
+
+.site-update {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 }
 
 @media screen and (min-width: 200px) and (max-width: 767px) {
