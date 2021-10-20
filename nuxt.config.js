@@ -131,16 +131,16 @@ export default {
 
   feed: [
     {
-      path: '/feed.xml',
+      path: '/rss.xml',
       async create(feed) {
         feed.options = {
           title: 'Ariel Diaz - Blog',
           description: 'I write about tech stuff',
-          link: 'https://arieldiaz.codes/feed.xml',
           favicon: "https://arieldiaz.codes/favicon.ico",
           copyright: "All rights reserved 2021, Ariel Diaz",
           language: "en",
-        };
+          image: "https://arieldiaz.codes/img/tr-icon.png"
+        }
         const { $content } = require('@nuxt/content');
         const posts = await $content('articles').fetch();
         posts.forEach((post) => {
@@ -162,8 +162,41 @@ export default {
         });
       },
       cacheTime: 1000 * 60 * 15,
-      type: 'rss2',
+      type: 'rss2'
     },
+    {
+      path: '/feed.json',
+      async create(feed) {
+        feed.options = {
+          title: 'Ariel Diaz - Blog',
+          description: 'I write about tech stuff',
+          favicon: "https://arieldiaz.codes/favicon.ico",
+          copyright: "All rights reserved 2021, Ariel Diaz",
+          image: "https://arieldiaz.codes/img/tr-icon.png"
+        }
+        const { $content } = require('@nuxt/content');
+        const posts = await $content('articles').fetch();
+        posts.forEach((post) => {
+          const url = `https://arieldiaz.codes/blog/${post.slug}`;
+          feed.addItem({
+            title: post.title,
+            id: url,
+            link: url,
+            published: new Date(post.date),
+            description: post.description,
+            content: post.bodyText,
+            author: [
+              {
+                name: 'Ariel Diaz',
+                email: 'fullmetalbrackets@gmail.com',
+              }
+            ]
+          });
+        });
+      },
+      cacheTime: 1000 * 60 * 15,
+      type: 'json1'
+    }
   ],
 
   hooks: {
