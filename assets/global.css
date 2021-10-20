@@ -11,15 +11,15 @@
 }
 
 html {
-  /* colors */
+  /* dark mode (base) colors */
   --text: hsl(201, 100%, 85%);
   --nav: hsl(234, 65%, 25%);
   --accent: hsl(240, 76%, 13%);
   --main: hsl(237, 44%, 10%);
   --heading: hsl(316, 99%, 53%);
+  --subheading: hsl(314, 90%, 75%);
   --link: hsl(30, 100%, 56%);
   --hover: hsl(58, 97%, 63%);
-  --subheading: hsl(314, 90%, 75%);
   --shadow: #000;
   --form-bg: hsl(0, 0%, 55%);
   --code-text: #f8f8f2;
@@ -212,7 +212,7 @@ ul {
   }
 }
 
-/* detect light or dark mode */
+/* detect light mode & change colors */
 
 @media (prefers-color-scheme: light) {
   html {
@@ -220,12 +220,10 @@ ul {
     --nav: hsl(170, 70%, 65%);
     --main: #fef1f8;
     --accent: hsl(170, 70%, 55%);
+    --subheading: hotpink;
     --link: hsl(30, 100%, 45%);
     --hover: hsl(55, 90%, 60%);
-    --subheading: hotpink;
     --form-bg: hsl(170, 50%, 80%);
-    background: var(--nav);
-    overflow-x: hidden;
   }
 
   p a,
@@ -233,6 +231,22 @@ ul {
   p a:visited,
   p a:hover {
     font-weight: bold;
+  }
+}
+
+/* detect high contrast modes & change colors */
+
+@media (prefers-contrast: more) {
+  html {
+    --text: #fff;
+    --nav: #404040;
+    --main: #000;
+    --accent: #777;
+    --heading: hsl(316, 99%, 53%);
+    --subheading: hsl(316, 99%, 53%);
+    --link: hsl(58, 97%, 63%);
+    --hover: hsl(58, 97%, 63%);
+    --form-bg: #777;
   }
 }
 
