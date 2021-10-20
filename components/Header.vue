@@ -16,11 +16,6 @@ header {
   align-items: center;
   height: auto;
   width: auto;
-  margin: 0;
-  margin-bottom: 0.5em;
-  padding: 0;
-  padding-right: 10px;
-  padding-left: 10px;
   line-height: 1.25;
 }
 
@@ -30,7 +25,7 @@ img {
 }
 
 div {
-  margin-left: 1.5em
+  margin-left: 2rem
 }
 
 #edge {
@@ -39,7 +34,7 @@ div {
 
 #logo {
   font-family: 'streamster';
-  font-size: calc(2.25rem + 2.25vw);
+  font-size: calc(2rem + 1vw);
   text-shadow: 0.1rem 0.1rem 0.1rem var(--shadow);
   width: auto;
   height: auto;
@@ -73,7 +68,7 @@ div {
 
 nav {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
-  font-size: calc(1rem + 2.25vw);
+  font-size: calc(1rem + 1.5vw);
   text-shadow: 0.125rem 0.125rem 0.15rem var(--shadow);
   display: flex;
   justify-content: space-between;
@@ -82,7 +77,8 @@ nav {
 
 nav a {
   position: relative;
-  padding: 0.25px 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav a::after {
@@ -97,6 +93,7 @@ nav a::after {
 	transform: scale(0);
 	transform-origin: center;
   transition: opacity 300ms, transform 300ms;
+  margin-bottom: calc(1px + 0.5vw);
 }
 
 nav a:hover::after,

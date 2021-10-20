@@ -5,11 +5,12 @@
   src: url(~/assets/streamster.ttf) format('truetype');
 }
 
-html {
-  overflow-x: hidden;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-:root {
+html {
   /* colors */
   --text: hsl(201, 100%, 85%);
   --bg: hsl(234, 65%, 25%);
@@ -23,13 +24,11 @@ html {
   --line-color: hsl(234, 65%, 25%);
   --form-bg: hsl(0, 0%, 55%);
   --code-text: #f8f8f2;
-  font-size: 0.975rem;
+  font-size: 1.2rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text);
   line-height: 1;
-  background: linear-gradient(0deg, var(--accent) 35%, var(--bg) 95%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: var(--bg);
   overflow-x: hidden;
   margin: 0 auto;
   width: 100vw;
@@ -42,13 +41,12 @@ html {
 
 main {
   border-style: none;
-  border-radius: 1rem;
-  padding: 2.5em;
+  padding: 2rem;
+  margin: 0 auto;
   background: var(--main);
   min-height: auto;
   height: auto;
   width: auto;
-  font-size: 1.5em;
   font-weight: 500;
   letter-spacing: -0.0125em;
   line-height: 1.25;
@@ -97,6 +95,21 @@ h3 {
   color: var(--heading);
 }
 
+p,
+section,
+article,
+aside,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 p > code,
 li > code {
   padding-right: 4px;
@@ -110,6 +123,16 @@ li > code {
   font-family: 'JetBrainsMono NF', 'JetBrainsMono Nerd Font',
     'JetBrainsMono Nerd Font Mono', Consolas, Monaco, 'Andale Mono',
     'Ubuntu Mono', monospace;
+}
+
+hr {
+  border: 0.25px solid var(--text);
+  opacity: 0.25;
+  margin: 1rem 0;
+}
+
+ul {
+  list-style-position: inside;
 }
 
 .art-date {
@@ -129,6 +152,7 @@ li > code {
 .art-title {
   margin: 0;
   text-shadow: none;
+  height: 50px;
 }
 
 .art-tags {
@@ -197,7 +221,7 @@ li > code {
 /* detect light or dark mode */
 
 @media (prefers-color-scheme: light) {
-  :root {
+  html {
     --text: hsl(0, 0%, 25%);
     --main: hsl(316, 100%, 84%);
     --heading: hsl(263, 95%, 57%);
@@ -209,14 +233,7 @@ li > code {
     --line-color: hsl(228, 26%, 45%);
     --form-bg: hsl(0, 0%, 80%);
     background: var(--bg);
-    background: linear-gradient(0deg, var(--accent) 35%, var(--bg) 95%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     overflow-x: hidden;
-  }
-
-  main {
-    background: var(--main);
   }
 
   a,
@@ -230,34 +247,54 @@ li > code {
 @media screen and (min-width: 200px) and (max-width: 767px) {
   main {
     font-size: 1.25em;
-    padding: 1em;
+    padding: 0.5rem;
+  }
+
+  header {
+    padding: 1rem;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .wrapper {
+  main {
     font-size: 1.25em;
-    margin: 0;
+    padding: 0.5rem 2rem;
+  }
+
+  header {
+    padding: 1rem 2rem 0.5rem 2rem;
   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  .wrapper {
+  main {
     font-size: 1.5em;
-    margin: 0 5rem;
+    padding: 1rem 5rem;
+  }
+
+  header {
+    padding: 1rem 5rem 0.5rem 5rem;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
-  .wrapper {
+  main {
     font-size: 1.5em;
-    margin: 0 10rem;
+    padding: 2rem 10rem;
+  }
+
+  header {
+    padding: 1rem 10rem 0.5rem 10rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .wrapper {
-    margin: 0 20rem;
+  main {
     font-size: 1.5rem;
+    padding: 2rem calc(10rem + 10vw);
+  }
+
+  header {
+    padding: 1rem calc(10rem + 10vw) 0.5rem calc(10rem + 10vw);
   }
 }

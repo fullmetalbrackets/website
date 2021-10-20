@@ -4,12 +4,12 @@
       <span><h1>Blog</h1></span>
       <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
     </aside>
-    <hr/>
     <section>
       <ul>
         <li v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-                <h2 class="art-title">{{ article.title }}</h2>
+                <h2 class="title">{{ article.title }}</h2>
+                <hr class="divider">
                 <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
                 <p class="art-desc">{{ article.description }}</p>
                 <p class="art-tags">
@@ -23,7 +23,6 @@
     </section>
   </main>
 </template>
-
 
 <script>
 export default {
@@ -83,17 +82,17 @@ section {
   padding: 0 auto;
 }
 
-.blog {
-  margin: 0;
+.title {
+  margin: 0 0 1rem 0;
   padding: 0;
-  font-size: 2em;
 }
 
 aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5em;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -114,12 +113,6 @@ input {
   box-sizing: border-box;
   font-family: 'Fira Sans', 'Courier New', Courier, monospace;
   outline: none;
-}
-
-hr {
-  border: 0.25px solid var(--line-color);
-  margin-top: 0;
-  margin-bottom: 1em;
 }
 
 ul {
