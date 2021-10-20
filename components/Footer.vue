@@ -33,4 +33,16 @@ img:hover {
   height: auto;
   width: 70px;
 }
+
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  img {
+    width: 25px;
+    height: auto;
+  }
+
+  #json {
+    width: 40px;
+    height: auto;
+  }
+}
 </style>
