@@ -14,8 +14,7 @@ footer {
   align-items: center;
   height: auto;
   width: auto;
-  margin: 0 auto;
-  margin-top: 0.75em;
+  margin: 0.5rem auto 0.25rem auto;
   line-height: 1.25;
 }
 

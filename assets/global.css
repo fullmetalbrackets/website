@@ -5,11 +5,12 @@
   src: url(~/assets/streamster.ttf) format('truetype');
 }
 
-html {
-  overflow-x: hidden;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-:root {
+html {
   /* colors */
   --text: hsl(201, 100%, 85%);
   --bg: hsl(234, 65%, 25%);
@@ -27,9 +28,7 @@ html {
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text);
   line-height: 1;
-  background: linear-gradient(0deg, var(--accent) 35%, var(--bg) 95%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: var(--bg);
   overflow-x: hidden;
   margin: 0 auto;
   width: 100vw;
@@ -42,8 +41,8 @@ html {
 
 main {
   border-style: none;
-  border-radius: 1rem;
-  padding: 2.5em;
+  padding: 2rem;
+  margin: 0 auto;
   background: var(--main);
   min-height: auto;
   height: auto;
@@ -95,6 +94,15 @@ h3 {
   line-height: 1;
   font-size: 1.15em;
   color: var(--heading);
+}
+
+p,
+ul,
+li,
+section,
+article,
+aside {
+  margin-bottom: 1em;
 }
 
 p > code,
@@ -197,7 +205,7 @@ li > code {
 /* detect light or dark mode */
 
 @media (prefers-color-scheme: light) {
-  :root {
+  html {
     --text: hsl(0, 0%, 25%);
     --main: hsl(316, 100%, 84%);
     --heading: hsl(263, 95%, 57%);
@@ -209,14 +217,7 @@ li > code {
     --line-color: hsl(228, 26%, 45%);
     --form-bg: hsl(0, 0%, 80%);
     background: var(--bg);
-    background: linear-gradient(0deg, var(--accent) 35%, var(--bg) 95%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     overflow-x: hidden;
-  }
-
-  main {
-    background: var(--main);
   }
 
   a,
@@ -230,34 +231,54 @@ li > code {
 @media screen and (min-width: 200px) and (max-width: 767px) {
   main {
     font-size: 1.25em;
-    padding: 1em;
+    padding: 0.5rem;
+  }
+
+  header {
+    padding: 1rem;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .wrapper {
+  main {
     font-size: 1.25em;
-    margin: 0;
+    padding: 0.5rem 2rem;
+  }
+
+  header {
+    padding: 1rem 2rem 0.5rem 2rem;
   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  .wrapper {
+  main {
     font-size: 1.5em;
-    margin: 0 5rem;
+    padding: 1rem 5rem;
+  }
+
+  header {
+    padding: 1rem 5rem 0.5rem 5rem;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
-  .wrapper {
+  main {
     font-size: 1.5em;
-    margin: 0 10rem;
+    padding: 2rem 20rem;
+  }
+
+  header {
+    padding: 1rem 20rem 0.5rem 20rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .wrapper {
-    margin: 0 20rem;
+  main {
     font-size: 1.5rem;
+    padding: 2rem 30rem;
+  }
+
+  header {
+    padding: 1rem 30rem 0.5rem 30rem;
   }
 }
