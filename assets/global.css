@@ -13,9 +13,10 @@
 html {
   /* dark mode (base) colors */
   --text: hsl(201, 100%, 85%);
-  --nav: hsl(234, 65%, 25%);
-  --accent: hsl(240, 76%, 13%);
+  --nav: hsl(236, 66%, 21%);
+  --accent: hsl(234, 65%, 25%);
   --main: hsl(237, 44%, 10%);
+  --other: #fff;
   --heading: hsl(316, 99%, 53%);
   --subheading: hsl(314, 90%, 75%);
   --link: hsl(30, 100%, 56%);
@@ -220,6 +221,7 @@ ul {
     --nav: hsl(170, 70%, 65%);
     --main: #fef1f8;
     --accent: hsl(170, 70%, 55%);
+    --other: hsl(0, 0%, 25%);
     --subheading: hotpink;
     --link: hsl(30, 100%, 45%);
     --hover: hsl(55, 90%, 60%);
