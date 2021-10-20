@@ -169,7 +169,7 @@ section li:hover {
 .recent-posts {
   display: flex;
   justify-content: space-around;
-  font-size: 0.75em;
+  font-size: 1rem;
 }
 
 .about-me {
