@@ -21,7 +21,6 @@ html {
   --hover: hsl(58, 97%, 63%);
   --blog-date: hsl(314, 90%, 75%);
   --shadow: hsl(237, 44%, 10%);
-  --line-color: hsl(234, 65%, 25%);
   --form-bg: hsl(0, 0%, 55%);
   --code-text: #f8f8f2;
   font-size: 1.2rem;
@@ -171,16 +170,10 @@ ul {
   padding: 2px 4px;
 }
 
-.art-tags .tag a {
-  color: var(--main);
-}
-
-.art-tags .tag a:visited {
-  color: var(--main);
-}
-
+.art-tags .tag a,
+.art-tags .tag a:visited,
 .art-tags .tag a:active {
-  color: var(--main);
+  color: #fff;
 }
 
 .art-tags .tag:hover {
@@ -224,24 +217,22 @@ ul {
 @media (prefers-color-scheme: light) {
   html {
     --text: hsl(0, 0%, 25%);
-    --main: hsl(316, 100%, 84%);
-    --heading: hsl(263, 95%, 57%);
-    --bg: hsl(180, 96%, 74%);
-    --accent: hsl(180, 55%, 55%);
-    --hover: hsl(30, 100%, 56%);
-    --link: hsl(59, 100%, 50%);
-    --blog-date: hsl(230, 100%, 66%);
-    --line-color: hsl(228, 26%, 45%);
-    --form-bg: hsl(0, 0%, 80%);
+    --bg: hsl(170, 70%, 55%);
+    --main: #fef1f8;
+    --accent: hsl(170, 70%, 60%);
+    --link: hsl(30, 100%, 45%);
+    --hover: hsl(58, 97%, 63%);
+    --blog-date: hotpink;
+    --form-bg: hsl(170, 50%, 80%);
     background: var(--bg);
     overflow-x: hidden;
   }
 
-  a,
-  a:active,
-  a:visited,
-  a:hover {
-    text-shadow: 1px 1px 2px var(--shadow);
+  p a,
+  p a:active,
+  p a:visited,
+  p a:hover {
+    font-weight: bold;
   }
 }
 
