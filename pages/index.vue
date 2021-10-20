@@ -135,7 +135,7 @@ section li:hover {
 #desc {
   padding: 0 auto;
   margin: 0.25em 0.5em;
-  color: var(--text-color);
+  color: var(--text);
   min-height: 150px;
   max-height: auto;
   min-width: 300px;
