@@ -13,21 +13,21 @@
 html {
   /* colors */
   --text: hsl(201, 100%, 85%);
-  --bg: hsl(234, 65%, 25%);
+  --nav: hsl(234, 65%, 25%);
   --accent: hsl(240, 76%, 13%);
   --main: hsl(237, 44%, 10%);
   --heading: hsl(316, 99%, 53%);
   --link: hsl(30, 100%, 56%);
   --hover: hsl(58, 97%, 63%);
-  --blog-date: hsl(314, 90%, 75%);
-  --shadow: hsl(237, 44%, 10%);
+  --subheading: hsl(314, 90%, 75%);
+  --shadow: #000;
   --form-bg: hsl(0, 0%, 55%);
   --code-text: #f8f8f2;
   font-size: 1.2rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text);
   line-height: 1;
-  background: var(--bg);
+  background: var(--nav);
   overflow-x: hidden;
   margin: 0 auto;
   width: 100vw;
@@ -137,8 +137,8 @@ ul {
 
 .art-date {
   padding: 0 auto;
-  margin: 0 auto 0 0.35em;
-  color: var(--blog-date);
+  margin: 0 auto 0.35em 0.35em;
+  color: var(--subheading);
   text-shadow: none;
 }
 
@@ -158,7 +158,7 @@ ul {
 .art-tags {
   padding: 0 auto;
   margin: 0.5em auto 0 0.35em;
-  color: var(--blog-date);
+  color: var(--subheading);
 }
 
 .art-tags .tag {
@@ -166,8 +166,8 @@ ul {
   font-weight: bold;
   border-radius: 0.25em;
   margin-top: 2px;
-  margin-right: 6px;
-  padding: 2px 4px;
+  margin-right: 8px;
+  padding: 3px 5px;
 }
 
 .art-tags .tag a,
@@ -177,7 +177,7 @@ ul {
 }
 
 .art-tags .tag:hover {
-  background-color: var(--blog-date);
+  background-color: var(--subheading);
   text-decoration: none;
 }
 
@@ -214,17 +214,17 @@ ul {
 
 /* detect light or dark mode */
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   html {
     --text: hsl(0, 0%, 25%);
-    --bg: hsl(170, 70%, 55%);
+    --nav: hsl(170, 70%, 65%);
     --main: #fef1f8;
-    --accent: hsl(170, 70%, 60%);
+    --accent: hsl(170, 70%, 55%);
     --link: hsl(30, 100%, 45%);
-    --hover: hsl(58, 97%, 63%);
-    --blog-date: hotpink;
+    --hover: hsl(55, 90%, 60%);
+    --subheading: hotpink;
     --form-bg: hsl(170, 50%, 80%);
-    background: var(--bg);
+    background: var(--nav);
     overflow-x: hidden;
   }
 

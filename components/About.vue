@@ -97,7 +97,7 @@ button {
 }
 
 button:hover {
-  background: var(--blog-date);
+  background: var(--subheading);
   transition-duration: 0.25s;
   transition-property: color, fill, stroke;
   transition-timing-function: linear;

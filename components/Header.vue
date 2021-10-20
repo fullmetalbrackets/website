@@ -35,7 +35,7 @@ div {
 #logo {
   font-family: 'streamster';
   font-size: calc(2rem + 1vw);
-  text-shadow: 0.1rem 0.1rem 0.1rem var(--shadow);
+  text-shadow: 1px 1px 1px var(--shadow);
   width: auto;
   height: auto;
 }
@@ -69,7 +69,7 @@ div {
 nav {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
   font-size: calc(1rem + 1.5vw);
-  text-shadow: 0.125rem 0.125rem 0.15rem var(--shadow);
+  text-shadow: 1px 1px 1px var(--shadow);
   display: flex;
   justify-content: space-between;
   justify-items: right;
@@ -99,11 +99,5 @@ nav a::after {
 nav a:hover::after,
 nav a:focus::after {
 	transform: scale(1);
-}
-
-@media screen and (prefers-color-scheme: light) {
-  #logo {
-    text-shadow: 0.25rem 0.25rem 0.15rem hsl(0, 0%, 40%);
-  }
 }
 </style>

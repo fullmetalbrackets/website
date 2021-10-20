@@ -127,7 +127,7 @@ li {
   margin: auto;
   padding: 1em;
   border-radius: 0.5em;
-  background: var(--accent);
+  background: var(--nav);
   margin-bottom: 1.5em;
   height: auto;
   max-width: 1200px;
@@ -138,10 +138,7 @@ li:last-child {
 }
 
 li:hover {
-  background: var(--bg);
-  transition-duration: 0.25s;
-  transition-property: background, fill, stroke;
-  transition-timing-function: linear;
+  background: var(--accent);
 }
 
 @media screen and (min-width: 200px) and (max-width: 767px) {

@@ -109,7 +109,7 @@ section li {
   width: auto;
   padding: 1em;
   border-radius: 1em;
-  background: var(--accent);
+  background: var(--nav);
 }
 
 section li a,
@@ -121,13 +121,13 @@ section li a:visited {
 
 section li:hover {
   color: var(--text);
-  background: var(--bg);
+  background: var(--accent);
 }
 
 #date {
   padding: 0 auto;
   margin: 0 auto;
-  color: var(--blog-date);
+  color: var(--subheading);
   margin: 0;
   margin-top: 4px;
 }
@@ -163,7 +163,7 @@ section li:hover {
 }
 
 .tag:hover {
-  background-color: var(--blog-date);
+  background-color: var(--subheading);
   color: #000;
   text-decoration: none;
 }
@@ -215,7 +215,6 @@ span {
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 1em;
-    background: var(--accent);
   }
 
   section li a,
@@ -227,7 +226,6 @@ span {
 
   section li:hover {
     color: var(--text);
-    background: var(--bg);
   }
 
   #desc {

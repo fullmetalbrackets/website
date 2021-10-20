@@ -100,14 +100,14 @@ export default {
 .art-date {
   padding: 0 auto;
   margin: 0 auto;
-  color: var(--blog-date);
+  color: var(--subheading);
   text-shadow: none;
 }
 
 .art-tags {
   padding: 0 auto;
   margin: 1em auto;
-  color: var(--blog-date);
+  color: var(--subheading);
 }
 
 li::marker {

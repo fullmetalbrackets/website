@@ -43,12 +43,6 @@ export default {
 </script>
 
 <style scoped>
-hr {
-  border: 0.25px solid var(--line-color);
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
 .blog-return {
   margin: 0;
   padding: 0;
@@ -80,7 +74,7 @@ li {
 }
 
 li:hover {
-  background: var(--bg);
+  background: var(--nav);
   transition-duration: 0.25s;
   transition-property: background, fill, stroke;
   transition-timing-function: linear;
@@ -89,7 +83,7 @@ li:hover {
 .art-date {
   padding: 0 auto;
   margin: 0 auto 0 0.35em;
-  color: var(--blog-date);
+  color: var(--subheading);
   text-shadow: none;
 }
 
