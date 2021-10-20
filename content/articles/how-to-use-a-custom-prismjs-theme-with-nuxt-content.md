@@ -13,11 +13,13 @@ PrismJS is a great for making code blocks look pretty, it comes with a set of se
 
 ## Requirements
 
-Before we begin, please note that this method works like a charm when using universal/SSG mode and `ssr: false` or `target: static` in your Nuxt config. I assume this can easily be made to work with an SSR site, but I have not done so myself, so I can't say for certain.
+Before we begin, please note that I've so far only used this method and confirmed it works when using `target: 'static'` and `ssr: false` in **_nuxt.config.js_**. I assume this will work in SPA mode and/or using SSR, but I have not done so myself so I can't say for certain.
 
-If you haven't already, install PrismJS in your project via `npm install prismjs` or `yarn add prismjs`, then add the following to your **_nuxt.config.js_** file:
+If you haven't already, install PrismJS in your project via `npm install prismjs` or `yarn add prismjs`, then add the following to your Nuxt config:
 
 ```js
+// nuxt.config.js
+
 content: {
   markdown: {
     prism: {
@@ -27,17 +29,19 @@ content: {
 }
 ```
 
-This will use let Prism and Content play nice together. The reason we are setting `theme: false` is because we don't need to use this in static mode, instead we import a theme through a custom plugin that we'll make ourselves.
+This will use let Prism and Content play nice together. The reason we are setting `theme: false` is because we don't need to use this in static mode, instead we import a theme through a custom plugin that we'll make ourselves. First, let's create the theme.
 
-First, we need our custom theme. PrismJS "themes" are just CSS files that target specific classes used by Prism to style code blocks. Check out the CSS files [in Prism's themes directory](https://github.com/PrismJS/prism/tree/master/themes) or the [many additional Prism themes](https://github.com/PrismJS/prism-themes/tree/master/themes) available. Using these as a base, change the colors, sizes, and what have you to create your own theme.
+### Creating custom theme and importing to Prism
+
+PrismJS "themes" are just CSS files that target specific classes used by Prism to style code blocks. Check out the CSS files [in Prism's themes directory](https://github.com/PrismJS/prism/tree/master/themes) or the [many additional Prism themes](https://github.com/PrismJS/prism-themes/tree/master/themes) available. Using these as a base, change the colors, sizes, and what have you to create your own theme.
 
 Once you have a CSS file with your custom theme, place it in the same directory where you keep your global/main CSS file or Sass/SCSS files, probably `/assets`. I'll assume you named it **_prism-theme.css_** but you can name it whatever, just make sure it has a `.css` extension.
-
-### Importing the custom theme to Prism
 
 Create a file named **_Prism.js_** within the `/plugins` directory of your project, and add the following lines:
 
 ```js
+// plugins/Prism.js
+
 import Prism from 'prismjs'
 
 import 'assets/prism-theme.css'
