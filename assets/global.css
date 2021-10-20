@@ -214,7 +214,7 @@ ul {
 
 /* detect light or dark mode */
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
     --text: hsl(0, 0%, 25%);
     --nav: hsl(170, 70%, 65%);
