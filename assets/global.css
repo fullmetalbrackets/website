@@ -24,7 +24,7 @@ html {
   --line-color: hsl(234, 65%, 25%);
   --form-bg: hsl(0, 0%, 55%);
   --code-text: #f8f8f2;
-  font-size: 0.975rem;
+  font-size: 1.2rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
   color: var(--text);
   line-height: 1;
@@ -47,7 +47,6 @@ main {
   min-height: auto;
   height: auto;
   width: auto;
-  font-size: 1.5em;
   font-weight: 500;
   letter-spacing: -0.0125em;
   line-height: 1.25;
@@ -281,21 +280,21 @@ ul {
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
   main {
     font-size: 1.5em;
-    padding: 2rem 20rem;
+    padding: 2rem 10rem;
   }
 
   header {
-    padding: 1rem 20rem 0.5rem 20rem;
+    padding: 1rem 10rem 0.5rem 10rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
   main {
     font-size: 1.5rem;
-    padding: 2rem 30rem;
+    padding: 2rem calc(10rem + 10vw);
   }
 
   header {
-    padding: 1rem 30rem 0.5rem 30rem;
+    padding: 1rem calc(10rem + 10vw) 0.5rem calc(10rem + 10vw);
   }
 }
