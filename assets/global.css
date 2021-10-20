@@ -131,6 +131,7 @@ hr {
   margin: 1rem 0;
 }
 
+ol,
 ul {
   list-style-position: inside;
 }
