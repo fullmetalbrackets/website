@@ -157,12 +157,14 @@ section li:hover {
   padding: 2px 4px;
   margin-right: 6px;
   background: var(--heading);
+  color: #000;
   font-weight: bold;
   border-radius: 0.25em;
 }
 
 .tag:hover {
   background-color: var(--blog-date);
+  color: #000;
   text-decoration: none;
 }
 
@@ -177,7 +179,7 @@ section li:hover {
 }
 
 span {
-  color: var(--accent);
+  color: #FFF;
 }
 
 .site-update {
