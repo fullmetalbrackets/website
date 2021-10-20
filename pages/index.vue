@@ -176,11 +176,6 @@ section li:hover {
   margin-bottom: 1em;
 }
 
-hr {
-  border: 0.25px solid;
-  opacity: 0.25;
-}
-
 span {
   color: var(--accent);
 }

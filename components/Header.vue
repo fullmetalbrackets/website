@@ -77,7 +77,8 @@ nav {
 
 nav a {
   position: relative;
-  padding: 0.25px 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav a::after {
@@ -92,6 +93,7 @@ nav a::after {
 	transform: scale(0);
 	transform-origin: center;
   transition: opacity 300ms, transform 300ms;
+  margin-bottom: calc(1px + 0.5vw);
 }
 
 nav a:hover::after,

@@ -97,12 +97,18 @@ h3 {
 }
 
 p,
-ul,
-li,
 section,
 article,
-aside {
-  margin-bottom: 1em;
+aside,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 p > code,
@@ -118,6 +124,16 @@ li > code {
   font-family: 'JetBrainsMono NF', 'JetBrainsMono Nerd Font',
     'JetBrainsMono Nerd Font Mono', Consolas, Monaco, 'Andale Mono',
     'Ubuntu Mono', monospace;
+}
+
+hr {
+  border: 0.25px solid var(--text);
+  opacity: 0.25;
+  margin: 1rem 0;
+}
+
+ul {
+  list-style-position: inside;
 }
 
 .art-date {
@@ -137,6 +153,7 @@ li > code {
 .art-title {
   margin: 0;
   text-shadow: none;
+  height: 50px;
 }
 
 .art-tags {

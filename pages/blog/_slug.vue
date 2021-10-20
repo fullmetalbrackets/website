@@ -97,15 +97,6 @@ export default {
 </script>
 
 <style scoped>
-article {
-  margin: 0 auto;
-  padding: 0 auto;
-}
-
-hr {
-  border: 0.25px solid var(--line-color);
-}
-
 .art-date {
   padding: 0 auto;
   margin: 0 auto;
@@ -115,19 +106,8 @@ hr {
 
 .art-tags {
   padding: 0 auto;
-  margin: 0.5em auto 0 auto;
+  margin: 1em auto;
   color: var(--blog-date);
-}
-
-li {
-  margin: 0 auto;
-  margin-bottom: 0.25em;
-  padding: 0 auto;
-  line-height: 1.15;
-}
-
-li:last-child {
-  margin-bottom: 1em;
 }
 
 li::marker {
@@ -136,6 +116,10 @@ li::marker {
 
 .hide {
   display: none;
+}
+
+hr {
+  margin-bottom: 2rem;
 }
 
 img {
