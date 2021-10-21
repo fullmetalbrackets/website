@@ -10,7 +10,6 @@ package = "netlify-plugin-csp-generator"
     styleSrc = "'self' 'unsafe-inline' *.cloudfront.net *.gstatic.com *.googleapis.com cdn.jsdelivr.net"
     fontSrc = "'self' https://*.gstatic.com https://*.googleapis.com"
     imgSrc = "'self' data: blob:  https://*.shields.io"
-    connectSr
 
 [[headers]]
   for = "/img/*.png"
