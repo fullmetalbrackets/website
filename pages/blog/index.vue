@@ -142,6 +142,9 @@ li:hover {
 }
 
 @media screen and (min-width: 200px) and (max-width: 767px) {
+  aside {
+    margin: 0.5em 0;
+  }
   input {
     width: 125px;
     margin: 0;

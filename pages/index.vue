@@ -32,6 +32,7 @@
         </li>
       </ul>
     </section>
+    <div id='about'/>
     <h2 class="about-me">About Me</h2>
     <section>
       <LazyAbout />
@@ -83,6 +84,10 @@ export default {
 
 .recent {
   margin-top: 2em;
+}
+
+span {
+  color: #000;
 }
 
 section {
@@ -176,10 +181,6 @@ section li:hover {
 
 .about-me {
   margin-bottom: 1em;
-}
-
-span {
-  color: #FFF;
 }
 
 .site-update {

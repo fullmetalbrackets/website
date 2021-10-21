@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <div id='about'/>
     <p>
       I'm a self-taught web developer born and raised in South Florida, currently living in the St. Augustine area. Feel free to check out my <a href="https://github.com/fullmetalbrackets" target="_blank" rel="noopener">GitHub profile</a> if you'd like to see what I've been working on, or just check this space for future updates.
     </p>

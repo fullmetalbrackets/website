@@ -16,7 +16,6 @@ html {
   --nav: hsl(236, 66%, 21%);
   --accent: hsl(234, 65%, 25%);
   --main: hsl(237, 44%, 10%);
-  --other: #fff;
   --heading: hsl(316, 99%, 53%);
   --subheading: hsl(314, 90%, 75%);
   --link: hsl(30, 100%, 56%);
@@ -162,7 +161,7 @@ ul {
   color: var(--subheading);
 }
 
-.art-tags .tag {
+.tag {
   background: var(--heading);
   font-weight: bold;
   border-radius: 0.25em;
@@ -171,13 +170,13 @@ ul {
   padding: 3px 5px;
 }
 
-.art-tags .tag a,
-.art-tags .tag a:visited,
-.art-tags .tag a:active {
-  color: #fff;
+.tag a,
+.tag a:visited,
+.tag a:active {
+  color: #000;
 }
 
-.art-tags .tag:hover {
+.tag:hover {
   background-color: var(--subheading);
   text-decoration: none;
 }
@@ -221,7 +220,6 @@ ul {
     --nav: hsl(170, 70%, 65%);
     --main: #fef1f8;
     --accent: hsl(170, 70%, 55%);
-    --other: hsl(0, 0%, 25%);
     --subheading: hotpink;
     --link: hsl(30, 100%, 45%);
     --hover: hsl(55, 90%, 60%);
@@ -260,6 +258,10 @@ ul {
 
   header {
     padding: 1rem;
+  }
+
+  .art-title {
+    height: 50px;
   }
 }
 
