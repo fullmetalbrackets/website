@@ -6,63 +6,70 @@ package = "netlify-plugin-csp-generator"
 
   [plugins.inputs.policies]
     defaultSrc = "'none'"
-    scriptSrc = "'self' 'unsafe-inline' 'unsafe-eval' *.cloudfront.net cdn.jsdelivr.net"
-    styleSrc = "'self' 'unsafe-inline' *.cloudfront.net *.gstatic.com *.googleapis.com cdn.jsdelivr.net"
-    fontSrc = "'self' 'unsafe-inline' *.gstatic.com *.googleapis.com *.cloudfront.net"
-    frameSrc = "'self' *.cloudfront.net"
-    imgSrc = "'self' data: blob: *.cloudfront.net *.shields.io"
-    manifestSrc = "'self' *.cloudfront.net"
-    mediaSrc = "'self' *.cloudfront.net"
-    objectSrc = "'self' *.cloudfront.net"
-    prefetchSrc = "'self' *.gstatic.com *.googleapis.com *.cloudfront.net cdn.jsdelivr.net"
-    scriptSrcElem = "'self' 'unsafe-inline' *.cloudfront.net *.netlify.com"
-    scriptSrcAttr = "'self' 'unsafe-inline' *.cloudfront.net cdn.jsdelivr.net"
-    styleSrcElem = "'self' 'unsafe-inline' *.gstatic.com *.googleapis.com *.cloudfront.net"
-    styleSrcAttr = "'self' 'unsafe-inline' *.gstatic.com *.googleapis.com *.cloudfront.net cdn.jsdelivr.net"
-    workerSrc = "'self' *.cloudfront.net"
-    baseUri = "'self' *.cloudfront.net"
-    formAction = "'self' *.cloudfront.net"
-    frameAncestors = "'self' *.cloudfront.net"
-    connectSrc = "'self'"
+    scriptSrc = "'self' https://*.cloudfront.net https://cdn.jsdelivr.net"
+    styleSrc = "'self' https://*.cloudfront.net https://*.gstatic.com https://*.googleapis.com https://cdn.jsdelivr.net"
+    fontSrc = "'self' https://*.gstatic.com https://*.googleapis.com https://*.cloudfront.net"
+    frameSrc = "'self' https://*.cloudfront.net"
+    imgSrc = "'self' data: blob: https://*.cloudfront.net https://*.shields.io"
+    manifestSrc = "'self' https://*.cloudfront.net"
+    mediaSrc = "'self' https://*.cloudfront.net"
+    objectSrc = "'self' https://*.cloudfront.net"
+    prefetchSrc = "'self' https://*.gstatic.com https://*.googleapis.com https://*.cloudfront.net https://cdn.jsdelivr.net"
+    scriptSrcElem = "'self' https://*.cloudfront.net https://*.netlify.com"
+    scriptSrcAttr = "'self' https://*.cloudfront.net https://cdn.jsdelivr.net"
+    styleSrcElem = "'self' https://*.gstatic.com https://*.googleapis.com https://*.cloudfront.net"
+    styleSrcAttr = "'self' https://*.gstatic.com https://*.googleapis.com https://*.cloudfront.net https://cdn.jsdelivr.net"
+    workerSrc = "'self' https://*.cloudfront.net"
+    baseUri = "'self' https://*.cloudfront.net"
+    formAction = "'self' https://*.cloudfront.net"
+    frameAncestors = "'self' https://*.cloudfront.net"
+    connectSrc = "'self' https://*.cloudfront.net"
 
 [[headers]]
-for = "/*"
-
-[headers.values]
-Access-Control-Allow-Origin = "*"
-            Referrer-Policy = "strict-origin-when-cross-origin"
-  Strict-Transport-Security = "max-age=15768000"
-     X-Content-Type-Options = "nosniff"
-            X-Frame-Options = "DENY"
-           X-XSS-Protection = "1; mode=block"
-         Permissions-Policy = "autoplay=(), camera=(), geolocation=(), microphone=()"
-
-[[headers]]
-  for = "/img/*.png"
+  for = "/img/https://*.png"
 
   [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/png"
 
 [[headers]]
-  for = "/img/*.jpg"
+  for = "/img/https://*.jpg"
 
   [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/jpeg"
 
 [[headers]]
-  for = "/assets/*.ttf"
+  for = "/assets/https://*.ttf"
+
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+    Content-Type = "application/font-ttf"
+
+[[headers]]
+  for = "/favicon.ico"
+
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Type = "application/x-icon"
+
+[[headers]]
+for = "/sw.js"
+
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+for = "/*"
 
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Cache-Control = "public, max-age=604800"
-    Content-Type = "application/font-ttf"
+    Strict-Transport-Security = "max-age=31536000"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Permissions-Policy = "autoplay=(), camera=(), geolocation=(), microphone=()"
 
 [[redirects]]
   from = "/tags"
