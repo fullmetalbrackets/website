@@ -7,26 +7,26 @@ package = "netlify-plugin-csp-generator"
   [plugins.inputs.policies]
     defaultSrc = "'self' https://cloudfront.net https://*.cloudfront.net"
     scriptSrc = "'self' https://cloudfront.net https://*.cloudfront.net https://cdn.jsdelivr.net"
-    styleSrc = "'unsafe-hashes' https://cloudfront.net https://*.cloudfront.net"
+    styleSrc = "'unsafe-inline' https://cloudfront.net https://*.cloudfront.net"
     fontSrc = "'self' https://*.gstatic.com https://*.googleapis.com"
     imgSrc = "'self' data: blob:  https://*.shields.io"
 
 [[headers]]
-  for = "/img/https://*.png"
+  for = "/img/*.png"
 
   [headers.values]
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/png"
 
 [[headers]]
-  for = "/img/https://*.jpg"
+  for = "/img/*.jpg"
 
   [headers.values]
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/jpeg"
 
 [[headers]]
-  for = "/assets/https://*.ttf"
+  for = "/assets/*.ttf"
 
   [headers.values]
     Cache-Control = "public, max-age=604800"
