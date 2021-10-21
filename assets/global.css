@@ -161,7 +161,7 @@ ul {
   color: var(--subheading);
 }
 
-.tag {
+.art-tags .tag {
   background: var(--heading);
   font-weight: bold;
   border-radius: 0.25em;
@@ -170,13 +170,13 @@ ul {
   padding: 3px 5px;
 }
 
-.tag a,
-.tag a:visited,
-.tag a:active {
+.art-tags .tag a,
+.art-tags .tag a:visited,
+.art-tags .tag a:active {
   color: #000;
 }
 
-.tag:hover {
+.art-tags .tag:hover {
   background-color: var(--subheading);
   text-decoration: none;
 }
