@@ -7,7 +7,7 @@ package = "netlify-plugin-csp-generator"
   [plugins.inputs.policies]
     defaultSrc = "'self' https://cloudfront.net https://*.cloudfront.net"
     scriptSrc = "'self' https://cloudfront.net https://*.cloudfront.net https://cdn.jsdelivr.net"
-    styleSrc = "'unsafe-inline' https://cloudfront.net https://*.cloudfront.net"
+    styleSrc = "'unsafe-hashes' https://cloudfront.net https://*.cloudfront.net https://*.gstatic.com https://*.googleapis.com"
     fontSrc = "'self' https://*.gstatic.com https://*.googleapis.com"
     imgSrc = "'self' data: blob:  https://*.shields.io"
 
