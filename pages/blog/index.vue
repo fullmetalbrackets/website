@@ -1,7 +1,7 @@
 <template>
   <main>
     <aside>
-      <span><h1>Blog</h1></span>
+      <span class="blog-page"><h1>Blog</h1></span>
       <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
     </aside>
     <section>
@@ -80,6 +80,10 @@ section {
   line-height: 1.15;
   margin: 0 auto;
   padding: 0 auto;
+}
+
+.blog-page {
+  font-size: 1.2rem;
 }
 
 .title {
