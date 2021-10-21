@@ -6,10 +6,10 @@ package = "netlify-plugin-csp-generator"
 
   [plugins.inputs.policies]
     defaultSrc = "'self' cloudfront.net *.cloudfront.net"
-    scriptSrc = "'self' cdn.jsdelivr.net"
+    scriptSrc = "'self' 'unsafe-hashes' cdn.jsdelivr.net"
     styleSrc = "'self' 'unsafe-hashes' *.gstatic.com *.googleapis.com cdn.jsdelivr.net"
     fontSrc = "'self' *.gstatic.com *.googleapis.com "
-    imgSrc = "'self' data: blob: *.shields.io"
+    imgSrc = "'self' data: blob:  *.shields.io"
     prefetchSrc = "'self' *.gstatic.com *.googleapis.com cdn.jsdelivr.net"
 
 [[headers]]
