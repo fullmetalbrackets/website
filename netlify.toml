@@ -24,7 +24,7 @@ package = "netlify-plugin-csp-generator"
     formAction = "'self' *.cloudfront.net"
     frameAncestors = "'self' *.cloudfront.net"
     connectSrc = "'self'"
-    require-trusted-types-for = "'scripts'"
+    require-trusted-types-for = "'script'"
 
 [[headers]]
   for = "/img/https://*.png"
