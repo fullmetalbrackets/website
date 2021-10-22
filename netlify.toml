@@ -6,7 +6,7 @@ package = "netlify-plugin-csp-generator"
 
   [plugins.inputs.policies]
     defaultSrc = "'none'"
-    scriptSrc = "'self' 'unsafe-inline' 'unsafe-eval' *.cloudfront.net cdn.jsdelivr.net"
+    scriptSrc = "'self' 'unsafe-inline' *.cloudfront.net cdn.jsdelivr.net"
     styleSrc = "'self' 'unsafe-inline' *.cloudfront.net *.gstatic.com *.googleapis.com cdn.jsdelivr.net"
     fontSrc = "'self' 'unsafe-inline' *.gstatic.com *.googleapis.com *.cloudfront.net"
     frameSrc = "'self' *.cloudfront.net"
@@ -26,55 +26,50 @@ package = "netlify-plugin-csp-generator"
     connectSrc = "'self'"
 
 [[headers]]
-for = "/*"
-
-[headers.values]
-Access-Control-Allow-Origin = "*"
-            Referrer-Policy = "strict-origin-when-cross-origin"
-  Strict-Transport-Security = "max-age=15768000"
-     X-Content-Type-Options = "nosniff"
-            X-Frame-Options = "DENY"
-           X-XSS-Protection = "1; mode=block"
-         Permissions-Policy = "autoplay=(), camera=(), geolocation=(), microphone=()"
-
-[[headers]]
-  for = "/img/*.png"
+  for = "/img/https://*.png"
 
   [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/png"
 
 [[headers]]
-  for = "/img/*.jpg"
+  for = "/img/https://*.jpg"
 
   [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/jpeg"
 
 [[headers]]
-  for = "/assets/*.ttf"
+  for = "/assets/https://*.ttf"
+
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+    Content-Type = "application/font-ttf"
+
+[[headers]]
+  for = "/favicon.ico"
+
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Type = "application/x-icon"
+
+[[headers]]
+for = "/sw.js"
+
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+for = "/*"
 
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Cache-Control = "public, max-age=604800"
-    Content-Type = "application/font-ttf"
-
-[[redirects]]
-  from = "/tags"
-  to = "/blog"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/form.html"
-  to = "/"
-  status = 301
-  force = true
+    Strict-Transport-Security = "max-age=31536000"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Permissions-Policy = "autoplay=(), camera=(), geolocation=(), microphone=()"
 
 [[redirects]]
   from = "https://arieldiaz.netlify.com/*"

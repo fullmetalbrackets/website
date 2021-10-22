@@ -80,14 +80,12 @@ h2 {
   line-height: 1;
   font-size: 1.35em;
   margin: 0 auto;
-  margin-top: 2.25em;
   padding: 0 auto;
   letter-spacing: -0.0125em;
 }
 
 h3 {
   margin: 0 auto;
-  margin-top: 2.5em;
   padding: 0 auto;
   line-height: 1;
   font-size: 1.15em;
@@ -99,13 +97,17 @@ section,
 article,
 aside,
 h1,
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 h2,
 h3,
 h4,
 h5,
-h6,
-hr {
-  margin-top: 2rem;
+h6 {
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -186,7 +188,7 @@ ul {
 .typing {
   overflow: hidden;
   white-space: nowrap;
-  margin: 0 auto;
+  margin: 1em auto 0.1em auto;
   border-right: 0.65em solid transparent;
   width: 5.35em;
   float: left;
@@ -258,6 +260,10 @@ ul {
 
   header {
     padding: 1rem;
+  }
+
+  .index-page {
+    margin: 0.5rem 0;
   }
 
   .art-title {
