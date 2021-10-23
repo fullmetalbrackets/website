@@ -115,9 +115,8 @@ li > code {
   color: var(--code-text);
   border-radius: 0.25em;
   font-size: 0.9em;
-  font-family: 'JetBrainsMono NF', 'JetBrainsMono Nerd Font',
-    'JetBrainsMono Nerd Font Mono', Consolas, Monaco, 'Andale Mono',
-    'Ubuntu Mono', monospace;
+  font-family: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
 }
 
 hr {
@@ -175,37 +174,6 @@ ul {
 .art-tags .tag:hover {
   background-color: var(--subheading);
   text-decoration: none;
-}
-
-/* Typewriting effect borrowed from Geoff Graham - https://css-tricks.com/snippets/css/typewriter-effect */
-
-.typing {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 1em auto 0.1em auto;
-  border-right: 0.65em solid transparent;
-  width: 5.35em;
-  float: left;
-  animation: typing 0.5s steps(40, end), blink-caret 1s step-end 5;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 6em;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: var(--heading);
-  }
 }
 
 /* detect light mode */
