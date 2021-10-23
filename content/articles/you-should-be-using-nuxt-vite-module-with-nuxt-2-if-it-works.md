@@ -15,7 +15,7 @@ One of the not-so-great parts of developing with Nuxt is the several seconds of 
 
 First, you should know that in the near future, Nuxt/Content will be getting a "smaller scope" update, according to [this tweet from Atinux](https://twitter.com/Atinux/status/1448221492681093124?s=20), and apparently it may eventually be superseded by a new thing out of NuxtLabs called [Docus](https://docus.com). So this article may become outdated soon enough, but in the meantime if we want to use Nuxt/Content (which means we must use Nuxt 2) then we should use [Nuxt-Vite](<[https://vite.nuxtjs.org/getting-started/installation](https://vite.nuxtjs.org/getting-started/installation)>) with it!
 
-However, the second thing you should know is that Nuxt-Vite is experimental (and will probably remain that way indefinitely if the above information is any indication), but it works fine with Nuxt/Content and other important modules, like Nuxt/Sitemap and Nuxt/Feed. I will show all the packages this site uses and which have no issues with Nuxt-Vite at the bottom of the article.
+However, the second thing you should know is that Nuxt-Vite is experimental (and will probably remain that way indefinitely if the above information is any indication), but it works fine with Nuxt/Content and other modules by the Nuxt team, like Nuxt/Sitemap and Nuxt/Feed. I've personally used Nuxt-Vite with sass and sass-loader, but style-resources will not work; you'll have to import your sass/scss the old-fashioned way. Check out [common issues](https://vite.nuxtjs.org/misc/common-issues) in the docs. I will show all the packages this site uses and which have no issues with Nuxt-Vite at the bottom of the article.
 
 ## What is Nuxt-Vite and why use it?
 
