@@ -45,7 +45,9 @@ label {
 }
 
 form {
-  margin: 1em;
+  margin-top: 1em;
+  margin-left: calc(4em + 2vw);
+  margin-right: calc(4em + 2vw);
   margin-bottom: 2em;
 }
 
@@ -125,7 +127,12 @@ button:hover {
   }
 
   label, button {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
+
+  form {
+  margin-left: 1em;
+  margin-right: 1em;
+}
 }
 </style>
