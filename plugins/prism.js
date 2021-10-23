@@ -22,6 +22,7 @@ import "prismjs/components/prism-powershell";
 import "prismjs/components/prism-yaml";
 import "prismjs/components/prism-toml";
 import "prismjs/components/prism-shell-session";
+import "prismjs/components/prism-json"
 
 // Set vue SFC to markdown
 Prism.languages.vue = Prism.languages.markup;
