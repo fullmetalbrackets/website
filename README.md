@@ -12,11 +12,11 @@
 
 ## Site Features
 
-- **Nuxt/Content** for blog posts, category tags and search functionality.
-- **Nuxt/Sitemap** to generate dynamic routes to posts in sitemap.
-- **Nuxt/PWA** to make site installable as a progressive web app.
-- **Nuxt/Feed** to generate XML and JSON feeds for RSS readers.
-- **PrismJS** for code blocks with custom theme matching site color scheme.
+- **[Nuxt/Content](https://github.com/nuxt/content)** for blog posts, category tags and search functionality.
+- **[Nuxt/Sitemap](https://github.com/nuxt-community/sitemap-module)** to generate sitemap.xml with dynamic routes to blog posts.
+- **[Nuxt/PWA](https://github.com/nuxt-community/pwa-module)** to make site installable as a progressive web app with offline caching.
+- **[Nuxt/Feed](https://github.com/nuxt-community/feed-module)** to generate XML and JSON feeds for RSS readers.
+- **[PrismJS](https://github.com/PrismJS/prism)** for code blocks with custom theme I made to match this site's color scheme.
 
 ## Install locally and run in development:
 ```bash
