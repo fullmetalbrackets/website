@@ -17,6 +17,7 @@ header {
   height: auto;
   width: auto;
   line-height: 1.25;
+  background: var(--nav);
 }
 
 img {

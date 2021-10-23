@@ -16,6 +16,7 @@ footer {
   width: auto;
   margin: 0 auto;
   line-height: 1.25;
+  background: var(--nav);
 }
 
 img {
