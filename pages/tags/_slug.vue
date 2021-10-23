@@ -1,14 +1,23 @@
 <template>
 <main>
-  <h1 class="articles">Articles tagged: <span class="art-tag">{{ $route.params.slug }}</span></h1>
-  <p class="blog-return">
-  <a href="/blog"><i class="return"></i> Return to Blog</a>
+  <p class="tag-page">
+    <span class="articles">
+      Articles tagged:
+    </span>
+    <span class="article-tag">
+      {{ $route.params.slug }}
+    </span>
   </p>
-  <hr/>
+  <p class="tag-page">
+    <a href="/blog">
+      <i class="return"></i> Return to Blog
+    </a>
+  </p>
   <ul>
     <li v-for="article of articles" :key="article.slug">
       <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
         <h2 class="art-title">{{ article.title }}</h2>
+        <hr/>
         <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
         <p class="art-desc">{{ article.description }}</p>
         <p class="art-tags">
@@ -43,13 +52,20 @@ export default {
 </script>
 
 <style scoped>
-.blog-return {
-  margin: 0;
-  padding: 0;
+.tag-page {
+  display: block;
+  margin: 0 0 1em 0;
+}
+.articles {
+  font-size: 2em;
+}
+.article-tag {
+  font-size: 2em;
+  color: var(--heading);
 }
 
-.blog-return a:hover {
-  color: var(--hover);
+.blog-return {
+  margin-bottom: 1em;
 }
 
 .return {
@@ -60,15 +76,13 @@ export default {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   margin: 0;
+  margin-bottom: 3px;
 }
 
 li {
   list-style-type: none;
-  margin: auto;
-  margin-top: -0.25em;
-  margin-left: -1.85em;
-  margin-bottom: 2em;
-  padding: 10px;
+  padding: 1em;
+  margin: 1em auto;
   border-radius: 0.5em;
   background: var(--accent);
 }
@@ -80,22 +94,9 @@ li:hover {
   transition-timing-function: linear;
 }
 
-.art-date {
-  padding: 0 auto;
-  margin: 0 auto 0 0.35em;
-  color: var(--subheading);
-  text-shadow: none;
-}
-
-.art-desc {
-  padding: 0 auto;
-  margin: 0 auto 0 0.75em;
-  color: var(--text);
-  text-shadow: none;
-}
-
 .art-title {
   text-shadow: none;
+  min-height: 70px;
 }
 
 @media screen and (min-width: 200px) and (max-width: 767px) {
@@ -109,6 +110,14 @@ li:hover {
 
   section li:first-child {
     margin: 0;
+  }
+
+.articles, .article-tag {
+  font-size: 1.25em;
+}
+
+  .art-title {
+    min-height: 120px;
   }
 }
 </style>
