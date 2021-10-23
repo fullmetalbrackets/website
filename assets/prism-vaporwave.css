@@ -78,12 +78,12 @@ pre[class*='language-'] {
 .token.unit,
 .token.hexcode,
 .token.deleted {
-  color: #f986de;
+  color: #fe10bf;
 }
 
 .token.property,
 .token.selector {
-  color: #72f1b8;
+  color: #f986de;
 }
 
 .token.function-name {
