@@ -50,6 +50,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.cdnfonts.com/css/streamster' },
       {
         hid: "canonical",
         rel: "canonical",
