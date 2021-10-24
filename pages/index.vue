@@ -119,7 +119,7 @@ section li:hover {
 #date {
   padding: 0 auto;
   margin: 0 auto;
-  color: var(--subheading);
+  color: var(--heading);
   margin: 0;
   margin-top: 4px;
 }

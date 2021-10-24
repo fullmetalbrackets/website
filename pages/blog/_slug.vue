@@ -100,14 +100,14 @@ export default {
 .art-date {
   padding: 0 auto;
   margin: 0 auto;
-  color: var(--subheading);
+  color: var(--heading);
   text-shadow: none;
 }
 
 .art-tags {
   padding: 0 auto;
-  margin: 1em auto;
-  color: var(--subheading);
+  margin: 1em auto 3em auto;
+  color: var(--heading);
 }
 
 li::marker {
@@ -120,14 +120,6 @@ li::marker {
 
 hr {
   margin-bottom: 2rem;
-}
-
-img {
-  display: flex;
-  justify-content: center;
-  min-width: auto;
-  max-width: 100%;
-  height: auto;
 }
 
 .bottom {
@@ -164,5 +156,11 @@ img {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
   margin-bottom: 0.025em;
+}
+
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  .art-tags {
+    margin: 1em auto;
+  }
 }
 </style>
