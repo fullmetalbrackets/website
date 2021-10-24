@@ -12,7 +12,6 @@ html {
   --accent: hsl(234, 65%, 25%);
   --main: hsl(237, 44%, 10%);
   --heading: hsl(316, 99%, 53%);
-  --subheading: hsl(314, 90%, 75%);
   --link: hsl(30, 100%, 56%);
   --hover: hsl(58, 97%, 63%);
   --shadow: #000;
@@ -133,7 +132,7 @@ ul {
 .art-date {
   padding: 0 auto;
   margin: 0 auto 0.35em 0.35em;
-  color: var(--subheading);
+  color: var(--heading);
   text-shadow: none;
 }
 
@@ -153,7 +152,7 @@ ul {
 .art-tags {
   padding: 0 auto;
   margin: 0.5em auto 0 0.35em;
-  color: var(--subheading);
+  color: var(--heading);
 }
 
 .art-tags .tag {
@@ -172,7 +171,7 @@ ul {
 }
 
 .art-tags .tag:hover {
-  background-color: var(--subheading);
+  background-color: var(--heading);
   text-decoration: none;
 }
 
@@ -184,7 +183,7 @@ ul {
     --nav: hsl(170, 70%, 65%);
     --main: #fef1f8;
     --accent: hsl(170, 70%, 55%);
-    --subheading: hotpink;
+    --heading: hotpink;
     --link: hsl(30, 100%, 45%);
     --hover: hsl(55, 90%, 60%);
     --form-bg: hsl(170, 50%, 80%);
@@ -206,7 +205,7 @@ ul {
     --main: #000;
     --accent: #777;
     --heading: hsl(316, 99%, 53%);
-    --subheading: hsl(316, 99%, 53%);
+    --heading: hsl(316, 99%, 53%);
     --link: hsl(58, 97%, 63%);
     --hover: hsl(58, 97%, 63%);
     --form-bg: #777;
