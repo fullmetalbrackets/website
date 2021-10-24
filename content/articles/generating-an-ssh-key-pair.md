@@ -1,6 +1,7 @@
 ---
 title: Generating an SSH key pair
 date: 2021-09-11
+update: ''
 tags:
   - ssh
   - terminal

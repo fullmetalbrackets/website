@@ -1,6 +1,7 @@
 ---
 title: Mounting (either internal or external) hard drives in Linux
 date: 2021-09-13
+update: ''
 tags:
   - linux
   - terminal

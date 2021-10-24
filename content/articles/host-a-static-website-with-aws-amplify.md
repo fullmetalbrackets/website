@@ -1,6 +1,7 @@
 ---
 title: Host a static website with AWS Amplify
 date: 2021-09-29
+update: ''
 tags:
   - webdev
   - hosting

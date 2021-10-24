@@ -1,6 +1,7 @@
 ---
 title: How to use a custom PrismJS theme with Nuxt/Content
 date: 2021-10-18
+update: ''
 tags:
   - nuxtjs
   - webdev

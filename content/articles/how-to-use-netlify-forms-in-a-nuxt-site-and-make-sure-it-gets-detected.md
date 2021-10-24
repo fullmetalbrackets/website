@@ -1,6 +1,7 @@
 ---
 title: How to use Netlify Forms in a Nuxt site and make sure it gets detected
 date: 2021-10-11
+update: ''
 tags:
   - netlify
   - webdev

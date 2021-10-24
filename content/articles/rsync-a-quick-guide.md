@@ -1,6 +1,7 @@
 ---
 title: Rsync - A Quick Guide
 date: 2021-09-15
+update: ''
 tags:
   - linux
   - terminal

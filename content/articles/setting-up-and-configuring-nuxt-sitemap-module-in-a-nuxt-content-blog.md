@@ -1,6 +1,7 @@
 ---
 title: Setting up and configuring Nuxt/Sitemap module in a Nuxt/Content blog
 date: 2021-10-08
+update: ''
 tags:
   - nuxtjs
   - webdev
