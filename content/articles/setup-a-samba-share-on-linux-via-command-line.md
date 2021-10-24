@@ -1,7 +1,6 @@
 ---
 title: Setup a Samba share on Linux via command line
 date: 2021-09-01
-update: ''
 tags:
   - linux
   - terminal

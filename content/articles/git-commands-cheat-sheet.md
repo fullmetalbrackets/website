@@ -1,7 +1,6 @@
 ---
 title: Git commands cheat sheet
 date: 2021-09-08
-update: '2021-10-11'
 tags:
   - git
   - terminal

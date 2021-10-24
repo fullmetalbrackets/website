@@ -1,7 +1,6 @@
 ---
 title: Sideload the DirecTV Stream app on Sony Bravia TV with Android TV
 date: 2021-08-31
-update: ''
 tags:
   - misc
 ---

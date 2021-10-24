@@ -1,7 +1,6 @@
 ---
 title: Setup SSH authentication to push to Github
 date: 2021-09-09
-update: ''
 tags:
   - ssh
 ---
