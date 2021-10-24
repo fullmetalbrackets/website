@@ -1,7 +1,6 @@
 ---
 title: How to autologin Ubuntu on reboot and go straight to terminal
 date: 2021-09-14
-update: ''
 tags:
   - linux
   - terminal

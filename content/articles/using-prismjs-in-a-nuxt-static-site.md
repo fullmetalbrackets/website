@@ -1,7 +1,6 @@
 ---
 title: Using Prism.js in a Nuxt static site
 date: 2021-09-17
-update: ''
 tags:
   - nuxtjs
   - webdev

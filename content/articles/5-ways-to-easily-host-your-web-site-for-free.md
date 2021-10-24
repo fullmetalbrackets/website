@@ -1,7 +1,6 @@
 ---
 title: 5 ways to easily host your web site for free
 date: 2021-09-14
-update: 2021-09-28
 tags:
   - webdev
   - hosting
