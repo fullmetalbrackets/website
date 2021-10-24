@@ -2,8 +2,7 @@
   <header>
     <span id="logo"><NuxtLink to="/">Ariel Diaz</NuxtLink></span>
     <nav>
-      <div><NuxtLink to="/index#about" class=".nav2">About</NuxtLink></div>
-      <div id="edge"><NuxtLink to="/blog">Blog</NuxtLink></div>
+      <NuxtLink to="/blog">Blog</NuxtLink>
     </nav>
   </header>
 </template>
@@ -69,10 +68,10 @@ div {
 
 nav {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
-  font-size: calc(1rem + 1.5vw);
+  font-size: 2rem;
   text-shadow: 1px 1px 1px var(--shadow);
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   justify-items: right;
 }
 
@@ -94,11 +93,16 @@ nav a::after {
 	transform: scale(0);
 	transform-origin: center;
   transition: opacity 300ms, transform 300ms;
-  margin-bottom: calc(1px + 0.5vw);
 }
 
 nav a:hover::after,
 nav a:focus::after {
 	transform: scale(1);
+}
+
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  nav {
+    font-size: 1.5rem;
+  }
 }
 </style>

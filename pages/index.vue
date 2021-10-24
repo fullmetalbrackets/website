@@ -2,7 +2,7 @@
   <main>
     <h1 class="index-page">Hello World</h1>
     <p>
-      I'm Ariel, learning web development and living life in sunny/rainy (depending on the time of year) South Florida.
+      I'm Ariel, a self-taught web developer born and raised in rainy/sunny (depending on the time of year) South Florida, currently living in the St. Augustine area.
     </p>
     <p>
       This is my personal website, made with Nuxt.js as a way to learn the framework. Feel free to check out <a href="https://github.com/fullmetalbrackets/website" target="_blank" rel="noopener">this site's source code</a>. Eventually this site will have a portfolio of projects I've worked on, but for now feel free to read my blog -- really just a dump of documentation I've made for myself as I've learned web development, Linux, the command line, etc. Thanks for visiting!
@@ -23,10 +23,10 @@
         </li>
       </ul>
     </section>
-    <div id='about'/>
-    <h2 class="about-me">About Me</h2>
+    <div id='contact'/>
+    <h2 class="contact">Contact Me</h2>
     <section>
-      <LazyAbout />
+      <LazyContact />
     </section>
     <div class="site-update">
       <img alt="Last Updated" src="https://img.shields.io/github/last-commit/fullmetalbrackets/website/main?color=%23fe10bf&label=Last%20Updated&logo=github&logoColor=%23fe10bf&style=for-the-badge">
@@ -141,7 +141,7 @@ section li:hover {
   font-size: 1rem;
 }
 
-.about-me {
+.contact {
   margin-bottom: 1em;
 }
 

@@ -1,9 +1,5 @@
 <template>
-  <div class="about">
-    <p>
-      I'm a self-taught web developer born and raised in South Florida, currently living in the St. Augustine area. Feel free to check out my <a href="https://github.com/fullmetalbrackets" target="_blank" rel="noopener">GitHub profile</a> if you'd like to see what I've been working on, or just check this space for future updates.
-    </p>
-    <div id='contact'/>
+  <div>
     <p>
       If you'd like to get in touch, please use the contact form below.
     </p>
@@ -27,10 +23,6 @@
 * {
   margin: 0 auto;
   padding: 0 auto;
-}
-
-.about {
-  display: unset;
 }
 
 p {
