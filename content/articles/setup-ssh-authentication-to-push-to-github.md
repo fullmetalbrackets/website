@@ -24,11 +24,18 @@ Now click the green **New SSH key** button near the top-right side of the scre
 
 Now use your favorite text editor to open your computer's SSH public key, located in your `~/.ssh` directory ([read this](ssh.html) if you have no idea what I'm talking about) and most likely named `id_rsa.pub`, if you used the default options when you generated the key. In the key file you'll see a jumble of text that looks something like this:
 
-[![Screenshot of an SSH key](/img/gh4.png)](https://arieldiaz.codes/img/gh4.png)
+```shell
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9Tjom/BWDSU
+GPl+nafzlHDTYW7hdI4yZ5ew18JH4JW9jbhUFrviQzM7xlELEVf4h9lFX5QVkbPppSwg0cda3
+Pbv7kOdJ/MTyBlWXFCR+HAo3FXRitBqxiX1nKhXpHAZsMciLq8V6RjsNAQwdsdMFvSlVK/7XA
+t3FaoJoAsncM1Q9x5+3V0Ww68/eIFmb1zuUFljQJKprrX88XypNDvjYNby6vw/Pb0rwert/En
+mZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbx
+NrRFi9wrf+M7Q== bob@hostname
+```
 
 Copy all this text to clipboard. Now go back to GitHub, paste the SSH key text in, add a title (I usually put the hostname of the computer this key belongs to) and finally click **Add SSH key**.
 
-[![Screenshot of GitHub screen to add new SSH key](/img/gh5.png)](https://arieldiaz.codes/img/gh5.png)
+[![Screenshot of GitHub screen to add new SSH key](/img/gh4.png)](https://arieldiaz.codes/img/gh4.png)
 
 That's it! You should now be able to push to GitHub via SSH and without password prompt. Now, go into the directory of the project you want to push to GitHub. On Windows, we can go into the project folder then right-click > Open Powershell. Note that if you don't have Powershell in your right-click menu, [you'll have to add it](https://www.howtogeek.com/165268/how-to-add-open-powershell-here-to-the-context-menu-in-windows/). (Alternately, you can [install Windows Terminal and add that to the right-click menu](https://www.tenforums.com/tutorials/179549-add-open-windows-terminal-expandable-context-menu-windows-10-a.html), which is my personal preference for doing anything on the command line in Windows.)
 
