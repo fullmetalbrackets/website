@@ -83,6 +83,30 @@ for = "/*"
   status = 301
   force = true
 
+[[redirects]]
+  from = "https://arieldiaz.codes/rsync"
+  to = "https://arieldiaz.codes/rsync-a-quick-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://arieldiaz.codes/samba"
+  to = "https://arieldiaz.codes/setup-a-samba-share-on-linux-via-command-line"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://arieldiaz.codes/about"
+  to = "https://arieldiaz.codes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://arieldiaz.codes/projects"
+  to = "https://arieldiaz.codes/"
+  status = 301
+  force = true
+
 [context.deploy-preview]
   ignore = "git log -1 --pretty=%B | grep dependabot"
 
