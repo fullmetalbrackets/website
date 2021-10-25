@@ -84,14 +84,14 @@ for = "/*"
   force = true
 
 [[redirects]]
-  from = "https://arieldiaz.codes/rsync"
-  to = "https://arieldiaz.codes/rsync-a-quick-guide"
+  from = "https://arieldiaz.codes/blog/rsync"
+  to = "https://arieldiaz.codes/blog/rsync-a-quick-guide"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://arieldiaz.codes/samba"
-  to = "https://arieldiaz.codes/setup-a-samba-share-on-linux-via-command-line"
+  from = "https://arieldiaz.codes/blog/samba"
+  to = "https://arieldiaz.codes/blog/setup-a-samba-share-on-linux-via-command-line"
   status = 301
   force = true
 
