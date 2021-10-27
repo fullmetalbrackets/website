@@ -39,10 +39,16 @@ export default {
     return {
       title: this.article.title,
       meta: [
+        { hid: 'author', name: 'author', content: 'Ariel Diaz'},
         {
           hid: "description",
           name: "description",
           content: this.article.description,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: "https://arieldiaz.codes/blog/${this.$route.params.slug}",
         },
         { hid: 'og:title', property: 'og:title', content: this.article.title },
         { hid: 'og:description', property: 'og:description', content: this.article.description },
@@ -68,7 +74,6 @@ export default {
           content: this.article.tags ? this.article.tags.toString() : "",
         }
       ],
-
       link: [
         {
           hid: "canonical",

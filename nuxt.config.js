@@ -10,52 +10,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Website and blog of Ariel Diaz.' },
       { name: 'format-detection', content: 'telephone=no' },
-      { hid: 'keywords', name: 'keywords', content: 'HTML, CSS, PHP, JavaScript, Node JS, Vue JS, Nuxt JS, web development, web design, Linux, tech, blog'},
-      { hid: 'author', name: 'author', content: 'Ariel Diaz'},
-      { name: 'format-detection', content: 'telephone=no' },
-      { property: "og:site_name", content: "Ariel Diaz" },
-      { hid: "og:type", property: "og:type", content: "website" },
-      {
-        hid: "og:url",
-        property: "og:url",
-        content: "https://arieldiaz.codes",
-      },
-      {
-        hid: "og:title",
-        property: "og:title",
-        content: "Ariel Diaz",
-      },
-      {
-        hid: "og:description",
-        property: "og:description",
-        content: "Website and blog of Ariel Diaz.",
-      },
-      {
-        hid: "twitter:url",
-        name: "twitter:url",
-        content: "https://arieldiaz.codes",
-      },
-      {
-        hid: "twitter:title",
-        name: "twitter:title",
-        content: "Ariel Diaz",
-      },
-      {
-        hid: "twitter:description",
-        name: "twitter:description",
-        content: "Website and blog of Ariel Diaz.",
-      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.cdnfonts.com/css/streamster' },
-      {
-        hid: "canonical",
-        rel: "canonical",
-        href: "https://arieldiaz.codes",
-      },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.cdnfonts.com/css/streamster' }
     ]
   },
 

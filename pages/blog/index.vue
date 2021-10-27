@@ -44,6 +44,43 @@ export default {
 
   head() {
       return {
+        meta: [
+          { hid: 'keywords', name: 'keywords', content: 'HTML, CSS, PHP, JavaScript, Node JS, Vue JS, Nuxt JS, web development, web design, Linux, tech, blog'},
+          { hid: 'description', name: 'description', content: 'Blog of Ariel Diaz.' },
+          { hid: 'author', name: 'author', content: 'Ariel Diaz'},
+          { property: "og:site_name", content: "Ariel Diaz" },
+          { hid: "og:type", property: "og:type", content: "website" },
+          {
+            hid: "og:url",
+            property: "og:url",
+            content: "https://arieldiaz.codes/blog",
+          },
+          {
+            hid: "og:title",
+            property: "og:title",
+            content: "Ariel Diaz",
+          },
+          {
+            hid: "og:description",
+            property: "og:description",
+            content: "Blog of Ariel Diaz.",
+          },
+          {
+            hid: "twitter:url",
+            name: "twitter:url",
+            content: "https://arieldiaz.codes/blog",
+          },
+          {
+            hid: "twitter:title",
+            name: "twitter:title",
+            content: "Ariel Diaz",
+          },
+          {
+            hid: "twitter:description",
+            name: "twitter:description",
+            content: "Blog of Ariel Diaz.",
+          },
+        ],
         link: [
           {
             hid: "canonical",
