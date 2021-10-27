@@ -181,13 +181,13 @@ ul {
   /* light mode colors */
   html {
     --text: hsl(0, 0%, 25%);
-    --nav: hsl(170, 70%, 65%);
-    --main: #fef1f8;
-    --accent: hsl(170, 70%, 55%);
+    --nav: hsl(184, 100%, 45%);
+    --main: hsl(328, 87%, 97%);
+    --accent: hsl(184, 100%, 50%);
     --subheading: hotpink;
     --link: hsl(30, 100%, 45%);
     --hover: hsl(55, 90%, 60%);
-    --form-bg: hsl(170, 50%, 80%);
+    --form-bg: hsl(184, 70%, 75%);
   }
 
   p a,
