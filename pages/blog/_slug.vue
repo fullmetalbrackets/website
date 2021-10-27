@@ -48,7 +48,7 @@ export default {
         {
           hid: "og:url",
           property: "og:url",
-          content: "https://arieldiaz.codes/blog/${this.$route.params.slug}",
+          content: `https://arieldiaz.codes/blog/${this.$route.params.slug}`,
         },
         { hid: 'og:title', property: 'og:title', content: this.article.title },
         { hid: 'og:description', property: 'og:description', content: this.article.description },
