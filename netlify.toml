@@ -26,21 +26,21 @@ package = "netlify-plugin-csp-generator"
     connectSrc = "'self'"
 
 [[headers]]
-  for = "/img/https://*.png"
+  for = "/img/*.png"
 
   [headers.values]
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/png"
 
 [[headers]]
-  for = "/img/https://*.jpg"
+  for = "/img/*.jpg"
 
   [headers.values]
     Cache-Control = "public, max-age=604800"
     Content-Type = "image/jpeg"
 
 [[headers]]
-  for = "/assets/https://*.ttf"
+  for = "/assets/*.ttf"
 
   [headers.values]
     Cache-Control = "public, max-age=604800"
