@@ -1,5 +1,6 @@
 ---
 title: Setting up and configuring Nuxt/Sitemap module in a Nuxt/Content blog
+description: The excellent Nuxt/Sitemap module can automatically generate a new sitemap.xml at each build, and you can set either static and/or dynamic routes in it's config. It can also auto-generate routes to your blog posts (or whatever other content) fetched and displayed in a \_slug.vue file, so a new post shows up with the correct route in the sitemap when created. Here's a quick and simple guide for Nuxt/Sitemap to generate routes to your Nuxt/Content blog posts, whether static or SSR.
 date: 2021-10-08
 update: ''
 tags:
@@ -8,8 +9,6 @@ tags:
 ---
 
 The excellent Nuxt/Sitemap module can automatically generate a new sitemap.xml at each build, and you can set either static and/or dynamic routes in it's config. It can also auto-generate routes to your blog posts (or whatever other content) fetched and displayed in a \_slug.vue file, so a new post shows up with the correct route in the sitemap when created. Here's a quick and simple guide for Nuxt/Sitemap to generate routes to your Nuxt/Content blog posts, whether static or SSR.
-
-<!--more-->
 
 This guide assumes you are working on a Nuxt site using the Content module as a headless CMS for blog posts, but it's easily modified to work with other use cases of Nuxt/Content. First, we have to add Nuxt/Sitemap to our dependencies, of course.
 

@@ -1,5 +1,6 @@
 ---
 title: 5 ways to easily host your web site for free
+description: So you're learning web development, building things locally and only ever seeing your site or app when you use "npm run dev" (or "yarn dev") on your computer. But how do you get this thing online so you can make sure it works on the interwebs? How do you learn headers, content-security-policy and CORS without having a site hosted online to work with? And how to do it FOR FREE?
 date: 2021-09-14
 update: 2021-09-28
 tags:
@@ -8,8 +9,6 @@ tags:
 ---
 
 So you're learning web development, building things locally and only ever seeing your site or app when you use "npm run dev" (or "yarn dev") on your computer. But how do you get this thing online so you can make sure it works on the interwebs? How do you learn headers, content-security-policy and CORS without having a site hosted online to work with? And how to do it FOR FREE?
-
-<!--more-->
 
 If you'd like to quickly jump to a specific host instead of reading about all of them, click on it below.
 
