@@ -34,7 +34,7 @@ div {
 }
 
 #logo {
-  font-family: 'Streamster', sans-serif;
+  font-family: 'Streamster', 'Freestyle Script', 'Lucida Calligraphy', 'Handwriting', sans-serif;
   font-size: calc(2rem + 1vw);
   text-shadow: 1px 1px 1px var(--shadow);
   width: auto;
