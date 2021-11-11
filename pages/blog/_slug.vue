@@ -16,6 +16,10 @@
         </span>
       </p>
       <nuxt-content :document="article" class="blog-article" />
+      <h4>
+        More Articles
+      </h4>
+      <prev-next :prev="prev" :next="next" />
       <hr class="bottom">
       <p class="foot">
         <a href="/blog"><i class="return"></i> Return to Blog</a>
@@ -30,9 +34,19 @@ import Prism from "~/plugins/prism.js";
 
 export default {
   async asyncData({ $content, params }) {
-  const article = await $content('articles', params.slug).fetch()
+    const article = await $content('articles', params.slug).fetch()
 
-  return { article }
+    const [prev, next] = await $content('articles')
+      .only(['title', 'description', 'slug'])
+      .sortBy('createdAt', 'asc')
+      .surround(params.slug)
+      .fetch()
+
+    return {
+      article,
+      prev,
+      next
+    }
   },
 
   head() {
