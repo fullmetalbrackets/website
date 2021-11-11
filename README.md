@@ -3,7 +3,7 @@
 
 ## Latest blog posts
 <!-- BLOG-POST-LIST:START -->
-- [You should be using Nuxt-Vite module with Nuxt 2 (if it works)](https://arieldiaz.codes/blog/you-should-be-using-nuxt-vite-module-with-nuxt-2-if-it-works)
+- [You should be using Nuxt-Vite module with Nuxt 2 &lpar;if it works&rpar;](https://arieldiaz.codes/blog/you-should-be-using-nuxt-vite-module-with-nuxt-2-if-it-works)
 - [How to use a custom PrismJS theme with Nuxt/Content](https://arieldiaz.codes/blog/how-to-use-a-custom-prismjs-theme-with-nuxt-content)
 - [How to use Netlify Forms in a Nuxt site and make sure it gets detected](https://arieldiaz.codes/blog/how-to-use-netlify-forms-in-a-nuxt-site-and-make-sure-it-gets-detected)
 - [Setting up and configuring Nuxt/Sitemap module in a Nuxt/Content blog](https://arieldiaz.codes/blog/setting-up-and-configuring-nuxt-sitemap-module-in-a-nuxt-content-blog)
