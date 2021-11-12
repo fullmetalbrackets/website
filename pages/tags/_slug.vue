@@ -83,7 +83,7 @@ li {
   list-style-type: none;
   padding: 1em;
   margin: 1em auto;
-  border-radius: 0.5em;
+  border-radius: 1rem;
   background: var(--accent);
 }
 

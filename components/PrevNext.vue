@@ -56,7 +56,7 @@
 
 .other-post {
   padding: 1em;
-  border-radius: 0.25em;
+  border-radius: 1rem;
   background: var(--nav);
   margin-bottom: 1.5em;
   height: auto;

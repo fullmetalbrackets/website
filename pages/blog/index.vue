@@ -147,7 +147,7 @@ input {
   margin: auto;
   padding: 5px;
   line-height: 1;
-  border-radius: 0.25em;
+  border-radius: 1rem;
   background: var(--form-bg);
   height: auto;
   width: 350px;
@@ -167,7 +167,7 @@ li {
   list-style-type: none;
   margin: auto;
   padding: 1em;
-  border-radius: 0.5em;
+  border-radius: 1rem;
   background: var(--nav);
   margin-bottom: 1.5em;
   height: auto;

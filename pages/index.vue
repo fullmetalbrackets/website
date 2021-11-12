@@ -146,7 +146,7 @@ section li {
   height: auto;
   width: auto;
   padding: 1em;
-  border-radius: 1em;
+  border-radius: 1rem;
   background: var(--nav);
 }
 
@@ -248,7 +248,7 @@ section li:hover {
     max-width: auto;
     padding: 1em;
     margin-bottom: 1em;
-    border-radius: 1em;
+    border-radius: 1rem;
   }
 
   section li a,
