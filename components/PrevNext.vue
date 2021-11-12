@@ -84,5 +84,10 @@ a, a:active, a:visited, a:hover, a:focus {
   .other-post {
     width: auto;
   }
+
+  .prev-post, .next-post {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 </style>
