@@ -64,7 +64,7 @@ force user = 0777
 
 Let's explain these parameters briefly:
 
-- Under `[global]` the `workgroup = parameter` is important; you'll need to specify a Workgroup to access the share from Windows. The default is most likely WORKGROUP unless you changed it on your Windows PC. Just make sure it's the same for all the machines you want accessing the share.
+- Under `[global]` the `workgroup =` parameter is important; you'll need to specify a Workgroup to access the share from Windows. The default is most likely WORKGROUP unless you changed it on your Windows PC. Just make sure it's the same for all the machines you want accessing the share.
 - Under `[public]` are parameters for the share, and this first one sets the share's name to "public."
 - `writeable = yes` and `read only = no` allows the directories and files in the share to be created, modified, or deleted from other computers that access it. Changing these to `writeable = no` and `read only = yes` means you can only open/execute files, but not modify (or even add!) files/directories in the share.
 - `security = user` and `ntlm auth = true` ensures that Windows PCs can login to the Linux share. In my experience, these aren't necessary on Debian/Ubuntu, but I find Samba won't work on Arch/Manjaro without ntlm auth.
