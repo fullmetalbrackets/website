@@ -91,15 +91,15 @@ smbpasswd -a bob
 Let's start up the services needed, smbd and winbindd, and enable them to auto-run at boot. Also, if you want to access the share from other computers via hostname instead of IP address, we also need to start & enable nmbd. The commands for Ubuntu/Debian are:
 
 ```bash
-sudo systemctl start smbd nmbd winbindd
-sudo systemctl enable smbd nmbd winbindd
+sudo systemctl start smbd nmbd winbind
+sudo systemctl enable smbd nmbd winbind
 ```
 
-For Arch/Manjaro, use these commands instead (notice the the services don't have the trailing d in their names):
+For Arch/Manjaro, use these commands instead (notice that "winbind" does not have the trailing d in Debian/Ubuntu, but "smbd" and "nmbd" do, while the reverse is true in Arch):
 
 ```bash
-sudo systemctl start smb nmb winbind
-sudo systemctl enable smb nmb winbind
+sudo systemctl start smb nmb winbindd
+sudo systemctl enable smb nmb winbindd
 ```
 
 Now you should be able to connect to the shared directory from other computers on your network! On Windows, go to Start Menu > Run and type the following (replacing with your Linux machine's actual IP) and hit Enter:
