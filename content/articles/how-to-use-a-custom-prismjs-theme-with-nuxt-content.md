@@ -1,6 +1,6 @@
 ---
 title: How to use a custom PrismJS theme with Nuxt/Content
-description: PrismJS is a great for making code blocks look pretty, it comes with a set of several themes out of the box (my favorite of those is Okaidia), and there's also many more additional themes available as a separate package on NPM and Yarn. But what if none of those matches the color scheme of your website? With Nuxt and the Content module, you can easily use a custom CSS file to make the syntax highlighting really match the overall look of your site or blog. Here's how.
+description: PrismJS is great for making code blocks look pretty, it comes with a set of several themes out of the box, and there's also many more additional themes available as a separate package on NPM and Yarn. But what if none of those matches the color scheme of your website? With Nuxt you can easily use a custom CSS file to make your code blocks perfectly match the overall look of your site or blog. Here's how.
 date: 2021-10-18
 update: ''
 tags:
@@ -8,7 +8,7 @@ tags:
   - webdev
 ---
 
-PrismJS is a great for making code blocks look pretty, it comes with a set of several themes out of the box (my favorite of those is Okaidia), and there's also many more additional themes available as a separate package on NPM and Yarn. But what if none of those matches the color scheme of your website? With Nuxt and the Content module, you can easily use a custom CSS file to make the syntax highlighting really match the overall look of your site or blog. Here's how.
+PrismJS is great for making code blocks look pretty, it comes with a set of several themes out of the box, and there's also many more additional themes available as a separate package on NPM and Yarn. But what if none of those matches the color scheme of your website? With Nuxt you can easily use a custom CSS file to make your code blocks perfectly match the overall look of your site or blog. Here's how.
 
 ## Requirements
 
