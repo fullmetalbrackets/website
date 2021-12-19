@@ -1,9 +1,9 @@
 <template>
   <header>
-    <span id="logo"><NuxtLink to="/">Ariel Diaz</NuxtLink></span>
+    <span id="logo" title="Go to Home page"><NuxtLink to="/">Ariel Diaz</NuxtLink></span>
     <nav>
-      <div><NuxtLink to="/#about" class=".nav2">About</NuxtLink></div>
-      <div id="edge"><NuxtLink to="/blog">Blog</NuxtLink></div>
+      <div><NuxtLink to="/#about" class=".nav2" title="Jump to About section">About</NuxtLink></div>
+      <div id="edge"><NuxtLink to="/blog" title="Go to Blog page">Blog</NuxtLink></div>
     </nav>
   </header>
 </template>
