@@ -21,7 +21,8 @@
     "markdown-it": "^12.3.0",
     "netlify-plugin-csp-generator": "^1.5.0",
     "nuxt": "^2.15.7",
-    "prismjs": "^1.25.0"
+    "prismjs": "^1.25.0",
+    "vue-debounce": "^3.0.1"
   },
   "devDependencies": {
     "nuxt-vite": "^0.3.5",
