@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="main-content">
     <h1 class="index-page">Hello World</h1>
     <p>
       I'm Ariel, learning web development and living life in sunny/rainy (depending on the time of year) South Florida.
