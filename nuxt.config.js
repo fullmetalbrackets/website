@@ -57,6 +57,7 @@ export default {
     },
     icon: {
       fileName: 'icon.png',
+      purpose: ['any'],
       sizes: [64, 120, 144, 152, 192, 384, 512]
     }
   },
