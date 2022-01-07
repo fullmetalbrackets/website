@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="main-content">
     <h1 class="index-page">Hello World</h1>
     <p>
       I'm Ariel, learning web development and living life in sunny/rainy (depending on the time of year) South Florida.
@@ -37,9 +37,6 @@
     <section>
       <LazyAbout />
     </section>
-    <div class="site-update">
-      <img alt="Last Updated" src="https://img.shields.io/github/last-commit/fullmetalbrackets/website/main?color=%23fe10bf&label=Last%20Updated&logo=github&logoColor=%23fe10bf&style=for-the-badge">
-    </div>
   </main>
 </template>
 
@@ -214,12 +211,6 @@ section li:hover {
 
 .about-me {
   margin-bottom: 1em;
-}
-
-.site-update {
-  display: flex;
-  justify-content: center;
-  margin-top: 1em;
 }
 
 @media screen and (min-width: 200px) and (max-width: 767px) {

@@ -1,5 +1,8 @@
 <template>
   <header>
+    <a href="#main-content" class="skip-nav">
+      Skip Navigation
+    </a>
     <span id="logo" title="Go to Home page"><NuxtLink to="/">Ariel Diaz</NuxtLink></span>
     <nav>
       <div><NuxtLink to="/#about" class=".nav2" title="Jump to About section">About</NuxtLink></div>
@@ -65,6 +68,20 @@ div {
 #logo a:hover::after,
 #logo a:focus::after {
 	transform: scale(1);
+}
+
+.skip-nav {
+  background: var(--accent);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  left: 0.5rem;
+  transform: translateY(-200%);
+  transition: transform 300ms ease-in;
+}
+
+.skip-nav:focus {
+  transform: translateY(-100%);
 }
 
 nav {
