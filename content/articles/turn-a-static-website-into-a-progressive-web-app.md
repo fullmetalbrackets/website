@@ -125,22 +125,15 @@ The `manifest.json` file that tells the browser how the PWA should behave when i
 }
 ```
 
-Let's break it down.
+Let's break it down:
 
 - `"name"` is the text displayed on the splash screen below the icon
-
 - `"short_name"` is the text displayed below the shortcut on the desktop or the home screen of mobile devices
-
 - `"scope"` tells the browser which pages are part of the PWA, generally this should be “/” (project root directory and all subdirectories) or “.” (same directory as the manifest, which should be project root anyway, and all subdirectories)
-
 - `"display"` specifies how the app is displayed on a mobile device — there’s several options, but “standalone” gives the most native-like feel, with the PWA having it’s own app window and launcher icon
-
 - `"background_color"` is the color of the splash screen’s background
-
 - `"theme_color"` is the color of the status bars and navigation if used in the app
-
 - `"orientation"` determines whether the app is meant to be primarily displayed in portrait, landscape or either mode on a mobile device — you should probably set this to “any” or “natural” until you get a feel for whether or not you like one orientation over the other
-
 - `"icons"` is an array of the app icons in their various sizes, each for a different size display of mobile device — you want this to be the same image (your app’s icon or logo) just in the specific different sizes
 
 For the icons, you can just google “PWA icon generator” to find a bunch of tools that let you turn an image into the various sizes needed for a PWA, but I personally prefer [this one](https://tools.crawlink.com/tools/pwa-icon-generator/) since it also generates the manifest code for your icons. Note that if **ANY** size of icon is missing, or the incorrect size, it will not be installable.
