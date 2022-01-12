@@ -47,7 +47,7 @@ self.addEventListener('fetch', (fetchEvent) => {
 })
 ```
 
-What the code above does is specify the assets the service worker will cache, currently the array only caches the root file, which is index.html and app.js . That’s all you really need, but you’ll have to cache any additional HTML pages, CSS files, images, favicon, etc. Caching these files is how the PWA will be able to work offline. The next part of the code simply listens for the “install” and “fetch” events essential for PWAs to function.
+What the code above does is specify the assets the service worker will cache, currently the array only caches the root file, which is `index.html`, and `app.js`. That’s all you really need, but you’ll have to cache any additional HTML pages, CSS files, images, favicon, etc. Caching these files is how the PWA will be able to work offline. The next part of the code simply listens for the “install” and “fetch” events essential for PWAs to function.
 
 Next you’ll need to register the service worker, which is done with this simple piece of code.
 
@@ -62,7 +62,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-The above code can be inline on your HTML file with <script> tags, or in a separate JavaScript file if you prefer. (I personally do.)
+The above code can be inline on your HTML file with `<script>` tags, or in a separate JavaScript file if you prefer. (I personally do.)
 
 ### Manifest
 
