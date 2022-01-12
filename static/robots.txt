@@ -1,9 +1,8 @@
 # *
 User-agent: *
 Disallow: /thanks
-Disallow: /404
 Disallow: /form.html
 
-Host: https://arieldiaz.codes
+Host: https://arieldiaz.codes/
 
 Sitemap: https://arieldiaz.codes/sitemap.xml
