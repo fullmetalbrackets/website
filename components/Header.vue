@@ -39,7 +39,6 @@ div {
 #logo {
   font-family: 'Streamster', 'Freestyle Script', 'Lucida Calligraphy', 'Handwriting', sans-serif;
   font-size: calc(2rem + 1vw);
-  text-shadow: 1px 1px 1px var(--shadow);
   width: auto;
   height: auto;
 }
@@ -49,6 +48,7 @@ div {
 	position: relative;
 	padding: 2px 0;
   color: var(--heading);
+  text-shadow: 0px 0px 8px var(--pink-glow);
 }
 
 #logo a::after {
@@ -87,7 +87,7 @@ div {
 nav {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
   font-size: calc(1rem + 1.5vw);
-  text-shadow: 1px 1px 1px var(--shadow);
+  text-shadow: 0px 0px 8px var(--orange-glow);
   display: flex;
   justify-content: space-between;
   justify-items: right;
@@ -107,6 +107,7 @@ nav a::after {
   width: 100%;
   height: 1px;
   background-color: var(--hover);
+  text-shadow: 0px 0px 8px var(--yellow-glow);
 	opacity: 1;
 	transform: scale(0);
 	transform-origin: center;

@@ -126,6 +126,7 @@ section {
 .title {
   margin: 0 0 1rem 0;
   padding: 0;
+  text-shadow: 0px 0px 4px var(--pink-glow);
 }
 
 aside {

@@ -8,14 +8,22 @@
 html {
   /* dark mode (base) colors */
   --text: hsl(201, 100%, 85%);
-  --nav: hsl(236, 66%, 21%);
-  --accent: hsl(234, 65%, 25%);
-  --main: hsl(237, 44%, 10%);
+  --nav: hsl(234, 85%, 25%);
+  --accent: hsl(236, 80%, 35%);
+  --main: #00012d;
   --heading: hsl(316, 99%, 53%);
-  --subheading: hsl(314, 90%, 75%);
-  --link: hsl(30, 100%, 56%);
+  --subheading: hsl(318, 95%, 66%);
+  --link: hsl(30, 100%, 50%);
   --hover: hsl(58, 97%, 63%);
   --shadow: #000;
+  --pink-glow: rgba(186, 45, 126, 0.6);
+  --orange-glow: rgba(253, 120, 23, 0.6);
+  --yellow-glow: rgba(254, 211, 24, 0.6);
+  --teal-glow: rgba(108, 227, 212, 0.6);
+  --green-glow: rgba(128, 211, 77, 0.6);
+  --white-glow: rgba(255, 255, 255, 0.6);
+  --blue-glow: rgba(198, 208, 235, 0.6);
+  --red-glow: rgba(253, 52, 88, 0.6);
   --form-bg: hsl(0, 0%, 55%);
   --code-text: #f8f8f2;
   font-size: 1.2rem;
@@ -50,11 +58,24 @@ main {
   line-height: 1.25;
 }
 
+main > p {
+  text-shadow: 0px 0px 2px var(--white-glow);
+}
+
+main > h1 {
+  text-shadow: 0px 0px 8px var(--pink-glow);
+}
+
+main > h2 {
+  text-shadow: 0px 0px 4px var(--pink-glow);
+}
+
 a,
 a:active,
 a:visited {
   color: var(--link);
   text-decoration: none;
+  text-shadow: 0px 0px 4px var(--orange-glow);
 }
 
 a:hover {
@@ -63,6 +84,7 @@ a:hover {
   transition-duration: 0.25s;
   transition-property: color, fill, stroke;
   transition-timing-function: linear;
+  text-shadow: 0px 0px 4px var(--yellow-glow);
 }
 
 h1 {
@@ -182,28 +204,7 @@ ul {
 .art-tags .tag:hover {
   background-color: var(--subheading);
   text-decoration: none;
-}
-
-/* detect light mode */
-@media (prefers-color-scheme: light) {
-  /* light mode colors */
-  html {
-    --text: hsl(0, 0%, 25%);
-    --nav: hsl(180, 57%, 61%);
-    --main: hsl(328, 87%, 97%);
-    --accent: hsl(180, 60%, 65%);
-    --subheading: hotpink;
-    --link: hsl(30, 100%, 45%);
-    --hover: hsl(50, 87%, 62%);
-    --form-bg: hsl(184, 70%, 75%);
-  }
-
-  p a,
-  p a:active,
-  p a:visited,
-  p a:hover {
-    font-weight: bold;
-  }
+  text-shadow: 0px 0px 8px var(--pink-glow);
 }
 
 /* high contrast mode colors (Apple devices only -- I have no Apple device to test if this is working) */

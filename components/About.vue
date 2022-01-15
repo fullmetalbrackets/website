@@ -102,10 +102,7 @@ button:hover {
   transition-duration: 0.25s;
   transition-property: color, fill, stroke;
   transition-timing-function: linear;
-}
-
-.disclaimer {
-  color: var(--heading);
+  box-shadow: 0px 0px 8px var(--pink-glow);
 }
 
 /* Change autocomplete styles in WebKit */

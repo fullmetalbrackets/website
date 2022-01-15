@@ -69,6 +69,7 @@
 
 h2 {
   margin: 0;
+  text-shadow: 0px 0px 2px var(--pink-glow);
 }
 
 a, a:active, a:visited, a:hover, a:focus {
