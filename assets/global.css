@@ -58,6 +58,10 @@ main {
   line-height: 1.25;
 }
 
+strong {
+  color: #fff;
+}
+
 main > p {
   text-shadow: 0px 0px 2px var(--white-glow);
 }
