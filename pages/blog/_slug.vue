@@ -14,7 +14,7 @@
         </span>
       </div>
       <p v-if="article.update === ''" class="hide"></p>
-      <p v-else class="art-date art-update">
+      <p v-else class="art-date">
         Updated on {{ formatDate(article.update) }}
       </p>
       <nuxt-content :document="article" class="blog-article" />
@@ -123,15 +123,12 @@ export default {
   justify-content: space-between;
   justify-items: center;
 }
+
 .art-date {
   padding: 0;
   margin: 0;
   color: var(--subheading);
   text-shadow: none;
-}
-
-.art-update {
-  margin-bottom: 5rem;
 }
 
 .art-tags {
