@@ -229,7 +229,12 @@ ul {
   }
 
   header {
-    padding: 1rem;
+    padding: 0.5rem 1rem 0.15rem 1rem;
+  }
+
+  #edge {
+    margin-right: 0;
+    margin-left: 1em;
   }
 
   .index-page {
