@@ -84,14 +84,11 @@ li {
   padding: 1em;
   margin: 1em auto;
   border-radius: 1rem;
-  background: var(--accent);
+  background: var(--nav);
 }
 
 li:hover {
-  background: var(--nav);
-  transition-duration: 0.25s;
-  transition-property: background, fill, stroke;
-  transition-timing-function: linear;
+  background: var(--accent);
 }
 
 .art-title {
