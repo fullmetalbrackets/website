@@ -18,14 +18,14 @@
             <h2 class="art-title">{{ article.title }}</h2>
             <hr/>
             <p id="info">
-              <span id="date">{{ formatDate(article.date) }}</span>
+              <span id="date">
+                {{ formatDate(article.date) }}
+              </span>
               <span id="tags">
                 <span v-for="tag in article.tags" :key="tag" class="tag">
-                  <nuxt-link :to="`/tags/${tag}`">
-                    <span>{{ tag }}</span>
-                  </nuxt-link>
+                  <span>{{ tag }}</span>
+                </span>
               </span>
-            </span>
             </p>
             <p id="desc">{{ article.description }}</p>
           </NuxtLink>
@@ -44,9 +44,9 @@
 export default {
   async asyncData ({ $content }) {
     const articles = await $content('articles')
-      .without('body')
+      .without('body', 'update')
       .sortBy('date', 'desc')
-      .limit(2)
+      .limit(3)
       .fetch()
     return {
       articles
@@ -128,34 +128,22 @@ section {
   margin: 0;
 }
 
-section ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  height: auto;
-  width: auto;
-  padding: 0;
-  margin: 0;
-}
-
 section li {
-  margin: 1rem;
   list-style-type: none;
-  height: auto;
-  width: auto;
+  margin: auto;
   padding: 1em;
   border-radius: 1rem;
   background: var(--nav);
+  margin-bottom: 1.5em;
+  height: auto;
+  max-width: 1200px;
 }
 
-section li a,
-section li a:active,
-section li a:visited {
-  color: var(--text);
-  text-shadow: none;
+section li:last-child {
+  margin-bottom: 0;
 }
 
 section li:hover {
-  color: var(--text);
   background: var(--accent);
 }
 
@@ -171,7 +159,7 @@ section li:hover {
   padding: 0 auto;
   margin: 0.25em 0.5em;
   color: var(--text);
-  min-height: 150px;
+  min-height: 80px;
   max-height: auto;
   min-width: 300px;
   max-width: auto;
@@ -195,12 +183,6 @@ section li:hover {
   color: #000;
   font-weight: bold;
   border-radius: 0.25em;
-}
-
-.tag:hover {
-  background-color: var(--subheading);
-  color: #000;
-  text-decoration: none;
 }
 
 .recent-posts {
