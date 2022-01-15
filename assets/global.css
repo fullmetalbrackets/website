@@ -67,16 +67,16 @@ i {
   font-weight: 400;
 }
 
-main > p {
-  text-shadow: 0px 0px 2px var(--white-glow);
-}
-
-main > h1 {
+main > h1,
+main > h2 {
   text-shadow: 0px 0px 8px var(--pink-glow);
 }
 
-main > h2 {
-  text-shadow: 0px 0px 4px var(--pink-glow);
+main > h3,
+main > h4,
+main > h5,
+main > h6 {
+  text-shadow: 0px 0px 6px var(--pink-glow);
 }
 
 a,
@@ -85,13 +85,13 @@ a:visited {
   position: relative;
   color: var(--link);
   text-decoration: none;
-  text-shadow: 0px 0px 4px var(--orange-glow);
+  text-shadow: 0px 0px 8px var(--orange-glow);
 }
 
 a:hover {
   color: var(--hover);
   text-decoration: none;
-  text-shadow: 0px 0px 4px var(--orange-glow);
+  text-shadow: 0px 0px 8px var(--orange-glow);
 }
 
 a::after,
@@ -191,6 +191,18 @@ ul {
 
 .blog-article {
   margin-top: 5rem;
+}
+
+.blog-article > h1,
+.blog-article > h2 {
+  text-shadow: 0px 0px 8px var(--pink-glow);
+}
+
+.blog-article > h3,
+.blog-article > h4,
+.blog-article > h5,
+.blog-article > h6 {
+  text-shadow: 0px 0px 6px var(--pink-glow);
 }
 
 .art-date {
