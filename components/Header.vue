@@ -12,6 +12,8 @@
 </template>
 
 <style scoped>
+@import url('http://fonts.cdnfonts.com/css/streamster');
+
 header {
   display: flex;
   justify-content: space-between;
@@ -39,6 +41,7 @@ div {
 #logo {
   font-family: 'Streamster', 'Freestyle Script', 'Lucida Calligraphy', 'Handwriting', sans-serif;
   font-size: calc(2rem + 1vw);
+  font-display: swap;
   width: auto;
   height: auto;
 }
