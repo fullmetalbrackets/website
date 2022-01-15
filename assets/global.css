@@ -27,8 +27,10 @@ html {
   --form-bg: hsl(0, 0%, 55%);
   --code-text: #f8f8f2;
   font-size: 1.2rem;
-  font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
+  font-family: 'Fira Sans', 'Source Sans 3', 'Source Sans Pro', 'Segoe UI',
+    'Courier New', Courier, monospace;
   font-weight: 400;
+  font-display: swap;
   color: var(--text);
   line-height: 1;
   background: var(--main);
