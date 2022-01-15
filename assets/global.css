@@ -11,8 +11,8 @@ html {
   --nav: hsl(234, 85%, 25%);
   --accent: hsl(236, 80%, 35%);
   --main: hsl(239, 100%, 9%);
-  --heading: hsl(316, 99%, 53%);
-  --subheading: hsl(318, 95%, 66%);
+  --heading: hsl(316, 99%, 50%);
+  --subheading: hsl(316, 100%, 75%);
   --link: hsl(30, 100%, 50%);
   --hover: hsl(58, 97%, 63%);
   --shadow: #000;
@@ -28,6 +28,7 @@ html {
   --code-text: #f8f8f2;
   font-size: 1.2rem;
   font-family: 'Fira Sans', 'Segoe UI', 'Courier New', Courier, monospace;
+  font-weight: 400;
   color: var(--text);
   line-height: 1;
   background: var(--main);
@@ -59,7 +60,8 @@ main {
 }
 
 strong {
-  color: #fff;
+  color: hsl(300, 96%, 80%);
+  font-weight: 400;
 }
 
 main > p {
