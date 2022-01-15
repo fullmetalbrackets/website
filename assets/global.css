@@ -10,7 +10,7 @@ html {
   --text: hsl(201, 100%, 85%);
   --nav: hsl(234, 85%, 25%);
   --accent: hsl(236, 80%, 35%);
-  --main: #00012d;
+  --main: hsl(239, 100%, 9%);
   --heading: hsl(316, 99%, 53%);
   --subheading: hsl(318, 95%, 66%);
   --link: hsl(30, 100%, 50%);
