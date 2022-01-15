@@ -1,6 +1,6 @@
 ---
 title: Setup a Samba share on Linux via command line
-description: How to set up a Samba share on Linux and access it from Windows PCs on the same network with minimal config (but also minimal security) using only the terminal.
+description: Rather than mess with a dedicated NAS operating system like OpenMediaVault or TrueNAS, I prefer the simplicity creating Samba shares on Linux to use as network storage accessible from Windows PCs on my home network. Here is the minimal Samba config to do that.
 date: 2021-09-01
 update: 2022-01-15
 tags:
@@ -34,10 +34,11 @@ There's a whole lot of text in here and it may be intimidating to first time use
 workgroup = WORKGROUP
 server string = Samba Server %v
 netbios name = HOSTNAME
-security = share
+security = user
 
 [public]
-path = /path/to/share
+path = /path/to/directory
+browsable = yes
 writable = yes
 read only = no
 guest ok = yes
@@ -49,16 +50,19 @@ force group = nogroup
 
 Let's explain these parameters briefly:
 
-- Under `[global]` the `workgroup =` parameter is important; you'll need to specify a Workgroup to access the share from Windows. The default is most likely WORKGROUP unless you changed it on your Windows PC. Just make sure it's the same for all the machines you want accessing the share.
-- `[public]` in brackets sets the share's name to "public."
-- `writeable = yes` and `read only = no` allows the directories and files in the share to be created, modified, or deleted from other computers that access it.
-- `security = share` is required in order for Windows to access a Linux
+- Under `[global]`, the `workgroup =` parameter is important; you'll need to specify a Workgroup to access the share from Windows. The default is most likely WORKGROUP unless you changed it on your Windows PC. Just make sure it's the same for all the machines you want accessing the share.
+- `netbios name =` is important, you want this to match your server's **hostname**.
+- `security = user` is the default security mode for Samba and the one most compatible with Windows. You don't really have to specify this since it's the default, but I like to anyway.
+- `[public]` within brackets sets the share's name to "public."
+- `path =` will contain the direct path to the directory you want to share.
+- `browsable = yes` allows the share to be accessible from Windows PCs.
+- `writable = yes` and `read only = no` allows the directories and files in the share to be created, modified, or deleted from other computers that access it.
 - `create mask = 0777` and `directory mask = 0777` gives the share and all it's directories/sub-directories full read/write/execute permissions.
-- `force user = nobody` and `force group = nogroup` ensures any Windows PC accessing the share is not logged in as a specific Linux user.
+- `force user = nobody` and `force group = nogroup` ensures any Windows PC accessing the share can do so with without having to login or enter a password.
 
-Please note that the above is a minimal and <strong>very unsecure</strong> config that should only be used if the Linux machine doing the sharing is secure behind a firewall and only accessible within your network. <strong>Do not use these settings for a publicly-accessible Samba share!!</strong>
+Please note that the above is a minimal and **very unsecure** config that should only be used if the Linux machine doing the sharing is secure behind a firewall and only accessible within your network. **Do not use these settings for a publicly-accessible Samba share!**
 
-Save the file and quit the editor. Now let's check that the configuration is valid with the following command:
+When you are done with the `smb.conf` file, save it and quit the editor. Now let's check that the configuration is valid with the following command:
 
 ```bash
 testparm
