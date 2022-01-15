@@ -166,6 +166,10 @@ ul {
   list-style-position: inside;
 }
 
+.blog-article {
+  margin-top: 5rem;
+}
+
 .art-date {
   padding: 0 auto;
   margin: 0 auto 0.35em 0.35em;
