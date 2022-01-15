@@ -3,17 +3,19 @@
     <article>
       <h1>{{ article.title }}</h1>
       <hr>
-      <p class="art-date">
-        Posted on {{ formatDate(article.date) }}
-      </p>
-      <p v-if="article.update === ''" class="hide"></p>
-      <p v-else class="art-date">
-        Updated on {{ formatDate(article.update) }}
-      </p>
-      <p class="art-tags">
-        <span v-for="tag in article.tags" :key="tag" class="tag">
-        <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+      <div class="date-tags">
+        <span class="art-date">
+          Posted on {{ formatDate(article.date) }}
         </span>
+        <span class="art-tags">
+          Tagged: <span v-for="tag in article.tags" :key="tag" class="tag">
+          <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+          </span>
+        </span>
+      </div>
+      <p v-if="article.update === ''" class="hide"></p>
+      <p v-else class="art-date art-update">
+        Updated on {{ formatDate(article.update) }}
       </p>
       <nuxt-content :document="article" class="blog-article" />
       <h4>
@@ -116,17 +118,27 @@ export default {
 </script>
 
 <style scoped>
+.date-tags {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
 .art-date {
-  padding: 0 auto;
-  margin: 0 auto;
+  padding: 0;
+  margin: 0;
   color: var(--subheading);
   text-shadow: none;
 }
 
+.art-update {
+  margin-bottom: 5rem;
+}
+
 .art-tags {
-  padding: 0 auto;
-  margin: 1em auto;
+  padding: 0;
+  margin: 0;
   color: var(--subheading);
+  text-align: right;
 }
 
 li::marker {
