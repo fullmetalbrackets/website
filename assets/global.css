@@ -12,9 +12,9 @@ html {
   --accent: hsl(236, 80%, 35%);
   --main: hsl(239, 100%, 9%);
   --heading: hsl(316, 99%, 50%);
-  --subheading: hsl(316, 100%, 75%);
+  --subheading: hsl(300, 96%, 80%);
   --link: hsl(30, 100%, 50%);
-  --hover: hsl(58, 97%, 63%);
+  --hover: hsl(30, 100%, 70%);
   --shadow: #000;
   --pink-glow: rgba(186, 45, 126, 0.6);
   --orange-glow: rgba(253, 120, 23, 0.6);
@@ -59,8 +59,11 @@ main {
   line-height: 1.25;
 }
 
-strong {
-  color: hsl(300, 96%, 80%);
+strong,
+b,
+u,
+i {
+  color: hsl(58, 97%, 63%);
   font-weight: 400;
 }
 
@@ -79,6 +82,7 @@ main > h2 {
 a,
 a:active,
 a:visited {
+  position: relative;
   color: var(--link);
   text-decoration: none;
   text-shadow: 0px 0px 4px var(--orange-glow);
@@ -87,10 +91,29 @@ a:visited {
 a:hover {
   color: var(--hover);
   text-decoration: none;
-  transition-duration: 0.25s;
-  transition-property: color, fill, stroke;
-  transition-timing-function: linear;
-  text-shadow: 0px 0px 4px var(--yellow-glow);
+  text-shadow: 0px 0px 4px var(--orange-glow);
+}
+
+a::after,
+a:active::after,
+a:visited::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--hover);
+  text-shadow: 0px 0px 8px var(--orange-glow);
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+  transition: opacity 300ms, transform 300ms;
+}
+
+a:hover::after,
+a:focus::after {
+  transform: scale(1);
 }
 
 h1 {
@@ -215,6 +238,13 @@ ul {
   background-color: var(--subheading);
   text-decoration: none;
   text-shadow: 0px 0px 8px var(--pink-glow);
+}
+
+.art-tags .tag a::after,
+.art-tags .tag a:visited::after,
+.art-tags .tag a:active::after,
+.art-tags .tag a:hover::after {
+  transform: scale(0);
 }
 
 /* high contrast mode colors (Apple devices only -- I have no Apple device to test if this is working) */

@@ -110,7 +110,7 @@ nav a::after {
   width: 100%;
   height: 1px;
   background-color: var(--hover);
-  text-shadow: 0px 0px 8px var(--yellow-glow);
+  text-shadow: 0px 0px 8px var(--orange-glow);
 	opacity: 1;
 	transform: scale(0);
 	transform-origin: center;
