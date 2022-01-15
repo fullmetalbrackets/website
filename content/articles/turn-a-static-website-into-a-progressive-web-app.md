@@ -52,17 +52,28 @@ What the code above does is specify the assets the service worker will cache, cu
 Next you’ll need to register the service worker, which is done with this simple piece of code.
 
 ```js
+// app.js
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
-    navigator.serviceWorker
-      .register('/serviceWorker.js')
-      .then((res) => console.log('service worker registered'))
-      .catch((err) => console.log('service worker not registered', err))
+    navigator.serviceWorker.register('/sw.js').then(
+      function (registration) {
+        // Registration was successful
+        console.log(
+          'ServiceWorker registration successful with scope: ',
+          registration.scope
+        )
+      },
+      function (err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err)
+      }
+    )
   })
 }
 ```
 
-The above code can be inline on your HTML file with `<script>` tags, or in a separate JavaScript file if you prefer. (I personally do.)
+The above code can be inline on your HTML file with `<script>` tags, or in a separate JavaScript file if you prefer, which is what I did above.
 
 ### Manifest
 
@@ -136,7 +147,7 @@ Let's break it down:
 - `"orientation"` determines whether the app is meant to be primarily displayed in portrait, landscape or either mode on a mobile device — you should probably set this to “any” or “natural” until you get a feel for whether or not you like one orientation over the other
 - `"icons"` is an array of the app icons in their various sizes, each for a different size display of mobile device — you want this to be the same image (your app’s icon or logo) just in the specific different sizes
 
-For the icons, you can just google “PWA icon generator” to find a bunch of tools that let you turn an image into the various sizes needed for a PWA, but I personally prefer [this one](https://tools.crawlink.com/tools/pwa-icon-generator/) since it also generates the manifest code for your icons. Note that if **ANY** size of icon is missing, or the incorrect size, it will not be installable.
+For the icons, you can just google “PWA icon generator” to find a bunch of tools that let you turn an image into the various sizes needed for a PWA, but I personally prefer [this one](https://www.simicart.com/manifest-generator.html/) since generates both the correct size icons and the manifest for them. Note that if **any** size of icon is missing, or the incorrect size, the site will not be installable as a PWA.
 
 ### Testing your PWA
 
@@ -148,4 +159,4 @@ Either way, once you've got HTTPS figured out, go to your site's URL in Google C
 
 - [MDN Web Docs on Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 - [FreeCodeCamp article that helped me understand PWAs](https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/)
-- [My preferred tool for generator PWA icons & manifest](https://tools.crawlink.com/tools/pwa-icon-generator/)
+- [My preferred tool for generating PWA manifest & icons](https://www.simicart.com/manifest-generator.html/)
