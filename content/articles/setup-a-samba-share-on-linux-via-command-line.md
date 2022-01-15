@@ -8,6 +8,8 @@ tags:
   - terminal
 ---
 
+Rather than mess with a dedicated NAS operating system like OpenMediaVault or TrueNAS, I prefer the simplicity creating Samba shares on Linux to use as network storage accessible from Windows PCs on my home network. Here is the minimal Samba config to do that.
+
 Samba usually comes installed with most Linux distributions. If you do need to install it, use the following commands (which will also auto-install dependencies). On Ubuntu and other Debian-based distributions:
 
 ```bash
@@ -50,10 +52,10 @@ force group = nogroup
 
 Let's explain these parameters briefly:
 
-- Under `[global]`, the `workgroup =` parameter is important; you'll need to specify a Workgroup to access the share from Windows. The default is most likely WORKGROUP unless you changed it on your Windows PC. Just make sure it's the same for all the machines you want accessing the share.
+- Under `[global]`, the `workgroup =` parameter is important; you'll need to specify a Workgroup to access the share from Windows. The default is most likely **WORKGROUP** unless you changed it on your Windows PC. Just make sure it's the same for all the machines you want accessing the share.
 - `netbios name =` is important, you want this to match your server's **hostname**.
 - `security = user` is the default security mode for Samba and the one most compatible with Windows. You don't really have to specify this since it's the default, but I like to anyway.
-- `[public]` within brackets sets the share's name to "public."
+- `[public]` within brackets sets the share's name to "**public**."
 - `path =` will contain the direct path to the directory you want to share.
 - `browsable = yes` allows the share to be accessible from Windows PCs.
 - `writable = yes` and `read only = no` allows the directories and files in the share to be created, modified, or deleted from other computers that access it.

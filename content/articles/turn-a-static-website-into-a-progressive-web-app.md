@@ -8,6 +8,8 @@ tags:
   - webdev
 ---
 
+Frameworks and libraries are great and all, but sometimes you just want to make a simple website with only HTML, CSS and JavaScript — maybe without the latter even. When making a PWA, it’s common to use a framework like Vue or a library like Workbox, which requires a bundler like Webpack. In truth, that’s completely unnecessary!
+
 ### What is a Progressive Web App?
 
 Progressive Web Applications, or PWAs for short, are web apps that can give a user experience on par with native apps you’d install on your smartphone or computer. You can read more about it [on the MDN web docs](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps), and I strongly suggest you do because I will not be going in-depth here.
