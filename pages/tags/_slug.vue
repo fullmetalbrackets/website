@@ -62,6 +62,7 @@ export default {
 .article-tag {
   font-size: 2em;
   color: var(--heading);
+  text-shadow: 0px 0px 8px var(--pink-glow);
 }
 
 .blog-return {

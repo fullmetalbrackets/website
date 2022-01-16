@@ -147,6 +147,10 @@ section li:hover {
   background: var(--accent);
 }
 
+section li h2 {
+  padding-bottom: 5px;
+}
+
 #date {
   padding: 0 auto;
   margin: 0 auto;
@@ -159,7 +163,7 @@ section li:hover {
   padding: 0 auto;
   margin: 0.25em 0.5em;
   color: var(--text);
-  min-height: 80px;
+  min-height: 65px;
   max-height: auto;
   min-width: 300px;
   max-width: auto;

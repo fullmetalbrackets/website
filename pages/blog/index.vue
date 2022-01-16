@@ -2,7 +2,7 @@
   <main>
     <aside>
       <span class="blog-page"><h1>Blog</h1></span>
-      <span>Search: <input v-model="query" type="search" autocomplete="off" placeholder="" /></span>
+      <span><span class="search">Search:</span> <input v-model="query" type="search" autocomplete="off" placeholder="" /></span>
     </aside>
     <section>
       <ul class="post-list">
@@ -134,6 +134,10 @@ section {
   margin: 0 0 1rem 0;
   padding: 0;
   text-shadow: 0px 0px 4px var(--pink-glow);
+}
+
+.search {
+  text-shadow: 0px 0px 6px var(--white-glow);
 }
 
 #date {
