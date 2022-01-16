@@ -2,7 +2,7 @@
 title: Using Prism.js in a Nuxt static site
 description: I was having some issue getting this to work on a static (not SSR) site made with Nuxt, and although I read through a bunch of blog articles, most of them seemed to be missing some piece of information or other that made it not work for me. After mixing and matching some of the instructions, and combining the useful info with the official Nuxt documentation, I finally did all the necessary steps and got it to work. So here's a clear, succinct guide to using Prism.js in a Nuxt static site.
 date: 2021-09-17
-update: ''
+update: 2022-01-16
 tags:
   - nuxtjs
   - webdev
@@ -47,8 +47,6 @@ I know setting `theme: false` seems counter-intuitive, but it's necessary for Pr
 If it doesn't already exist, create a directory in your project root named **/plugins**, and within it create a file named **prism.js**. We want to import all the things we need in **/plugins/prism.js**:
 
 ```js
-// prism.js
-
 import Prism from 'prismjs'
 
 // Include a theme:
@@ -95,13 +93,12 @@ That's it!
 
 ### But wait, what about inline code?!
 
-Prism.js only works on code _blocks_ and not inline code snippets `like this one`. So if you use a theme, get the base colors for it (either look at the theme's CSS file or just inspect a Prism code block element in Dev Tools to get them) and include in your style, so that it all matches! You want to target inline code within paragraph elements.
+Prism.js only works on code _blocks_ and not inline code snippets `like this one`. So if you use a theme, get the base colors for it (either look at the theme's CSS file or just inspect a Prism code block element in Chrome Dev Tools to get them) and include in your style, so that it all matches! You want to target inline code within paragraph elements.
 
 ```css
-/* make inline code match Okaidia theme base colors  */
 p code {
   background: #272822;
-  color: #f8f8f2;
+  color: #fe10bf;
 }
 ```
 

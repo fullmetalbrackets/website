@@ -12,7 +12,7 @@ PrismJS is great for making code blocks look pretty, it comes with a set of seve
 
 ## Requirements
 
-Before we begin, please note that I've so far only used this method and confirmed it works when using `target: 'static'` and `ssr: false` in **_nuxt.config.js_**. I assume this will work in SPA mode and/or using SSR, but I have not done so myself so I can't say for certain.
+Before we begin, please note that while I can confirm it works when using `target: 'static'` in **_nuxt.config.js_**, I have not used PrismJS under `target: 'server'` and cannot say for certain whether it will work, or even be necessary.
 
 If you haven't already, install PrismJS in your project via `npm install prismjs` or `yarn add prismjs`, then add the following to your Nuxt config:
 
@@ -34,13 +34,11 @@ This will use let Prism and Content play nice together. The reason we are settin
 
 PrismJS "themes" are just CSS files that target specific classes used by Prism to style code blocks. Check out the CSS files [in Prism's themes directory](https://github.com/PrismJS/prism/tree/master/themes) or the [many additional Prism themes](https://github.com/PrismJS/prism-themes/tree/master/themes) available. Using these as a base, change the colors, sizes, and what have you to create your own theme.
 
-Once you have a CSS file with your custom theme, place it in the same directory where you keep your global/main CSS file or Sass/SCSS files, probably `/assets`. I'll assume you named it **_prism-theme.css_** but you can name it whatever, just make sure it has a `.css` extension.
+Once you have a CSS file with your custom theme, place it in the same directory where you keep your global/main CSS file or Sass/SCSS files, probably `/assets`. I'll assume you named it _*prism-theme.css*_ but you can name it whatever, just make sure it has a `.css` extension.
 
-Create a file named **_Prism.js_** within the `/plugins` directory of your project, and add the following lines:
+Create a file named _*Prism.js*_ within the `/plugins` directory of your project, and add the following lines:
 
 ```js
-// plugins/Prism.js
-
 import Prism from 'prismjs'
 
 import 'assets/prism-theme.css'
