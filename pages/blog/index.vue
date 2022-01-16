@@ -2,21 +2,25 @@
   <main>
     <aside>
       <span class="blog-page"><h1>Blog</h1></span>
-      <span>Search: <input v-model="query" type="search" autocomplete="off" /></span>
+      <span>Search: <input v-model="query" type="search" autocomplete="off" placeholder="" /></span>
     </aside>
     <section>
-      <ul>
-        <li v-for="article of articles" :key="article.slug">
+      <ul class="post-list">
+        <li v-for="article of articles" :key="article.slug" class="posts">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
                 <h2 class="title">{{ article.title }}</h2>
                 <hr class="divider">
-                <p class="art-date">{{ formatDate(article.date) }}</p>
-                <p class="art-desc">{{ article.description }}</p>
-                <p class="art-tags">
-                  <span v-for="tag in article.tags" :key="tag" class="tag">
-                  <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+                <p id="info">
+                  <span id="date">
+                    {{ formatDate(article.date) }}
+                  </span>
+                  <span id="tags">
+                    <span v-for="tag in article.tags" :key="tag" class="tag">
+                      <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+                    </span>
                   </span>
                 </p>
+                <p class="art-desc">{{ article.description }}</p>
             </NuxtLink>
         </li>
       </ul>
@@ -35,64 +39,17 @@ export default {
       articles
     }
   },
+
   data () {
-  return {
-    query: '',
-    articles: []
+    return {
+      query: '',
+      articles: []
     }
   },
 
-  head() {
-      return {
-        meta: [
-          { hid: 'keywords', name: 'keywords', content: 'HTML, CSS, PHP, JavaScript, Node JS, Vue JS, Nuxt JS, web development, web design, Linux, tech, blog'},
-          { hid: 'description', name: 'description', content: 'Blog of Ariel Diaz.' },
-          { hid: 'author', name: 'author', content: 'Ariel Diaz'},
-          { property: "og:site_name", content: "Ariel Diaz" },
-          { hid: "og:type", property: "og:type", content: "website" },
-          {
-            hid: "og:url",
-            property: "og:url",
-            content: "https://arieldiaz.codes/blog",
-          },
-          {
-            hid: "og:title",
-            property: "og:title",
-            content: "Ariel Diaz",
-          },
-          {
-            hid: "og:description",
-            property: "og:description",
-            content: "Blog of Ariel Diaz.",
-          },
-          {
-            hid: "twitter:url",
-            name: "twitter:url",
-            content: "https://arieldiaz.codes/blog",
-          },
-          {
-            hid: "twitter:title",
-            name: "twitter:title",
-            content: "Ariel Diaz",
-          },
-          {
-            hid: "twitter:description",
-            name: "twitter:description",
-            content: "Blog of Ariel Diaz.",
-          },
-        ],
-        link: [
-          {
-            hid: "canonical",
-            rel: "canonical",
-            href: `https://arieldiaz.codes/blog`,
-          }
-        ]
-      }
-    },
-
   watch: {
     async query (query) {
+      console.log(this.articles)
       if (!query) {
         this.articles = []
         return
@@ -103,6 +60,56 @@ export default {
         .fetch()
     }
   },
+
+  head() {
+    return {
+      meta: [
+        { hid: 'keywords', name: 'keywords', content: 'HTML, CSS, PHP, JavaScript, Node JS, Vue JS, Nuxt JS, web development, web design, Linux, tech, blog'},
+        { hid: 'description', name: 'description', content: 'Blog of Ariel Diaz.' },
+        { hid: 'author', name: 'author', content: 'Ariel Diaz'},
+        { property: "og:site_name", content: "Ariel Diaz" },
+        { hid: "og:type", property: "og:type", content: "website" },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: "https://arieldiaz.codes/blog",
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: "Ariel Diaz",
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: "Blog of Ariel Diaz.",
+        },
+        {
+          hid: "twitter:url",
+          name: "twitter:url",
+          content: "https://arieldiaz.codes/blog",
+        },
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: "Ariel Diaz",
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: "Blog of Ariel Diaz.",
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: `https://arieldiaz.codes/blog`,
+        }
+      ]
+    }
+  },
+
     methods: {
     formatDate(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -127,6 +134,44 @@ section {
   margin: 0 0 1rem 0;
   padding: 0;
   text-shadow: 0px 0px 4px var(--pink-glow);
+}
+
+#date {
+  padding: 0 auto;
+  margin: 0 auto;
+  color: var(--subheading);
+  margin: 0;
+  margin-top: 4px;
+}
+
+#desc {
+  padding: 0 auto;
+  margin: 0.25em 0.5em;
+  color: var(--text);
+  min-height: 80px;
+  max-height: auto;
+  min-width: 300px;
+  max-width: auto;
+}
+
+#tags {
+  margin: 0;
+}
+
+#info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.25em;
+}
+
+.tag {
+  padding: 2px 4px;
+  margin-right: 6px;
+  background: var(--heading);
+  color: #000;
+  font-weight: bold;
+  border-radius: 0.25em;
 }
 
 aside {
@@ -157,14 +202,14 @@ input {
   outline: none;
 }
 
-ul {
+.post-list {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
   width: auto;
 }
 
-li {
+.posts {
   list-style-type: none;
   margin: auto;
   padding: 1em;
@@ -175,12 +220,25 @@ li {
   max-width: 1200px;
 }
 
-li:last-child {
+.posts:last-child {
   margin-bottom: 0;
 }
 
-li:hover {
+.posts:hover {
   background: var(--accent);
+}
+
+.tag a, .tag a:active, .tag a:visited, .tag a:hover, .tag a:focus {
+  color: #000;
+}
+
+.tag:hover {
+  background: var(--subheading);
+}
+
+a:hover::after,
+a:focus::after {
+  transform: scale(0);
 }
 
 @media screen and (min-width: 200px) and (max-width: 767px) {

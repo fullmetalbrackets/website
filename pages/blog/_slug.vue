@@ -9,7 +9,7 @@
         </span>
         <span class="art-tags">
           <span v-for="tag in article.tags" :key="tag" class="tag">
-          <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+            <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
           </span>
         </span>
       </div>
@@ -24,7 +24,7 @@
       <prev-next :prev="prev" :next="next" />
       <hr class="bottom">
       <p class="foot">
-        <a href="/blog"><i class="return"></i> Return to Blog</a>
+        <NuxtLink to="/blog"><i class="return"></i> Return to Blog</NuxtLink>
         <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
       </p>
     </article>
