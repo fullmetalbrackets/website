@@ -15,6 +15,7 @@ html {
   --subheading: hsl(300, 96%, 80%);
   --link: hsl(30, 100%, 50%);
   --hover: hsl(30, 100%, 70%);
+  --yellow: hsl(58, 97%, 63%);
   --shadow: #000;
   --pink-glow: rgba(186, 45, 126, 0.6);
   --orange-glow: rgba(253, 120, 23, 0.6);
@@ -25,8 +26,7 @@ html {
   --blue-glow: rgba(198, 208, 235, 0.6);
   --red-glow: rgba(253, 52, 88, 0.6);
   --form-bg: hsl(0, 0%, 55%);
-  --code-text: #f8f8f2;
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   font-family: 'Fira Sans', 'Source Sans 3', 'Source Sans Pro', 'Segoe UI',
     'Courier New', Courier, monospace;
   font-weight: 400;
@@ -65,7 +65,7 @@ strong,
 b,
 u,
 i {
-  color: hsl(58, 97%, 63%);
+  color: var(--yellow);
   font-weight: 400;
 }
 
@@ -173,9 +173,9 @@ li > code {
   padding-top: 2px;
   padding-bottom: 2px;
   background: #08083a;
-  color: var(--code-text);
+  color: var(--heading);
   border-radius: 0.25em;
-  font-size: 0.9em;
+  font-size: 1.125rem;
   font-family: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
     monospace;
 }
@@ -192,7 +192,7 @@ ul {
 }
 
 .blog-article {
-  margin-top: 5rem;
+  margin-top: 3.5rem;
 }
 
 .blog-article > h1,

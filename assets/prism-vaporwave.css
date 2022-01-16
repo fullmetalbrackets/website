@@ -8,18 +8,18 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #fe10bf;
+  color: var(--heading);
   background: none;
   border-radius: 1rem;
   font-family: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
     monospace;
-  font-size: 0.9em;
+  font-size: 1.125rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
+  line-height: 1.25;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -78,7 +78,7 @@ pre[class*='language-'] {
 .token.unit,
 .token.hexcode,
 .token.deleted {
-  color: #fe10bf;
+  color: #f8f8f2;
 }
 
 .token.property,
@@ -102,7 +102,7 @@ pre[class*='language-'] {
 
 .token.constant,
 .token.symbol {
-  color: #fe10bf;
+  color: var(--yellow);
 }
 
 .token.important,
