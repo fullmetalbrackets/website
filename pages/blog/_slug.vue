@@ -138,6 +138,11 @@ export default {
   text-align: right;
 }
 
+li {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 li::marker {
   color: var(--heading);
 }
