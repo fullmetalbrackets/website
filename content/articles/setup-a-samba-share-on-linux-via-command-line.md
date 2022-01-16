@@ -33,21 +33,21 @@ There's a whole lot of text in here and it may be intimidating to first time use
 
 ```yaml
 [global]
-workgroup = WORKGROUP
-server string = Samba Server %v
-netbios name = HOSTNAME
-security = user
+  workgroup = WORKGROUP
+  server string = Samba Server %v
+  netbios name = HOSTNAME
+  security = user
 
 [public]
-path = /path/to/directory
-browsable = yes
-writable = yes
-read only = no
-guest ok = yes
-create mask = 0777
-directory mask = 0777
-force user = nobody
-force group = nogroup
+  path = /path/to/directory
+  browsable = yes
+  writable = yes
+  read only = no
+  guest ok = yes
+  create mask = 0777
+  directory mask = 0777
+  force user = nobody
+  force group = nogroup
 ```
 
 Let's explain these parameters briefly:
