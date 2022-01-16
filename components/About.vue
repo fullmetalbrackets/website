@@ -42,6 +42,7 @@ label {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
   font-size: 2rem;
   color: var(--heading);
+  text-shadow: 0px 0px 6px var(--pink-glow);
 }
 
 form {
