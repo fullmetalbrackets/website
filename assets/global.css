@@ -199,19 +199,16 @@ ul {
   padding: 0 auto;
   margin: 0 auto 0.35em 0.35em;
   color: var(--subheading);
-  text-shadow: none;
 }
 
 .art-desc {
   padding: 0 auto;
   margin: 0 auto 0 0.75em;
   color: var(--text);
-  text-shadow: none;
 }
 
 .art-title {
   margin: 0;
-  text-shadow: none;
   height: 60px;
 }
 
