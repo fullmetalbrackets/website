@@ -31,18 +31,9 @@ pre[class*='language-'] {
   hyphens: none;
 }
 
-.toolbar-item {
-  margin-right: 5px;
-  color: var(--heading);
-}
-
-.copy-to-clipboard-button:hover {
-  cursor: pointer;
-}
-
 /* Code blocks */
 pre[class*='language-'] {
-  padding: 1em;
+  padding: 2.25em 1em;
   margin: 0.5em 0;
   overflow: auto;
 }
@@ -142,4 +133,14 @@ pre[class*='language-'] {
 
 .token.inserted {
   color: green;
+}
+
+/* Other custom styling */
+.toolbar-item {
+  margin-right: 10px;
+  color: var(--heading);
+}
+
+.copy-to-clipboard-button:hover {
+  cursor: pointer;
 }
