@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Fira+Sans&family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono&display=swap');
 
 * {
   padding: 0;
@@ -36,17 +36,28 @@ html {
   background: var(--main);
   overflow-x: hidden;
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   height: auto;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: var(--main);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: var(--heading);
 }
 
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 main {
@@ -59,26 +70,6 @@ main {
   width: auto;
   letter-spacing: -0.0125em;
   line-height: 1.25;
-}
-
-strong,
-b,
-u,
-i {
-  color: var(--yellow);
-  font-weight: 400;
-}
-
-main > h1,
-main > h2 {
-  text-shadow: 0px 0px 8px var(--pink-glow);
-}
-
-main > h3,
-main > h4,
-main > h5,
-main > h6 {
-  text-shadow: 0px 0px 6px var(--pink-glow);
 }
 
 a,
@@ -124,16 +115,16 @@ h1 {
   margin: 0 auto;
   padding: 0 auto;
   letter-spacing: -0.0125em;
+  text-shadow: 0px 0px 8px var(--pink-glow);
 }
 
 h2 {
   color: var(--heading);
-  font-weight: 600;
   line-height: 1;
-  font-size: 1.35em;
   margin: 0 auto;
   padding: 0 auto;
   letter-spacing: -0.0125em;
+  text-shadow: 0px 0px 8px var(--pink-glow);
 }
 
 h3,
@@ -145,6 +136,15 @@ h6 {
   line-height: 1;
   font-size: 1.15em;
   color: var(--heading);
+  text-shadow: 0px 0px 6px var(--pink-glow);
+}
+
+strong,
+b,
+u,
+i {
+  color: var(--yellow);
+  font-weight: 400;
 }
 
 p,
@@ -195,18 +195,6 @@ ul {
   margin-top: 3.5rem;
 }
 
-.blog-article > h1,
-.blog-article > h2 {
-  text-shadow: 0px 0px 8px var(--pink-glow);
-}
-
-.blog-article > h3,
-.blog-article > h4,
-.blog-article > h5,
-.blog-article > h6 {
-  text-shadow: 0px 0px 6px var(--pink-glow);
-}
-
 .art-date {
   padding: 0 auto;
   margin: 0 auto 0.35em 0.35em;
@@ -251,7 +239,6 @@ ul {
 .art-tags .tag:hover {
   background-color: var(--subheading);
   text-decoration: none;
-  text-shadow: 0px 0px 8px var(--pink-glow);
 }
 
 .art-tags .tag a::after,
