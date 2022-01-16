@@ -89,6 +89,7 @@ div {
 
 nav {
   font-family: 'Baloo 2', 'Courier New', Courier, monospace;
+  font-weight: 500;
   font-size: calc(1rem + 1.5vw);
   text-shadow: 0px 0px 8px var(--orange-glow);
   display: flex;
