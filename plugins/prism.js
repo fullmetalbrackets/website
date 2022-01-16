@@ -1,11 +1,11 @@
 import Prism from "prismjs";
 
-// Include theme:
+// Include custom CSS:
 import "assets/prism-vaporwave.css";
+import "assets/prism-toolbar.css";
 
 // Include toolbar plugin:
 import "prismjs/plugins/toolbar/prism-toolbar";
-import "prismjs/plugins/toolbar/prism-toolbar.css";
 
 // Include some plugins:
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
