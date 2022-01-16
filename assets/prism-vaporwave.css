@@ -78,7 +78,7 @@ pre[class*='language-'] {
 .token.unit,
 .token.hexcode,
 .token.deleted {
-  color: #f8f8f2;
+  color: var(--heading);
 }
 
 .token.property,
