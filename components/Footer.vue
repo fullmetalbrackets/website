@@ -30,6 +30,10 @@ img:hover {
   filter: invert(80%) sepia(17%) saturate(3619%) hue-rotate(280deg) brightness(102%) contrast(95%);
 }
 
+a:hover::after {
+  transform: scale(0);
+}
+
 #json {
   height: auto;
   width: 70px;

@@ -77,6 +77,11 @@ a, a:active, a:visited, a:hover, a:focus {
   font-size: 1rem;
 }
 
+a:hover::after,
+a:focus::after {
+  transform: scale(0);
+}
+
 @media screen and (min-width: 200px) and (max-width: 767px) {
   .prev-next {
     flex-direction: column;
