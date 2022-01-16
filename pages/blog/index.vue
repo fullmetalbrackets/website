@@ -10,7 +10,7 @@
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
                 <h2 class="title">{{ article.title }}</h2>
                 <hr class="divider">
-                <p class="art-date">Posted on: {{ formatDate(article.date) }}</p>
+                <p class="art-date">{{ formatDate(article.date) }}</p>
                 <p class="art-desc">{{ article.description }}</p>
                 <p class="art-tags">
                   <span v-for="tag in article.tags" :key="tag" class="tag">

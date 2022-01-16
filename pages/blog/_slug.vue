@@ -5,17 +5,17 @@
       <hr>
       <div class="date-tags">
         <span class="art-date">
-          Posted on {{ formatDate(article.date) }}
+          {{ formatDate(article.date) }}
         </span>
         <span class="art-tags">
-          Tagged: <span v-for="tag in article.tags" :key="tag" class="tag">
+          <span v-for="tag in article.tags" :key="tag" class="tag">
           <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
           </span>
         </span>
       </div>
       <p v-if="article.update === ''" class="hide"></p>
       <p v-else class="art-date">
-        Updated on {{ formatDate(article.update) }}
+        <b>Updated</b> {{ formatDate(article.update) }}
       </p>
       <nuxt-content :document="article" class="blog-article" />
       <h4>
