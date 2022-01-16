@@ -10,11 +10,11 @@
       <form name="contact" action="/thanks" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input value="contact" name="form-name" type="hidden" />
         <label for="name">Name:</label>
-        <input type="text" name="name" required/>
+        <input id="text" type="text" name="name" required/>
         <label for="email">Email:</label>
-        <input type="email" name="email" required/>
+        <input id="email" type="email" name="email" required/>
         <label for="message">Message:</label>
-        <textarea name="message" required></textarea>
+        <textarea id="message" name="message" required></textarea>
         <button class="button" type="submit" value="Submit">Submit</button>
       </form>
     <p>
