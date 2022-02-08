@@ -1,7 +1,7 @@
 <template>
   <footer>
     <a href="https://github.com/fullmetalbrackets" target="_blank" rel="noreferrer"><img height="auto" width="50px" src="/img/gh.svg" alt="GitHub" title="GitHub"></a>
-    <NuxtLink to="#contact"><img height="auto" width="50px" src="/img/mail.svg" alt="Contact Me"></NuxtLink>
+    <NuxtLink to="/about#contact"><img height="auto" width="50px" src="/img/mail.svg" alt="Contact Me"></NuxtLink>
     <a href="/rss.xml" target="_blank"><img height="auto" width="50px" src="/img/rss.svg" alt="RSS Feed" title="RSS Feed"></a>
     <a href="/feed.json" target="_blank"><img height="auto" width="70px" id="json" src="/img/json.svg" alt="JSON Feed" title="JSON Feed"></a>
   </footer>

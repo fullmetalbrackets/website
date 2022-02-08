@@ -9,7 +9,7 @@
     </span>
   </p>
   <p class="tag-page">
-    <a href="/blog">
+    <a href="/">
       <i class="return"></i> Return to Blog
     </a>
   </p>

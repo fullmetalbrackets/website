@@ -3,10 +3,10 @@
     <a href="#main-content" class="skip-nav">
       Skip Navigation
     </a>
-    <span id="logo" title="Go to Home page"><NuxtLink to="/">Ariel Diaz</NuxtLink></span>
+    <span id="logo">Ariel Diaz</span>
     <nav>
-      <div><NuxtLink to="/#about" title="Jump to About section">About</NuxtLink></div>
-      <div id="edge"><NuxtLink to="/blog" title="Go to Blog page">Blog</NuxtLink></div>
+      <div><NuxtLink to="/about" title="Go to About page">About</NuxtLink></div>
+      <div id="edge"><NuxtLink to="/" title="Go to Blog index">Blog</NuxtLink></div>
     </nav>
   </header>
 </template>
@@ -44,35 +44,9 @@ div {
   font-display: swap;
   width: auto;
   height: auto;
-}
-
-#logo a {
-  display: block;
-	position: relative;
-	padding: 2px 0;
   color: var(--heading);
   text-shadow: 0px 0px 8px var(--pink-glow);
 }
-
-#logo a::after {
-  content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 1px;
-	background-color: var(--heading);
-	opacity: 1;
-	transform: scale(0);
-	transform-origin: center;
-  transition: opacity 300ms, transform 300ms;
-}
-
-#logo a:hover::after,
-#logo a:focus::after {
-	transform: scale(1);
-}
-
 .skip-nav {
   background: var(--accent);
   padding: 0.5rem 1.5rem;

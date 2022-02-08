@@ -24,7 +24,7 @@
       <prev-next :prev="prev" :next="next" />
       <hr class="bottom">
       <p class="foot">
-        <NuxtLink to="/blog"><i class="return"></i> Return to Blog</NuxtLink>
+        <NuxtLink to="/"><i class="return"></i> Return to Blog</NuxtLink>
         <a @click="scrollToTop()"><i class="top"></i> Back to Top</a>
       </p>
     </article>
