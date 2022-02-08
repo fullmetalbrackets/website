@@ -11,9 +11,7 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.cdnfonts.com/css/streamster' }
     ]
   },
-
-  target: 'static',
-
+ 
   css: [
     '@/assets/global.css'
   ],
