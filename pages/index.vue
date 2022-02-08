@@ -1,108 +1,116 @@
 <template>
-  <main id="main-content">
-    <h1 class="index-page">Hello World</h1>
-    <p>
-      I'm Ariel, learning web development and living life in sunny/rainy (depending on the time of year) South Florida.
-    </p>
-    <p>
-      This is my personal website, made with Nuxt.js as a way to learn the framework. Feel free to check out <a href="https://github.com/fullmetalbrackets/website" target="_blank" rel="noopener">this site's source code</a>. Eventually this site will have a portfolio of projects I've worked on, but for now feel free to read my blog -- really just a dump of documentation I've made for myself as I've learned web development, Linux, the command line, etc. If you want to reach out, please use the <Nuxt-Link to="#contact">contact form</Nuxt-Link>. Thanks for visiting!
-    </p>
-      <h2 class="recent">Recent Posts</h2>
-      <p>
-        Want to see what I've written about lately? Jump right in to my most recent posts below, or <NuxtLink to="/blog">see the full blog</NuxtLink> to read older articles.
-      </p>
-    <section class="recent-posts">
-      <ul>
-        <li v-for="article of articles" :key="article.slug">
-          <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-            <h2 class="art-title">{{ article.title }}</h2>
-            <hr/>
-            <p id="info">
-              <span id="date">
-                {{ formatDate(article.date) }}
-              </span>
-              <span id="tags">
-                <span v-for="tag in article.tags" :key="tag" class="tag">
-                  <span>{{ tag }}</span>
+  <main>
+    <aside>
+      <span class="blog-page"><h1>Articles</h1></span>
+      <span><span class="search">Search:</span> <input v-model="query" type="search" autocomplete="off" placeholder="" /></span>
+    </aside>
+    <section>
+      <ul class="post-list">
+        <li v-for="article of articles" :key="article.slug" class="posts">
+            <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+                <h2 class="title">{{ article.title }}</h2>
+                <hr class="divider">
+                <span id="date">
+                  {{ formatDate(article.date) }}
                 </span>
-              </span>
-            </p>
-            <p id="desc">{{ article.description }}</p>
-          </NuxtLink>
+                <br><br>
+                <p class="art-desc">{{ article.description }}</p>
+                <br>
+                <li id="tags">
+                  <span v-for="tag in article.tags" :key="tag" class="tag">
+                  <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
+                </span>
+              </li>
+            </NuxtLink>
         </li>
       </ul>
-    </section>
-    <div id='about'/>
-    <h2 class="about-me">About Me</h2>
-    <section>
-      <LazyAbout />
     </section>
   </main>
 </template>
 
 <script>
 export default {
-  async asyncData ({ $content }) {
+  async asyncData({ $content }) {
     const articles = await $content('articles')
       .without('body', 'update')
       .sortBy('date', 'desc')
-      .limit(3)
       .fetch()
     return {
       articles
     }
   },
 
-  head() {
-      return {
-        meta: [
-          { hid: 'keywords', name: 'keywords', content: 'HTML, CSS, PHP, JavaScript, Node JS, Vue JS, Nuxt JS, web development, web design, Linux, tech, blog'},
-          { hid: 'description', name: 'description', content: 'Website of Ariel Diaz.' },
-          { hid: 'author', name: 'author', content: 'Ariel Diaz'},
-          { property: "og:site_name", content: "Ariel Diaz" },
-          { hid: "og:type", property: "og:type", content: "website" },
-          {
-            hid: "og:url",
-            property: "og:url",
-            content: "https://arieldiaz.codes",
-          },
-          {
-            hid: "og:title",
-            property: "og:title",
-            content: "Ariel Diaz",
-          },
-          {
-            hid: "og:description",
-            property: "og:description",
-            content: "Website of Ariel Diaz.",
-          },
-          {
-            hid: "twitter:url",
-            name: "twitter:url",
-            content: "https://arieldiaz.codes",
-          },
-          {
-            hid: "twitter:title",
-            name: "twitter:title",
-            content: "Ariel Diaz",
-          },
-          {
-            hid: "twitter:description",
-            name: "twitter:description",
-            content: "Website of Ariel Diaz.",
-          },
-        ],
-        link: [
-          {
-            hid: "canonical",
-            rel: "canonical",
-            href: `https://arieldiaz.codes/`,
-          }
-        ]
-      }
-    },
+  data () {
+    return {
+      query: '',
+      articles: []
+    }
+  },
 
-  methods: {
+  watch: {
+    async query (query) {
+      console.log(this.articles)
+      if (!query) {
+        this.articles = []
+        return
+      }
+      this.articles = await this.$content('articles')
+        .sortBy('date', 'desc')
+        .search(query)
+        .fetch()
+    }
+  },
+
+  head() {
+    return {
+      meta: [
+        { hid: 'keywords', name: 'keywords', content: 'HTML, CSS, PHP, JavaScript, Node JS, Vue JS, Nuxt JS, web development, web design, Linux, tech, blog'},
+        { hid: 'description', name: 'description', content: 'Blog of Ariel Diaz.' },
+        { hid: 'author', name: 'author', content: 'Ariel Diaz'},
+        { property: "og:site_name", content: "Ariel Diaz" },
+        { hid: "og:type", property: "og:type", content: "website" },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: "https://arieldiaz.codes/blog",
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: "Ariel Diaz",
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: "Blog of Ariel Diaz.",
+        },
+        {
+          hid: "twitter:url",
+          name: "twitter:url",
+          content: "https://arieldiaz.codes/blog",
+        },
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: "Ariel Diaz",
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: "Blog of Ariel Diaz.",
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: `https://arieldiaz.codes/blog`,
+        }
+      ]
+    }
+  },
+
+    methods: {
     formatDate(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('en', options)
@@ -112,73 +120,38 @@ export default {
 </script>
 
 <style scoped>
-.recent {
-  margin-top: 2em;
-}
-
-span {
-  color: #000;
-}
-
 section {
-  display: flex;
-  justify-content: space-around;
-  box-sizing: border-box;
+  line-height: 1.15;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.blog-page {
+  font-size: 1.2rem;
+}
+
+.title {
+  margin: 0 0 1rem 0;
   padding: 0;
-  margin: 0;
+  text-shadow: 0px 0px 4px var(--pink-glow);
 }
 
-section li {
-  list-style-type: none;
-  margin: auto;
-  padding: 1em;
-  border-radius: 1rem;
-  background: var(--nav);
-  margin-bottom: 1.5em;
-  height: auto;
-  max-width: 1200px;
-}
-
-section li:last-child {
-  margin-bottom: 0;
-}
-
-section li:hover {
-  background: var(--accent);
-}
-
-section li h2 {
-  padding-bottom: 5px;
+.search {
+  text-shadow: 0px 0px 6px var(--white-glow);
 }
 
 #date {
-  padding: 0 auto;
-  margin: 0 auto;
   color: var(--subheading);
   margin: 0;
-  margin-top: 4px;
 }
 
-#desc {
-  padding: 0 auto;
-  margin: 0.25em 0.5em;
+/* #desc {
   color: var(--text);
-  min-height: 65px;
+  min-height: 80px;
   max-height: auto;
   min-width: 300px;
   max-width: auto;
-}
-
-#tags {
-  margin: 0;
-}
-
-#info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.25em;
-}
+} */
 
 .tag {
   padding: 2px 4px;
@@ -189,61 +162,89 @@ section li h2 {
   border-radius: 0.25em;
 }
 
-.recent-posts {
+aside {
   display: flex;
-  justify-content: space-around;
-  font-size: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.about-me {
-  margin-bottom: 1em;
+h1 {
+  font-size: 2.5em;
+}
+
+input {
+  line-height: 1;
+  font-size: 1rem;
+  border-style: none;
+  margin: auto;
+  padding: 5px;
+  line-height: 1;
+  border-radius: 1rem;
+  background: var(--form-bg);
+  height: auto;
+  width: 350px;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', 'Courier New', Courier, monospace;
+  outline: none;
+}
+
+.post-list {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: auto;
+}
+
+.posts {
+  list-style-type: none;
+  margin: auto;
+  padding: 1em;
+  border-radius: 1rem;
+  background: var(--nav);
+  margin-bottom: 1.5em;
+  height: auto;
+  max-width: 1200px;
+}
+
+.posts:last-child {
+  margin-bottom: 0;
+}
+
+.posts:hover {
+  background: var(--accent);
+}
+
+.tag a, .tag a:active, .tag a:visited, .tag a:hover, .tag a:focus {
+  color: #000;
+}
+
+.tag:hover {
+  background: var(--subheading);
+}
+
+a:hover::after,
+a:focus::after {
+  transform: scale(0);
 }
 
 @media screen and (min-width: 200px) and (max-width: 767px) {
-  main {
-    padding: 20px;
-    margin: 0 auto;
+  aside {
+    margin: 0.5em 0;
   }
-
-  section ul {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: auto;
-    padding: 0;
+  input {
+    width: 125px;
     margin: 0;
-    height: auto;
-    width: auto;
   }
 
-  section li {
+  span {
     margin: 0;
-    list-style-type: none;
-    min-height: auto;
-    max-height: 1000px;
-    min-width: auto;
-    max-width: auto;
-    padding: 1em;
-    margin-bottom: 1em;
-    border-radius: 1rem;
   }
 
-  section li a,
-  section li a:active,
-  section li a:visited {
-    color: var(--text);
-    text-shadow: none;
-  }
-
-  section li:hover {
-    color: var(--text);
-  }
-
-  #desc {
-    min-height: auto;
-    max-height: 1000px;
-    min-width: auto;
-    max-width: auto;
+  h1 {
+    font-size: 1.75em;
+    margin: 0;
   }
 }
 </style>
