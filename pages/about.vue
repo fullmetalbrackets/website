@@ -1,7 +1,11 @@
 <template>
-  <div class="about">
+  <main>
+    <h1>Hello World</h1>
     <p>
-      I'm a self-taught web developer born and raised in South Florida, currently living in the St. Augustine area. Feel free to check out my <a href="https://github.com/fullmetalbrackets" target="_blank" rel="noopener">GitHub profile</a> if you'd like to see what I've been working on, or just check this space for future updates.
+      I'm Ariel, learning web development and living life in sunny/rainy (depending on the time of year) South Florida.
+    </p>
+    <p>
+      This is my personal website, made with Nuxt.js as a way to learn the framework. Feel free to check out <a href="https://github.com/fullmetalbrackets/website" target="_blank" rel="noopener">this site's source code</a>. Eventually this site will have a portfolio of projects I've worked on, but for now feel free to read my blog -- really just a dump of documentation I've made for myself as I've learned web development, Linux, the command line, etc. If you want to reach out, please use the <Nuxt-Link to="#contact">contact form</Nuxt-Link>. Thanks for visiting!
     </p>
     <div id='contact'/>
     <p>
@@ -20,7 +24,7 @@
     <p>
       This will <u><strong>not</strong></u> sign you up for a newsletter or mailing list, I don't like those!
     </p>
-  </div>
+  </main>
 </template>
 
 <style scoped>
@@ -29,8 +33,16 @@
   padding: 0 auto;
 }
 
+div {
+  margin-bottom: 2em;
+}
+
 .about {
-  display: unset;
+  margin: 2em auto;
+}
+
+h1 {
+  margin: 1em auto;
 }
 
 p {
@@ -46,7 +58,7 @@ label {
 }
 
 form {
-  margin-top: 1em;
+  margin-top: 2em;
   margin-left: calc(4em + 2vw);
   margin-right: calc(4em + 2vw);
   margin-bottom: 2em;
