@@ -4,8 +4,8 @@ description: The excellent Nuxt/Sitemap module can automatically generate a new 
 date: 2021-10-08
 update: ''
 tags:
-  - nuxtjs
-  - webdev
+  - nuxt
+  - development
 ---
 
 The excellent Nuxt/Sitemap module can automatically generate a new sitemap.xml at each build, and you can set either static and/or dynamic routes in it's config. It can also auto-generate routes to your blog posts (or whatever other content) fetched and displayed in a slug file, so a new post shows up with the correct route in the sitemap when created. Here's a quick and simple guide for Nuxt/Sitemap to generate routes to your Nuxt/Content blog posts, whether static or SSR.

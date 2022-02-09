@@ -4,8 +4,8 @@ description: PrismJS is great for making code blocks look pretty, it comes with 
 date: 2021-10-18
 update: ''
 tags:
-  - nuxtjs
-  - webdev
+  - nuxt
+  - prismjs
 ---
 
 PrismJS is great for making code blocks look pretty, it comes with a set of several themes out of the box, and there's also many more additional themes available as a separate package on NPM and Yarn. But what if none of those matches the color scheme of your website? With Nuxt you can easily use a custom CSS file to make your code blocks perfectly match the overall look of your site or blog. Here's how.

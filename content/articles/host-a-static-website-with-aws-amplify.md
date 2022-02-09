@@ -4,7 +4,7 @@ description: Getting started learning Amazon Web Services can be a bit intimidat
 date: 2021-09-29
 update: ''
 tags:
-  - webdev
+  - web
   - hosting
 ---
 

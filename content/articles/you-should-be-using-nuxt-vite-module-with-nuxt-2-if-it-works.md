@@ -4,7 +4,7 @@ description: One of the not-so-great parts of developing with Nuxt is the severa
 date: 2021-10-23
 update: ''
 tags:
-  - nuxtjs
+  - nuxt
   - vite
 ---
 
