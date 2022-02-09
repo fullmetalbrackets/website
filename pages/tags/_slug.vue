@@ -97,6 +97,11 @@ li:hover {
   min-height: 70px;
 }
 
+.art-desc {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 @media screen and (min-width: 200px) and (max-width: 767px) {
   main {
     font-size: 1.25em;
