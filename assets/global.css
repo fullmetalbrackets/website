@@ -7,7 +7,7 @@
 
 html {
   /* dark mode (base) colors */
-  --text: hsl(201, 100%, 85%);
+  --text: hsl(224, 48%, 85%);
   --nav: hsl(234, 85%, 25%);
   --accent: hsl(236, 80%, 35%);
   --main: hsl(239, 100%, 9%);
@@ -182,7 +182,7 @@ li > code {
 }
 
 hr {
-  border: 0.25px solid var(--text);
+  border: 0.25px solid var(--subheading);
   opacity: 0.25;
   margin: 1rem 0;
 }
