@@ -9336,10 +9336,10 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
-vue-debounce@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/vue-debounce/-/vue-debounce-3.1.0.tgz#4aa59ce9114740079899e56f5b4ba8c6797d4a3d"
-  integrity sha512-/2t8iN2EmAJKbTrYOL3EN+wmRy0D6Q35j/T8xoErTg7OhNFGxDDOGMyxr5+U7BOE1yHVPgTUhe6N856MOx4eRw==
+vue-debounce@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/vue-debounce/-/vue-debounce-3.1.1.tgz#8b3accba7bea8a81791e8476300b21481c9492e9"
+  integrity sha512-C0OXFl6DAn3qzoAd+3h+YVoygkqj16WrbFvT6S3BDYaMBXZa67VnfwNoaDz+V23vwDtrSp8aN8uNp7S30Q86PQ==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
